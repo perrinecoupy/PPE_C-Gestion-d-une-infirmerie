@@ -24,7 +24,8 @@ namespace UtilisateursGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FrmConnexion frmConnexion = new FrmConnexion();
+            frmConnexion.ShowDialog();
         }
     }
 }
