@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace UtilisateursGUI.Properties
+namespace GestionInfirmerie.Properties
 {
     /// <summary>
     ///   Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
@@ -43,7 +43,7 @@ namespace UtilisateursGUI.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UtilisateursGUI.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GestionInfirmerie.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

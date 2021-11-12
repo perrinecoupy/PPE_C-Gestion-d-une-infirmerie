@@ -1,5 +1,5 @@
 ﻿
-namespace UtilisateursGUI
+namespace GestionInfirmerie
 {
     partial class Form1
     {

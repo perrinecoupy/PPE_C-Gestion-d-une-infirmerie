@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("UtilisateursGUI")]
+[assembly: AssemblyTitle("GestionInfirmerie")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("UtilisateursGUI")]
+[assembly: AssemblyProduct("GestionInfirmerie")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("3bc99625-1f92-4ee9-a6fb-173faca5337a")]
+[assembly: Guid("01c77a2a-3779-408b-a05e-0cae9a78693e")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //

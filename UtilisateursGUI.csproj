@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3BC99625-1F92-4EE9-A6FB-173FACA5337A}</ProjectGuid>
+    <ProjectGuid>{01C77A2A-3779-408B-A05E-0CAE9A78693E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UtilisateursGUI</RootNamespace>
-    <AssemblyName>UtilisateursGUI</AssemblyName>
+    <RootNamespace>GestionInfirmerie</RootNamespace>
+    <AssemblyName>GestionInfirmerie</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
