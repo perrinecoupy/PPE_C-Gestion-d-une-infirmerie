@@ -52,6 +52,12 @@
     <Compile Include="FrmAjoutEleve.Designer.cs">
       <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConnexion.Designer.cs">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDetailEleve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,12 +75,6 @@
     </Compile>
     <Compile Include="FrmAjoutMedicament.Designer.cs">
       <DependentUpon>FrmAjoutMedicament.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmConnexion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConnexion.Designer.cs">
-      <DependentUpon>FrmConnexion.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDetailsMedicament.cs">
       <SubType>Form</SubType>
@@ -144,6 +144,12 @@
     <Compile Include="FrmSuppressionEleve.Designer.cs">
       <DependentUpon>FrmSuppressionEleve.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmConnexion.resx">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -152,6 +158,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,6 +172,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logosaintvincent.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoinfirmiere.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
