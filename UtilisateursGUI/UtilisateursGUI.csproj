@@ -144,11 +144,26 @@
     <Compile Include="FrmSuppressionEleve.Designer.cs">
       <DependentUpon>FrmSuppressionEleve.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmAjoutEleve.resx">
+      <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailEleve.resx">
+      <DependentUpon>FrmDetailEleve.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificationEleve.resx">
+      <DependentUpon>FrmModificationEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPageAccueilEleve.resx">
+      <DependentUpon>FrmPageAccueilEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuppressionEleve.resx">
+      <DependentUpon>FrmSuppressionEleve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

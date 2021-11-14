@@ -40,10 +40,11 @@ namespace UtilisateursGUI
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::UtilisateursGUI.Properties.Resources.logosaintvincent;
+            this.pictureBox1.Image = global::UtilisateursGUI.Properties.Resources.logoinfirmiere;
             this.pictureBox1.Location = new System.Drawing.Point(48, 44);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
