@@ -34,11 +34,9 @@ namespace UtilisateursGUI
             this.lblPrenomEleve = new System.Windows.Forms.Label();
             this.lblClasseEleve = new System.Windows.Forms.Label();
             this.txtPrenomEleve = new System.Windows.Forms.TextBox();
-            this.listClasseEleve = new System.Windows.Forms.ListBox();
             this.lblDateDeNaissance = new System.Windows.Forms.Label();
             this.txtDateDeNaissanceEleve = new System.Windows.Forms.TextBox();
             this.lblSanteEleve = new System.Windows.Forms.Label();
-            this.txtSanteEleve = new System.Windows.Forms.TextBox();
             this.lblTelephoneEleve = new System.Windows.Forms.Label();
             this.lblTelephoneParentEleve = new System.Windows.Forms.Label();
             this.tiersTempsEleve = new System.Windows.Forms.Label();
@@ -48,191 +46,310 @@ namespace UtilisateursGUI
             this.txtTiersTempsEleve = new System.Windows.Forms.TextBox();
             this.txtCommentairesSanteEleve = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Sexe = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNomEleve
             // 
             this.lblNomEleve.AutoSize = true;
-            this.lblNomEleve.Location = new System.Drawing.Point(49, 128);
+            this.lblNomEleve.Location = new System.Drawing.Point(34, 50);
+            this.lblNomEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomEleve.Name = "lblNomEleve";
-            this.lblNomEleve.Size = new System.Drawing.Size(29, 13);
+            this.lblNomEleve.Size = new System.Drawing.Size(42, 20);
             this.lblNomEleve.TabIndex = 4;
             this.lblNomEleve.Text = "Nom";
+            this.lblNomEleve.Click += new System.EventHandler(this.lblNomEleve_Click);
             // 
             // txtNomEleve
             // 
-            this.txtNomEleve.Location = new System.Drawing.Point(49, 144);
+            this.txtNomEleve.Location = new System.Drawing.Point(29, 142);
+            this.txtNomEleve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNomEleve.Name = "txtNomEleve";
-            this.txtNomEleve.Size = new System.Drawing.Size(201, 20);
+            this.txtNomEleve.Size = new System.Drawing.Size(386, 26);
             this.txtNomEleve.TabIndex = 5;
             // 
             // lblPrenomEleve
             // 
             this.lblPrenomEleve.AutoSize = true;
-            this.lblPrenomEleve.Location = new System.Drawing.Point(46, 188);
+            this.lblPrenomEleve.Location = new System.Drawing.Point(34, 117);
+            this.lblPrenomEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrenomEleve.Name = "lblPrenomEleve";
-            this.lblPrenomEleve.Size = new System.Drawing.Size(43, 13);
+            this.lblPrenomEleve.Size = new System.Drawing.Size(64, 20);
             this.lblPrenomEleve.TabIndex = 6;
             this.lblPrenomEleve.Text = "Prénom";
             // 
             // lblClasseEleve
             // 
             this.lblClasseEleve.AutoSize = true;
-            this.lblClasseEleve.Location = new System.Drawing.Point(49, 251);
+            this.lblClasseEleve.Location = new System.Drawing.Point(34, 188);
+            this.lblClasseEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClasseEleve.Name = "lblClasseEleve";
-            this.lblClasseEleve.Size = new System.Drawing.Size(38, 13);
+            this.lblClasseEleve.Size = new System.Drawing.Size(57, 20);
             this.lblClasseEleve.TabIndex = 7;
             this.lblClasseEleve.Text = "Classe";
             // 
             // txtPrenomEleve
             // 
-            this.txtPrenomEleve.Location = new System.Drawing.Point(49, 204);
+            this.txtPrenomEleve.Location = new System.Drawing.Point(38, 142);
+            this.txtPrenomEleve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrenomEleve.Name = "txtPrenomEleve";
-            this.txtPrenomEleve.Size = new System.Drawing.Size(201, 20);
+            this.txtPrenomEleve.Size = new System.Drawing.Size(395, 26);
             this.txtPrenomEleve.TabIndex = 8;
-            // 
-            // listClasseEleve
-            // 
-            this.listClasseEleve.FormattingEnabled = true;
-            this.listClasseEleve.Location = new System.Drawing.Point(49, 267);
-            this.listClasseEleve.Name = "listClasseEleve";
-            this.listClasseEleve.Size = new System.Drawing.Size(201, 17);
-            this.listClasseEleve.TabIndex = 9;
             // 
             // lblDateDeNaissance
             // 
             this.lblDateDeNaissance.AutoSize = true;
-            this.lblDateDeNaissance.Location = new System.Drawing.Point(46, 305);
+            this.lblDateDeNaissance.Location = new System.Drawing.Point(34, 261);
+            this.lblDateDeNaissance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateDeNaissance.Name = "lblDateDeNaissance";
-            this.lblDateDeNaissance.Size = new System.Drawing.Size(96, 13);
+            this.lblDateDeNaissance.Size = new System.Drawing.Size(142, 20);
             this.lblDateDeNaissance.TabIndex = 10;
             this.lblDateDeNaissance.Text = "Date de naissance";
             // 
             // txtDateDeNaissanceEleve
             // 
-            this.txtDateDeNaissanceEleve.Location = new System.Drawing.Point(49, 321);
+            this.txtDateDeNaissanceEleve.Location = new System.Drawing.Point(38, 75);
+            this.txtDateDeNaissanceEleve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDateDeNaissanceEleve.Name = "txtDateDeNaissanceEleve";
-            this.txtDateDeNaissanceEleve.Size = new System.Drawing.Size(201, 20);
+            this.txtDateDeNaissanceEleve.Size = new System.Drawing.Size(395, 26);
             this.txtDateDeNaissanceEleve.TabIndex = 11;
             // 
             // lblSanteEleve
             // 
             this.lblSanteEleve.AutoSize = true;
-            this.lblSanteEleve.Location = new System.Drawing.Point(46, 360);
+            this.lblSanteEleve.Location = new System.Drawing.Point(34, 336);
+            this.lblSanteEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSanteEleve.Name = "lblSanteEleve";
-            this.lblSanteEleve.Size = new System.Drawing.Size(35, 13);
+            this.lblSanteEleve.Size = new System.Drawing.Size(52, 20);
             this.lblSanteEleve.TabIndex = 12;
             this.lblSanteEleve.Text = "Santé";
-            // 
-            // txtSanteEleve
-            // 
-            this.txtSanteEleve.Location = new System.Drawing.Point(49, 376);
-            this.txtSanteEleve.Name = "txtSanteEleve";
-            this.txtSanteEleve.Size = new System.Drawing.Size(201, 20);
-            this.txtSanteEleve.TabIndex = 13;
             // 
             // lblTelephoneEleve
             // 
             this.lblTelephoneEleve.AutoSize = true;
-            this.lblTelephoneEleve.Location = new System.Drawing.Point(417, 128);
+            this.lblTelephoneEleve.Location = new System.Drawing.Point(25, 50);
+            this.lblTelephoneEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelephoneEleve.Name = "lblTelephoneEleve";
-            this.lblTelephoneEleve.Size = new System.Drawing.Size(87, 13);
+            this.lblTelephoneEleve.Size = new System.Drawing.Size(125, 20);
             this.lblTelephoneEleve.TabIndex = 14;
             this.lblTelephoneEleve.Text = "Téléphone élève";
             // 
             // lblTelephoneParentEleve
             // 
             this.lblTelephoneParentEleve.AutoSize = true;
-            this.lblTelephoneParentEleve.Location = new System.Drawing.Point(417, 188);
+            this.lblTelephoneParentEleve.Location = new System.Drawing.Point(25, 117);
+            this.lblTelephoneParentEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelephoneParentEleve.Name = "lblTelephoneParentEleve";
-            this.lblTelephoneParentEleve.Size = new System.Drawing.Size(91, 13);
+            this.lblTelephoneParentEleve.Size = new System.Drawing.Size(134, 20);
             this.lblTelephoneParentEleve.TabIndex = 15;
             this.lblTelephoneParentEleve.Text = "Téléphone parent";
             // 
             // tiersTempsEleve
             // 
             this.tiersTempsEleve.AutoSize = true;
-            this.tiersTempsEleve.Location = new System.Drawing.Point(417, 251);
+            this.tiersTempsEleve.Location = new System.Drawing.Point(25, 188);
+            this.tiersTempsEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tiersTempsEleve.Name = "tiersTempsEleve";
-            this.tiersTempsEleve.Size = new System.Drawing.Size(61, 13);
+            this.tiersTempsEleve.Size = new System.Drawing.Size(91, 20);
             this.tiersTempsEleve.TabIndex = 16;
             this.tiersTempsEleve.Text = "Tiers temps";
             // 
             // lblCommentairesSanteEleve
             // 
             this.lblCommentairesSanteEleve.AutoSize = true;
-            this.lblCommentairesSanteEleve.Location = new System.Drawing.Point(417, 305);
+            this.lblCommentairesSanteEleve.Location = new System.Drawing.Point(25, 261);
+            this.lblCommentairesSanteEleve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCommentairesSanteEleve.Name = "lblCommentairesSanteEleve";
-            this.lblCommentairesSanteEleve.Size = new System.Drawing.Size(102, 13);
+            this.lblCommentairesSanteEleve.Size = new System.Drawing.Size(156, 20);
             this.lblCommentairesSanteEleve.TabIndex = 17;
             this.lblCommentairesSanteEleve.Text = "Commentaires santé";
             // 
             // txtTelephoneEleve
             // 
-            this.txtTelephoneEleve.Location = new System.Drawing.Point(420, 144);
+            this.txtTelephoneEleve.Location = new System.Drawing.Point(29, 75);
+            this.txtTelephoneEleve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelephoneEleve.Name = "txtTelephoneEleve";
-            this.txtTelephoneEleve.Size = new System.Drawing.Size(201, 20);
+            this.txtTelephoneEleve.Size = new System.Drawing.Size(386, 26);
             this.txtTelephoneEleve.TabIndex = 18;
             // 
             // txtTelephoneParentEleve
             // 
-            this.txtTelephoneParentEleve.Location = new System.Drawing.Point(420, 204);
+            this.txtTelephoneParentEleve.Location = new System.Drawing.Point(38, 286);
+            this.txtTelephoneParentEleve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelephoneParentEleve.Name = "txtTelephoneParentEleve";
-            this.txtTelephoneParentEleve.Size = new System.Drawing.Size(201, 20);
+            this.txtTelephoneParentEleve.Size = new System.Drawing.Size(395, 26);
             this.txtTelephoneParentEleve.TabIndex = 19;
             // 
             // txtTiersTempsEleve
             // 
-            this.txtTiersTempsEleve.Location = new System.Drawing.Point(420, 267);
+            this.txtTiersTempsEleve.Location = new System.Drawing.Point(38, 361);
+            this.txtTiersTempsEleve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTiersTempsEleve.Name = "txtTiersTempsEleve";
-            this.txtTiersTempsEleve.Size = new System.Drawing.Size(201, 20);
+            this.txtTiersTempsEleve.Size = new System.Drawing.Size(395, 26);
             this.txtTiersTempsEleve.TabIndex = 20;
             // 
             // txtCommentairesSanteEleve
             // 
-            this.txtCommentairesSanteEleve.Location = new System.Drawing.Point(420, 321);
+            this.txtCommentairesSanteEleve.Location = new System.Drawing.Point(29, 286);
+            this.txtCommentairesSanteEleve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCommentairesSanteEleve.Name = "txtCommentairesSanteEleve";
-            this.txtCommentairesSanteEleve.Size = new System.Drawing.Size(201, 20);
+            this.txtCommentairesSanteEleve.Size = new System.Drawing.Size(386, 26);
             this.txtCommentairesSanteEleve.TabIndex = 21;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UtilisateursGUI.Properties.Resources.logoinfirmiere;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(74, 48);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(245, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(74, 197);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1063, 460);
+            this.panel1.TabIndex = 22;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(685, 387);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 38);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "ANNULER";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(811, 387);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 38);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "ENREGISTRER ELEVE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.dateTimePicker2);
+            this.panel3.Controls.Add(this.Sexe);
+            this.panel3.Controls.Add(this.txtTiersTempsEleve);
+            this.panel3.Controls.Add(this.lblNomEleve);
+            this.panel3.Controls.Add(this.txtTelephoneParentEleve);
+            this.panel3.Controls.Add(this.txtDateDeNaissanceEleve);
+            this.panel3.Controls.Add(this.lblPrenomEleve);
+            this.panel3.Controls.Add(this.txtPrenomEleve);
+            this.panel3.Controls.Add(this.lblSanteEleve);
+            this.panel3.Controls.Add(this.lblClasseEleve);
+            this.panel3.Controls.Add(this.lblDateDeNaissance);
+            this.panel3.Location = new System.Drawing.Point(38, 26);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(495, 411);
+            this.panel3.TabIndex = 23;
+            // 
+            // Sexe
+            // 
+            this.Sexe.AutoSize = true;
+            this.Sexe.Location = new System.Drawing.Point(260, 190);
+            this.Sexe.Name = "Sexe";
+            this.Sexe.Size = new System.Drawing.Size(45, 20);
+            this.Sexe.TabIndex = 12;
+            this.Sexe.Text = "Sexe";
+            this.Sexe.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.lblCommentairesSanteEleve);
+            this.panel2.Controls.Add(this.txtCommentairesSanteEleve);
+            this.panel2.Controls.Add(this.txtTelephoneEleve);
+            this.panel2.Controls.Add(this.tiersTempsEleve);
+            this.panel2.Controls.Add(this.lblTelephoneEleve);
+            this.panel2.Controls.Add(this.lblTelephoneParentEleve);
+            this.panel2.Controls.Add(this.txtNomEleve);
+            this.panel2.Location = new System.Drawing.Point(567, 26);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(452, 334);
+            this.panel2.TabIndex = 22;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(29, 213);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(386, 26);
+            this.textBox1.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(536, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "AJOUT D\'UN ELEVE";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(38, 213);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(169, 32);
+            this.dateTimePicker2.TabIndex = 32;
+            this.dateTimePicker2.Value = new System.DateTime(2020, 12, 11, 0, 0, 0, 0);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(264, 213);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(169, 32);
+            this.dateTimePicker1.TabIndex = 33;
+            this.dateTimePicker1.Value = new System.DateTime(2020, 12, 11, 0, 0, 0, 0);
+            // 
             // FrmAjoutEleve
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtCommentairesSanteEleve);
-            this.Controls.Add(this.txtTiersTempsEleve);
-            this.Controls.Add(this.txtTelephoneParentEleve);
-            this.Controls.Add(this.txtTelephoneEleve);
-            this.Controls.Add(this.lblCommentairesSanteEleve);
-            this.Controls.Add(this.tiersTempsEleve);
-            this.Controls.Add(this.lblTelephoneParentEleve);
-            this.Controls.Add(this.lblTelephoneEleve);
-            this.Controls.Add(this.txtSanteEleve);
-            this.Controls.Add(this.lblSanteEleve);
-            this.Controls.Add(this.txtDateDeNaissanceEleve);
-            this.Controls.Add(this.lblDateDeNaissance);
-            this.Controls.Add(this.listClasseEleve);
-            this.Controls.Add(this.txtPrenomEleve);
-            this.Controls.Add(this.lblClasseEleve);
-            this.Controls.Add(this.lblPrenomEleve);
-            this.Controls.Add(this.txtNomEleve);
-            this.Controls.Add(this.lblNomEleve);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmAjoutEleve";
             this.Text = "AjoutEleve";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,11 +363,9 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Label lblPrenomEleve;
         private System.Windows.Forms.Label lblClasseEleve;
         private System.Windows.Forms.TextBox txtPrenomEleve;
-        private System.Windows.Forms.ListBox listClasseEleve;
         private System.Windows.Forms.Label lblDateDeNaissance;
         private System.Windows.Forms.TextBox txtDateDeNaissanceEleve;
         private System.Windows.Forms.Label lblSanteEleve;
-        private System.Windows.Forms.TextBox txtSanteEleve;
         private System.Windows.Forms.Label lblTelephoneEleve;
         private System.Windows.Forms.Label lblTelephoneParentEleve;
         private System.Windows.Forms.Label tiersTempsEleve;
@@ -259,5 +374,15 @@ namespace UtilisateursGUI
         private System.Windows.Forms.TextBox txtTelephoneParentEleve;
         private System.Windows.Forms.TextBox txtTiersTempsEleve;
         private System.Windows.Forms.TextBox txtCommentairesSanteEleve;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label Sexe;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

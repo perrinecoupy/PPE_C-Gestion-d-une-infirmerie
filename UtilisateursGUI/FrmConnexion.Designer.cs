@@ -41,65 +41,73 @@ namespace UtilisateursGUI
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UtilisateursGUI.Properties.Resources.logoinfirmiere;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(72, 68);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(176, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblIdentifiant
             // 
             this.lblIdentifiant.AutoSize = true;
-            this.lblIdentifiant.Location = new System.Drawing.Point(45, 130);
+            this.lblIdentifiant.Location = new System.Drawing.Point(68, 200);
+            this.lblIdentifiant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdentifiant.Name = "lblIdentifiant";
-            this.lblIdentifiant.Size = new System.Drawing.Size(53, 13);
+            this.lblIdentifiant.Size = new System.Drawing.Size(80, 20);
             this.lblIdentifiant.TabIndex = 2;
             this.lblIdentifiant.Text = "Identifiant";
             // 
             // txtIdentifiant
             // 
-            this.txtIdentifiant.Location = new System.Drawing.Point(48, 160);
+            this.txtIdentifiant.Location = new System.Drawing.Point(72, 246);
+            this.txtIdentifiant.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdentifiant.Name = "txtIdentifiant";
-            this.txtIdentifiant.Size = new System.Drawing.Size(441, 20);
+            this.txtIdentifiant.Size = new System.Drawing.Size(660, 26);
             this.txtIdentifiant.TabIndex = 3;
             // 
             // lblMotDePasse
             // 
             this.lblMotDePasse.AutoSize = true;
-            this.lblMotDePasse.Location = new System.Drawing.Point(45, 212);
+            this.lblMotDePasse.Location = new System.Drawing.Point(68, 326);
+            this.lblMotDePasse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMotDePasse.Name = "lblMotDePasse";
-            this.lblMotDePasse.Size = new System.Drawing.Size(71, 13);
+            this.lblMotDePasse.Size = new System.Drawing.Size(105, 20);
             this.lblMotDePasse.TabIndex = 4;
             this.lblMotDePasse.Text = "Mot de passe";
             // 
             // txtMotdePasse
             // 
-            this.txtMotdePasse.Location = new System.Drawing.Point(48, 241);
+            this.txtMotdePasse.Location = new System.Drawing.Point(72, 371);
+            this.txtMotdePasse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMotdePasse.Name = "txtMotdePasse";
-            this.txtMotdePasse.Size = new System.Drawing.Size(441, 20);
+            this.txtMotdePasse.Size = new System.Drawing.Size(660, 26);
             this.txtMotdePasse.TabIndex = 5;
             // 
             // btnEnvoyer
             // 
-            this.btnEnvoyer.Location = new System.Drawing.Point(205, 316);
+            this.btnEnvoyer.Location = new System.Drawing.Point(308, 486);
+            this.btnEnvoyer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEnvoyer.Name = "btnEnvoyer";
-            this.btnEnvoyer.Size = new System.Drawing.Size(122, 44);
+            this.btnEnvoyer.Size = new System.Drawing.Size(183, 68);
             this.btnEnvoyer.TabIndex = 6;
             this.btnEnvoyer.Text = "Envoyer";
             this.btnEnvoyer.UseVisualStyleBackColor = true;
             // 
             // FrmConnexion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 450);
+            this.ClientSize = new System.Drawing.Size(828, 692);
             this.Controls.Add(this.btnEnvoyer);
             this.Controls.Add(this.txtMotdePasse);
             this.Controls.Add(this.lblMotDePasse);
             this.Controls.Add(this.txtIdentifiant);
             this.Controls.Add(this.lblIdentifiant);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmConnexion";
             this.Text = "FrmConnexion";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
