@@ -150,6 +150,9 @@
     <EmbeddedResource Include="FrmAjoutEleve.resx">
       <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAjoutMedicament.resx">
+      <DependentUpon>FrmAjoutMedicament.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </EmbeddedResource>
