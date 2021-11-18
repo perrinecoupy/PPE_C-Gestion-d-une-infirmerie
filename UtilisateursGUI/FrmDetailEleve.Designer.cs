@@ -29,60 +29,40 @@ namespace UtilisateursGUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAjoutEleve = new System.Windows.Forms.Button();
-            this.tableDetailsEleve = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::UtilisateursGUI.Properties.Resources.logoinfirmiere;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnAjoutEleve
             // 
-            this.btnAjoutEleve.Location = new System.Drawing.Point(51, 114);
+            this.btnAjoutEleve.Location = new System.Drawing.Point(76, 175);
+            this.btnAjoutEleve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAjoutEleve.Name = "btnAjoutEleve";
-            this.btnAjoutEleve.Size = new System.Drawing.Size(138, 23);
+            this.btnAjoutEleve.Size = new System.Drawing.Size(207, 35);
             this.btnAjoutEleve.TabIndex = 25;
             this.btnAjoutEleve.Text = "Ajouter un nouveau élève";
             this.btnAjoutEleve.UseVisualStyleBackColor = true;
             // 
-            // tableDetailsEleve
+            // pictureBox1
             // 
-            this.tableDetailsEleve.ColumnCount = 10;
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.73913F));
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.26087F));
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableDetailsEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.tableDetailsEleve.Location = new System.Drawing.Point(51, 169);
-            this.tableDetailsEleve.Name = "tableDetailsEleve";
-            this.tableDetailsEleve.RowCount = 2;
-            this.tableDetailsEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableDetailsEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableDetailsEleve.Size = new System.Drawing.Size(725, 100);
-            this.tableDetailsEleve.TabIndex = 26;
+            this.pictureBox1.Image = global::UtilisateursGUI.Properties.Resources.logoinfirmiere;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 42);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(245, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmDetailEleve
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tableDetailsEleve);
-            this.Controls.Add(this.btnAjoutEleve);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnAjoutEleve);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDetailEleve";
             this.Text = "DetailEleve";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -91,9 +71,7 @@ namespace UtilisateursGUI
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAjoutEleve;
-        private System.Windows.Forms.TableLayoutPanel tableDetailsEleve;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
