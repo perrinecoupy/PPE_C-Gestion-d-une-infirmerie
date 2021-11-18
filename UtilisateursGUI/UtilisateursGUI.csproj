@@ -156,6 +156,9 @@
     <EmbeddedResource Include="FrmDetailEleve.resx">
       <DependentUpon>FrmDetailEleve.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailsVisite.resx">
+      <DependentUpon>FrmDetailsVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UtilisateursBLL;
+using System.Configuration;
 
 namespace UtilisateursGUI
 {
@@ -18,7 +19,7 @@ namespace UtilisateursGUI
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnEnvoyer_Click(object sender, EventArgs e)
         {
 
         }

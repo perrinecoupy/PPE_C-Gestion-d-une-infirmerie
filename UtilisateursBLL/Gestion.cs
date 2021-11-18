@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using UtilisateursDAL;
 using UtilisateursBO;
+using System.Configuration;
 
 namespace UtilisateursBLL
 {
