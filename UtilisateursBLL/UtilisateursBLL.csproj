@@ -39,11 +39,15 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="UtilisateursBO">
+      <HintPath>..\UtilisateursBO\bin\Debug\UtilisateursBO.dll</HintPath>
+    </Reference>
+    <Reference Include="UtilisateursDAL">
+      <HintPath>..\UtilisateursDAL\bin\Debug\UtilisateursDAL.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GestionEleve.cs" />
-    <Compile Include="GestionMedicament.cs" />
-    <Compile Include="GestionVisite.cs" />
+    <Compile Include="Gestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
