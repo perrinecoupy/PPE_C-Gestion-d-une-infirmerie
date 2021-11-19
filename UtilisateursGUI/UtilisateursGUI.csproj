@@ -219,5 +219,15 @@
   <ItemGroup>
     <None Include="Resources\logoinfirmiere.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UtilisateursBO\UtilisateursBO.csproj">
+      <Project>{5472161d-5d82-4042-b907-d4cef074ee09}</Project>
+      <Name>UtilisateursBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UtilisateursDAL\UtilisateursDAL.csproj">
+      <Project>{ccbff6fe-943c-4ee7-b480-8a49e6cb6888}</Project>
+      <Name>UtilisateursDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
