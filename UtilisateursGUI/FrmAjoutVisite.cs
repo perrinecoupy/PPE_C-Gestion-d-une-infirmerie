@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UtilisateursGUI
 {
-    public partial class FrmSaisieVisite : Form
+    public partial class FrmAjoutVisite : Form
     {
-        public FrmSaisieVisite()
+        public FrmAjoutVisite()
         {
             InitializeComponent();
         }
