@@ -175,6 +175,9 @@
     <EmbeddedResource Include="FrmModificationMedicament.resx">
       <DependentUpon>FrmModificationMedicament.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificationVisite.resx">
+      <DependentUpon>FrmModificationVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPageAccueilEleve.resx">
       <DependentUpon>FrmPageAccueilEleve.cs</DependentUpon>
     </EmbeddedResource>
