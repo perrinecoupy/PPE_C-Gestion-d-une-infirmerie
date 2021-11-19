@@ -181,6 +181,9 @@
     <EmbeddedResource Include="FrmSuppressionEleve.resx">
       <DependentUpon>FrmSuppressionEleve.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuppressionMedicament.resx">
+      <DependentUpon>FrmSuppressionMedicament.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
