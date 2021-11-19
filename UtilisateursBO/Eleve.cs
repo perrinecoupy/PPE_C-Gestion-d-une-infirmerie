@@ -21,6 +21,7 @@ namespace UtilisateursBO
         string Commentaire;
         int Classe;
 
+
         public Eleve(int id, string nom, string prenom, int age, char sexe, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe)
         {
             this.Id = id;
@@ -36,6 +37,7 @@ namespace UtilisateursBO
             Commentaire1 = commentaire;
             Classe1 = classe;
         }
+
 
         public int Id { get => id; set => id = value; }
         public string Nom1 { get => Nom; set => Nom = value; }

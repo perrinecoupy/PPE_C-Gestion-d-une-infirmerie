@@ -37,5 +37,11 @@ namespace UtilisateursBLL
         {
             return GestionDAO.EstConnecte(login, mdp);
         }
+
+        // Méthode qui ajoute un adhérent dans la base de données
+        public static void AjoutEleve(Eleve eleve)
+        {
+            GestionDAO.AjoutEleve(eleve);
+        }
     }
 }
