@@ -37,6 +37,9 @@ namespace UtilisateursGUI
             this.btnEnvoyer = new System.Windows.Forms.Button();
             this.checkBoxSourvenirMoi = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.erreurIdentifiant = new System.Windows.Forms.Label();
+            this.erreurMotDePasse = new System.Windows.Forms.Label();
+            this.erreurIdentification = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,12 +115,52 @@ namespace UtilisateursGUI
             this.label1.TabIndex = 24;
             this.label1.Text = "CONNEXION";
             // 
+            // erreurIdentifiant
+            // 
+            this.erreurIdentifiant.AutoSize = true;
+            this.erreurIdentifiant.BackColor = System.Drawing.Color.Transparent;
+            this.erreurIdentifiant.ForeColor = System.Drawing.Color.Red;
+            this.erreurIdentifiant.Location = new System.Drawing.Point(40, 206);
+            this.erreurIdentifiant.Name = "erreurIdentifiant";
+            this.erreurIdentifiant.Size = new System.Drawing.Size(144, 13);
+            this.erreurIdentifiant.TabIndex = 25;
+            this.erreurIdentifiant.Text = "Veuillez saisir votre identifiant";
+            this.erreurIdentifiant.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.erreurIdentifiant.Visible = false;
+            // 
+            // erreurMotDePasse
+            // 
+            this.erreurMotDePasse.AutoSize = true;
+            this.erreurMotDePasse.BackColor = System.Drawing.Color.Transparent;
+            this.erreurMotDePasse.ForeColor = System.Drawing.Color.Red;
+            this.erreurMotDePasse.Location = new System.Drawing.Point(40, 287);
+            this.erreurMotDePasse.Name = "erreurMotDePasse";
+            this.erreurMotDePasse.Size = new System.Drawing.Size(162, 13);
+            this.erreurMotDePasse.TabIndex = 26;
+            this.erreurMotDePasse.Text = "Veuillez saisir votre mot de passe";
+            this.erreurMotDePasse.Visible = false;
+            // 
+            // erreurIdentification
+            // 
+            this.erreurIdentification.AutoSize = true;
+            this.erreurIdentification.BackColor = System.Drawing.Color.Transparent;
+            this.erreurIdentification.ForeColor = System.Drawing.Color.Red;
+            this.erreurIdentification.Location = new System.Drawing.Point(275, 314);
+            this.erreurIdentification.Name = "erreurIdentification";
+            this.erreurIdentification.Size = new System.Drawing.Size(209, 13);
+            this.erreurIdentification.TabIndex = 27;
+            this.erreurIdentification.Text = "Nom d\'utilisateur ou mot de passe incorrect\r\n";
+            this.erreurIdentification.Visible = false;
+            // 
             // FrmConnexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(552, 450);
+            this.Controls.Add(this.erreurIdentification);
+            this.Controls.Add(this.erreurMotDePasse);
+            this.Controls.Add(this.erreurIdentifiant);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBoxSourvenirMoi);
             this.Controls.Add(this.btnEnvoyer);
@@ -144,5 +187,8 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Button btnEnvoyer;
         private System.Windows.Forms.CheckBox checkBoxSourvenirMoi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label erreurIdentifiant;
+        private System.Windows.Forms.Label erreurMotDePasse;
+        private System.Windows.Forms.Label erreurIdentification;
     }
 }
