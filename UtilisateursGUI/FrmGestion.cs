@@ -16,5 +16,10 @@ namespace UtilisateursGUI
         {
             InitializeComponent();
         }
+
+        private void btnGestionEleve_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

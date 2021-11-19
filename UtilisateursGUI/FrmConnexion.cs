@@ -53,32 +53,20 @@ namespace UtilisateursGUI
             {
                 if (vide)
                 {
-                    erreurIdentification.Visible = false;
+                    erreurIdentification.Visible = true;
                 }
                 else
                 {
-                    erreurIdentification.Visible = true;
+                    erreurIdentification.Visible = false;
                 }
             }
 
             else
             {
-                if(vide != true)
-                {
-                    if (Gestion.EstConnecte(txtIdentifiant.Text, txtMotdePasse.Text))
-                    {
-                        ChoixAdmin choixAdmin = new ChoixAdmin();
-                        choixAdmin.Show();
-                    }
+                FrmGestion choixAdmin = new FrmGestion();
+                choixAdmin.Show();
 
-                    else
-                    {
-                        Comptabilite comptabilite = new Comptabilite();
-                        comptabilite.Show();
-                    }
-
-                    this.Hide();
-                }
+                this.Hide();
             }
         }
     }

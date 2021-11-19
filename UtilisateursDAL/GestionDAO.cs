@@ -42,6 +42,7 @@ namespace UtilisateursDAL
                 if (monReader["login_utilisateur"].ToString() == login && monReader["mot_de_passe_utilisateur"].ToString() == mdp)
                 {
                     monReader.Close();
+                    maConnexion.Close();
 
                     return true;
                 }

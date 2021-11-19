@@ -42,6 +42,7 @@ namespace UtilisateursGUI
             this.btnGestionEleve.TabIndex = 0;
             this.btnGestionEleve.Text = "Gestion des élèves";
             this.btnGestionEleve.UseVisualStyleBackColor = true;
+            this.btnGestionEleve.Click += new System.EventHandler(this.btnGestionEleve_Click);
             // 
             // btnGestionVisite
             // 
