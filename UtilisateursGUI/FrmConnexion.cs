@@ -29,7 +29,7 @@ namespace UtilisateursGUI
 
             if (txtIdentifiant.Text == string.Empty)
             {
-                txtIdentifiant.Visible = true;
+                erreurIdentifiant.Visible = true;
                 vide = true;
             }
             else
