@@ -55,5 +55,11 @@ namespace UtilisateursBLL
         {
             return GestionDAO.GetDernierIdEleve();
         }
+
+        // Méthode qui retourne la liste des élèves
+        public static List<Eleve> GetEleves()
+        {
+            return GestionDAO.GetEleves();
+        }
     }
 }

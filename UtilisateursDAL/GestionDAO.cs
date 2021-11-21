@@ -62,7 +62,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO Eleve (nom_eleve, prenom_eleve, date_de_naissance_eleve, sante_eleve, numero_telephone_eleve, numero_telephone_parent_eleve, tiers_temps_eleve, commentaires_sante_libre_eleve, #id_classe_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve)";
+            cmd.CommandText = "INSERT INTO ELEVE (nom_eleve, prenom_eleve, date_de_naissance_eleve, sante_eleve, numero_telephone_eleve, numero_telephone_parent_eleve, tiers_temps_eleve, commentaires_sante_libre_eleve, #id_classe_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve)";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@Nom_eleve", eleve.Nom);
@@ -90,7 +90,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT Id_adherent FROM ELEVE WHERE Id_adherent = (SELECT max(id_eleve) FROM ELEVE)";
+            cmd.CommandText = "SELECT id_eleve FROM ELEVE WHERE id_eleve = (SELECT max(id_eleve) FROM ELEVE)";
 
             // Lecture des données
             SqlDataReader monReader = cmd.ExecuteReader();
@@ -134,6 +134,34 @@ namespace UtilisateursDAL
             maConnexion.Close();
 
             return 0;
+        }
+
+        // Méthode qui retourne la liste des élèves
+        public static List<Eleve> GetEleves()
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM ELEVE";
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            var lesEleves = new List<Eleve>();
+
+            while (monReader.Read())
+            {
+                Eleve eleve = new Eleve(Convert.ToInt32(monReader["id_eleve"]), monReader["nom_eleve"].ToString(), monReader["prenom_eleve"].ToString(), Convert.ToDateTime(monReader["date_de_naissance_eleve"]), monReader["sante_eleve"].ToString(), monReader["numero_telephone_eleve"].ToString(), monReader["numero_telephone_parent_eleve"].ToString(), monReader["tiers_temps_eleve"].ToString(), monReader["commentaires_sante_libre_eleve"].ToString(), (Convert.ToInt32(monReader["id_classe_eleve"])));
+
+                lesEleves.Add(eleve);
+            }
+            monReader.Close();
+            maConnexion.Close();
+
+            return lesEleves;
         }
     }
 }

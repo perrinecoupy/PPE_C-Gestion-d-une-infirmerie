@@ -19,9 +19,24 @@ namespace UtilisateursBO
         string commentaire;
         int classe;
 
+        // constructeur utilisé pour afficher les données des élèves
         public Eleve(int id, string nom, string prenom, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe)
         {
             this.id = id;
+            this.nom = nom;
+            this.prenom = prenom;
+            this.dateNaissance = dateNaissance;
+            this.sante = sante;
+            this.numTelEleve = numTelEleve;
+            this.numTelParent = numTelParent;
+            this.tiersTemps = tiersTemps;
+            this.commentaire = commentaire;
+            this.classe = classe;
+        }
+
+        // constructeur utilisé pour ajouter un élève dans la base de données
+        public Eleve(string nom, string prenom, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe)
+        {
             this.nom = nom;
             this.prenom = prenom;
             this.dateNaissance = dateNaissance;

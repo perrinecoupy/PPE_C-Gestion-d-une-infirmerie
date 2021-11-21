@@ -27,5 +27,10 @@ namespace UtilisateursGUI
             FrmConnexion frmConnexion = new FrmConnexion();
             frmConnexion.ShowDialog();
         }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

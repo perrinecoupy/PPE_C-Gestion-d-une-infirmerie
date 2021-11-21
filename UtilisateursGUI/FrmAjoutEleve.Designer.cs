@@ -29,6 +29,7 @@ namespace UtilisateursGUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNomEleve = new System.Windows.Forms.Label();
             this.txtTelephoneParentEleve = new System.Windows.Forms.TextBox();
             this.lblPrenomEleve = new System.Windows.Forms.Label();
@@ -46,19 +47,24 @@ namespace UtilisateursGUI
             this.txtCommentairesSanteEleve = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.erreurChampsVides = new System.Windows.Forms.Label();
+            this.btnAnnuler = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dtmDateDeNaissanceEleve = new System.Windows.Forms.DateTimePicker();
+            this.dpdClasse = new System.Windows.Forms.ComboBox();
+            this.cLASSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gestion_InfirmerieDataSet = new UtilisateursGUI.Gestion_InfirmerieDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTiersTempsEleve = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dpdClasse = new System.Windows.Forms.ComboBox();
-            this.dtmDateDeNaissanceEleve = new System.Windows.Forms.DateTimePicker();
-            this.erreurChampsVides = new System.Windows.Forms.Label();
             this.lblSuccess = new System.Windows.Forms.Label();
+            this.cLASSETableAdapter = new UtilisateursGUI.Gestion_InfirmerieDataSetTableAdapters.CLASSETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cLASSEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestion_InfirmerieDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -200,30 +206,44 @@ namespace UtilisateursGUI
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel1.Controls.Add(this.erreurChampsVides);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnAnnuler);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(49, 128);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(709, 299);
             this.panel1.TabIndex = 22;
             // 
-            // button2
+            // erreurChampsVides
             // 
-            this.button2.Location = new System.Drawing.Point(457, 252);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 25);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "ANNULER";
-            this.button2.UseVisualStyleBackColor = true;
+            this.erreurChampsVides.AutoSize = true;
+            this.erreurChampsVides.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erreurChampsVides.ForeColor = System.Drawing.Color.Red;
+            this.erreurChampsVides.Location = new System.Drawing.Point(490, 280);
+            this.erreurChampsVides.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.erreurChampsVides.Name = "erreurChampsVides";
+            this.erreurChampsVides.Size = new System.Drawing.Size(219, 19);
+            this.erreurChampsVides.TabIndex = 25;
+            this.erreurChampsVides.Text = "Veuillez remplir tous les champs";
+            this.erreurChampsVides.Visible = false;
+            // 
+            // btnAnnuler
+            // 
+            this.btnAnnuler.Location = new System.Drawing.Point(457, 252);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(80, 25);
+            this.btnAnnuler.TabIndex = 25;
+            this.btnAnnuler.Text = "ANNULER";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(541, 252);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 25);
             this.button1.TabIndex = 24;
@@ -245,10 +265,42 @@ namespace UtilisateursGUI
             this.panel3.Controls.Add(this.lblClasseEleve);
             this.panel3.Controls.Add(this.lblDateDeNaissance);
             this.panel3.Location = new System.Drawing.Point(25, 17);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(330, 267);
             this.panel3.TabIndex = 23;
+            // 
+            // dtmDateDeNaissanceEleve
+            // 
+            this.dtmDateDeNaissanceEleve.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmDateDeNaissanceEleve.Location = new System.Drawing.Point(26, 186);
+            this.dtmDateDeNaissanceEleve.Margin = new System.Windows.Forms.Padding(2);
+            this.dtmDateDeNaissanceEleve.Name = "dtmDateDeNaissanceEleve";
+            this.dtmDateDeNaissanceEleve.Size = new System.Drawing.Size(264, 24);
+            this.dtmDateDeNaissanceEleve.TabIndex = 37;
+            this.dtmDateDeNaissanceEleve.Value = new System.DateTime(2020, 12, 11, 0, 0, 0, 0);
+            // 
+            // dpdClasse
+            // 
+            this.dpdClasse.DataSource = this.cLASSEBindingSource;
+            this.dpdClasse.DisplayMember = "libelle_classe";
+            this.dpdClasse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dpdClasse.FormattingEnabled = true;
+            this.dpdClasse.Location = new System.Drawing.Point(25, 141);
+            this.dpdClasse.Name = "dpdClasse";
+            this.dpdClasse.Size = new System.Drawing.Size(265, 21);
+            this.dpdClasse.TabIndex = 34;
+            this.dpdClasse.ValueMember = "id_classe";
+            // 
+            // cLASSEBindingSource
+            // 
+            this.cLASSEBindingSource.DataMember = "CLASSE";
+            this.cLASSEBindingSource.DataSource = this.gestion_InfirmerieDataSet;
+            // 
+            // gestion_InfirmerieDataSet
+            // 
+            this.gestion_InfirmerieDataSet.DataSetName = "Gestion_InfirmerieDataSet";
+            this.gestion_InfirmerieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel2
             // 
@@ -262,7 +314,7 @@ namespace UtilisateursGUI
             this.panel2.Controls.Add(this.lblTelephoneParentEleve);
             this.panel2.Controls.Add(this.txtTelephoneParentEleve);
             this.panel2.Location = new System.Drawing.Point(378, 17);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 217);
             this.panel2.TabIndex = 22;
@@ -285,40 +337,6 @@ namespace UtilisateursGUI
             this.label1.Text = "AJOUT D\'UN ELEVE";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // dpdClasse
-            // 
-            this.dpdClasse.DisplayMember = "Libelle_classe";
-            this.dpdClasse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dpdClasse.FormattingEnabled = true;
-            this.dpdClasse.Location = new System.Drawing.Point(25, 141);
-            this.dpdClasse.Name = "dpdClasse";
-            this.dpdClasse.Size = new System.Drawing.Size(265, 21);
-            this.dpdClasse.TabIndex = 34;
-            this.dpdClasse.ValueMember = "Id_classe";
-            // 
-            // dtmDateDeNaissanceEleve
-            // 
-            this.dtmDateDeNaissanceEleve.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtmDateDeNaissanceEleve.Location = new System.Drawing.Point(26, 186);
-            this.dtmDateDeNaissanceEleve.Margin = new System.Windows.Forms.Padding(2);
-            this.dtmDateDeNaissanceEleve.Name = "dtmDateDeNaissanceEleve";
-            this.dtmDateDeNaissanceEleve.Size = new System.Drawing.Size(264, 24);
-            this.dtmDateDeNaissanceEleve.TabIndex = 37;
-            this.dtmDateDeNaissanceEleve.Value = new System.DateTime(2020, 12, 11, 0, 0, 0, 0);
-            // 
-            // erreurChampsVides
-            // 
-            this.erreurChampsVides.AutoSize = true;
-            this.erreurChampsVides.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erreurChampsVides.ForeColor = System.Drawing.Color.Red;
-            this.erreurChampsVides.Location = new System.Drawing.Point(490, 280);
-            this.erreurChampsVides.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.erreurChampsVides.Name = "erreurChampsVides";
-            this.erreurChampsVides.Size = new System.Drawing.Size(219, 19);
-            this.erreurChampsVides.TabIndex = 25;
-            this.erreurChampsVides.Text = "Veuillez remplir tous les champs";
-            this.erreurChampsVides.Visible = false;
-            // 
             // lblSuccess
             // 
             this.lblSuccess.AutoSize = true;
@@ -331,6 +349,10 @@ namespace UtilisateursGUI
             this.lblSuccess.Text = "L\'élève a bien été ajouté";
             this.lblSuccess.Visible = false;
             // 
+            // cLASSETableAdapter
+            // 
+            this.cLASSETableAdapter.ClearBeforeFill = true;
+            // 
             // lblAjoutEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,11 +364,14 @@ namespace UtilisateursGUI
             this.Controls.Add(this.pictureBox1);
             this.Name = "lblAjoutEleve";
             this.Text = "AjoutEleve";
+            this.Load += new System.EventHandler(this.lblAjoutEleve_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cLASSEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestion_InfirmerieDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -375,7 +400,7 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtTiersTempsEleve;
         private System.Windows.Forms.Label label1;
@@ -383,5 +408,8 @@ namespace UtilisateursGUI
         private System.Windows.Forms.DateTimePicker dtmDateDeNaissanceEleve;
         private System.Windows.Forms.Label erreurChampsVides;
         private System.Windows.Forms.Label lblSuccess;
+        private Gestion_InfirmerieDataSet gestion_InfirmerieDataSet;
+        private System.Windows.Forms.BindingSource cLASSEBindingSource;
+        private Gestion_InfirmerieDataSetTableAdapters.CLASSETableAdapter cLASSETableAdapter;
     }
 }

@@ -68,5 +68,20 @@ namespace UtilisateursGUI
         {
 
         }
+
+        private void lblAjoutEleve_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'gestion_InfirmerieDataSet.CLASSE'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.cLASSETableAdapter.Fill(this.gestion_InfirmerieDataSet.CLASSE);
+
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
+            frmDetailELeve.ShowDialog();
+
+            this.Close();
+        }
     }
 }
