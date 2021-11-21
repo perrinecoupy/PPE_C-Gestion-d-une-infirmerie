@@ -20,7 +20,7 @@ namespace UtilisateursGUI
         // Ouverture du formulaire AJOUTER UN ELEVE
         private void btnGestionEleve_Click(object sender, EventArgs e)
         {
-            FrmAjoutEleve frmAjoutEleve = new FrmAjoutEleve();
+            lblAjoutEleve frmAjoutEleve = new lblAjoutEleve();
             frmAjoutEleve.ShowDialog();
         }
     }

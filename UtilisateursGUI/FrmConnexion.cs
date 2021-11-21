@@ -69,5 +69,10 @@ namespace UtilisateursGUI
                 this.Hide();
             }
         }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

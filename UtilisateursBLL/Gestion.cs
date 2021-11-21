@@ -38,10 +38,22 @@ namespace UtilisateursBLL
             return GestionDAO.EstConnecte(login, mdp);
         }
 
-        // Méthode qui ajoute un adhérent dans la base de données
+        // Méthode qui ajoute un élève dans la base de données
         public static void AjoutEleve(Eleve eleve)
         {
             GestionDAO.AjoutEleve(eleve);
+        }
+
+        // Méthode qui retourne l'id qui correspond au libelle de la classe de l'élève
+        public static int GetIdClasseEleve(string libelle)
+        {
+            return GestionDAO.GetIdClasseEleve(libelle);
+        }
+
+        // Méthode qui ajoute un adhérent dans la base de données
+        public static int GetDernierIdEleve()
+        {
+            return GestionDAO.GetDernierIdEleve();
         }
     }
 }

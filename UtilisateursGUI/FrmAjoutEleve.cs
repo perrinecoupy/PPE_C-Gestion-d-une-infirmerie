@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UtilisateursBLL;
+using UtilisateursBO;
 
 namespace UtilisateursGUI
 {
-    public partial class FrmAjoutEleve : Form
+    public partial class lblAjoutEleve : Form
     {
-        public FrmAjoutEleve()
+        public lblAjoutEleve()
         {
             InitializeComponent();
         }
@@ -34,7 +36,32 @@ namespace UtilisateursGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            {
+                // vérification que les champs ne sont pas vides
+                if (txtNomEleve.Text == string.Empty || txtPrenomEleve.Text == string.Empty || dpdClasse.Text == string.Empty || dtmDateDeNaissanceEleve.Text == string.Empty || txtSanteEleve.Text == string.Empty || txtTelephoneEleve.Text == string.Empty || txtTelephoneParentEleve.Text == string.Empty || txtTiersTempsEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty)
+                {
+                    erreurChampsVides.Visible = true;
+                }
 
+                // si ils ne sont pas vides
+                else
+                {
+                    erreurChampsVides.Visible = false;
+
+                        // Ajout de l'élève
+                        if (erreurChampsVides.Visible == false)
+                        {
+                            int idClasse = Gestion.GetIdClasseEleve(dpdClasse.Text);
+
+                            Eleve eleve = new Eleve(txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, idClasse);
+
+                            Gestion.AjoutEleve(eleve);
+
+                            lblSuccess.Visible = true;
+
+                        }
+                }
+            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)

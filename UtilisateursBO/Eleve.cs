@@ -9,47 +9,40 @@ namespace UtilisateursBO
     public class Eleve
     {
         int id;
-        string Nom;
-        string Prenom;
-        int Age;
-        char Sexe;
-        DateTime DateNaissance;
-        string Sante;
-        string NumTelEleve;
-        string NumTelParent;
-        string TiersTemps;
-        string Commentaire;
-        int Classe;
+        string nom;
+        string prenom;
+        DateTime dateNaissance;
+        string sante;
+        string numTelEleve;
+        string numTelParent;
+        string tiersTemps;
+        string commentaire;
+        int classe;
 
-
-        public Eleve(int id, string nom, string prenom, int age, char sexe, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe)
+        public Eleve(int id, string nom, string prenom, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe)
         {
-            this.Id = id;
-            Nom1 = nom;
-            Prenom1 = prenom;
-            Age1 = age;
-            Sexe1 = sexe;
-            DateNaissance1 = dateNaissance;
-            Sante1 = sante;
-            NumTelEleve1 = numTelEleve;
-            NumTelParent1 = numTelParent;
-            TiersTemps1 = tiersTemps;
-            Commentaire1 = commentaire;
-            Classe1 = classe;
+            this.id = id;
+            this.nom = nom;
+            this.prenom = prenom;
+            this.dateNaissance = dateNaissance;
+            this.sante = sante;
+            this.numTelEleve = numTelEleve;
+            this.numTelParent = numTelParent;
+            this.tiersTemps = tiersTemps;
+            this.commentaire = commentaire;
+            this.classe = classe;
         }
 
 
         public int Id { get => id; set => id = value; }
-        public string Nom1 { get => Nom; set => Nom = value; }
-        public string Prenom1 { get => Prenom; set => Prenom = value; }
-        public int Age1 { get => Age; set => Age = value; }
-        public char Sexe1 { get => Sexe; set => Sexe = value; }
-        public DateTime DateNaissance1 { get => DateNaissance; set => DateNaissance = value; }
-        public string Sante1 { get => Sante; set => Sante = value; }
-        public string NumTelEleve1 { get => NumTelEleve; set => NumTelEleve = value; }
-        public string NumTelParent1 { get => NumTelParent; set => NumTelParent = value; }
-        public string TiersTemps1 { get => TiersTemps; set => TiersTemps = value; }
-        public string Commentaire1 { get => Commentaire; set => Commentaire = value; }
-        public int Classe1 { get => Classe; set => Classe = value; }
+        public string Nom { get => nom; set => nom = value; }
+        public string Prenom { get => prenom; set => prenom = value; }
+        public DateTime DateNaissance { get => dateNaissance; set => dateNaissance = value; }
+        public string Sante { get => sante; set => sante = value; }
+        public string NumTelEleve { get => numTelEleve; set => numTelEleve = value; }
+        public string NumTelParent { get => numTelParent; set => numTelParent = value; }
+        public string TiersTemps { get => tiersTemps; set => tiersTemps = value; }
+        public string Commentaire { get => commentaire; set => commentaire = value; }
+        public int Classe { get => classe; set => classe = value; }
     }
 }

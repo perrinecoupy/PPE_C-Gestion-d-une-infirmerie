@@ -40,6 +40,7 @@ namespace UtilisateursGUI
             this.erreurIdentifiant = new System.Windows.Forms.Label();
             this.erreurMotDePasse = new System.Windows.Forms.Label();
             this.erreurIdentification = new System.Windows.Forms.Label();
+            this.btnQuitter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,12 +153,23 @@ namespace UtilisateursGUI
             this.erreurIdentification.Text = "Nom d\'utilisateur ou mot de passe incorrect\r\n";
             this.erreurIdentification.Visible = false;
             // 
+            // btnQuitter
+            // 
+            this.btnQuitter.Location = new System.Drawing.Point(200, 394);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(122, 44);
+            this.btnQuitter.TabIndex = 28;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            // 
             // FrmConnexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(552, 450);
+            this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.erreurIdentification);
             this.Controls.Add(this.erreurMotDePasse);
             this.Controls.Add(this.erreurIdentifiant);
@@ -190,5 +202,6 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Label erreurIdentifiant;
         private System.Windows.Forms.Label erreurMotDePasse;
         private System.Windows.Forms.Label erreurIdentification;
+        private System.Windows.Forms.Button btnQuitter;
     }
 }

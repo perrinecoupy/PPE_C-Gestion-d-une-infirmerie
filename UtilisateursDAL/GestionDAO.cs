@@ -62,25 +62,78 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO Eleve (nom_eleve, prenom_eleve, age_eleve, sexe_eleve, date_de_naissance_eleve, sante_eleve, numero_telephone_eleve, numero_telephone_parent_eleve, tiers_temps_eleve, commentaires_sante_libre_eleve, #id_classe_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Age_eleve, @Sexe_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve)";
+            cmd.CommandText = "INSERT INTO Eleve (nom_eleve, prenom_eleve, date_de_naissance_eleve, sante_eleve, numero_telephone_eleve, numero_telephone_parent_eleve, tiers_temps_eleve, commentaires_sante_libre_eleve, #id_classe_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve)";
 
             // Ajout des paramètres
-            cmd.Parameters.AddWithValue("@Nom_eleve", eleve.Nom1);
-            cmd.Parameters.AddWithValue("@Prenom_eleve", eleve.Prenom1);
-            cmd.Parameters.AddWithValue("@Age_eleve", eleve.Age1);
-            cmd.Parameters.AddWithValue("@Sexe_eleve", eleve.Sexe1);
-            cmd.Parameters.AddWithValue("@Date_de_naissance_eleve", eleve.DateNaissance1);
-            cmd.Parameters.AddWithValue("@Sante_eleve", eleve.Sante1);
-            cmd.Parameters.AddWithValue("@Numero_telephone_eleve", eleve.NumTelEleve1);
-            cmd.Parameters.AddWithValue("@Numero_telephine_parent_eleve", eleve.NumTelParent1);
-            cmd.Parameters.AddWithValue("@Tiers_temps_eleve", eleve.TiersTemps1);
-            cmd.Parameters.AddWithValue("@Commentaires_sante_libre_eleve", eleve.Commentaire1);
-            cmd.Parameters.AddWithValue("@Id_classe_eleve", eleve.Classe1);
+            cmd.Parameters.AddWithValue("@Nom_eleve", eleve.Nom);
+            cmd.Parameters.AddWithValue("@Prenom_eleve", eleve.Prenom);
+            cmd.Parameters.AddWithValue("@Date_de_naissance_eleve", eleve.DateNaissance);
+            cmd.Parameters.AddWithValue("@Sante_eleve", eleve.Sante);
+            cmd.Parameters.AddWithValue("@Numero_telephone_eleve", eleve.NumTelEleve);
+            cmd.Parameters.AddWithValue("@Numero_telephine_parent_eleve", eleve.NumTelParent);
+            cmd.Parameters.AddWithValue("@Tiers_temps_eleve", eleve.TiersTemps);
+            cmd.Parameters.AddWithValue("@Commentaires_sante_libre_eleve", eleve.Commentaire);
+            cmd.Parameters.AddWithValue("@Id_classe_eleve", eleve.Classe);
 
             // Execution de la requete
             cmd.ExecuteNonQuery();
 
             maConnexion.Close();
+        }
+
+        // Méthode qui retourne l'id d'un élève
+        public static int GetDernierIdEleve()
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT Id_adherent FROM ELEVE WHERE Id_adherent = (SELECT max(id_eleve) FROM ELEVE)";
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            while (monReader.Read())
+            {
+                return Convert.ToInt32(monReader["id_eleve"]);
+            }
+
+            monReader.Close();
+            maConnexion.Close();
+
+            return 0;
+        }
+
+        // méthode qui retourne l'id qui correspond au libelle de la classe de l'élève
+        public static int GetIdClasseEleve(string libelle)
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT id_classe FROM CLASSE WHERE libelle_classe = @libelle";
+
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@libelle", libelle);
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            var idClasse = new List<int>();
+
+            while (monReader.Read())
+            {
+                return Convert.ToInt32(monReader["id_classe"]);
+            }
+
+            monReader.Close();
+            maConnexion.Close();
+
+            return 0;
         }
     }
 }
