@@ -65,9 +65,8 @@ namespace UtilisateursGUI
             {
                 FrmGestion choixAdmin = new FrmGestion();
                 choixAdmin.Show();
-
-                this.Close();
             }
+            this.Hide();
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)

@@ -81,7 +81,7 @@ namespace UtilisateursGUI
             FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
             frmDetailELeve.ShowDialog();
 
-            this.Close();
+            this.Hide();
         }
     }
 }

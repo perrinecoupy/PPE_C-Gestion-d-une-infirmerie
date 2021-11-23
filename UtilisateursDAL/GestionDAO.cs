@@ -53,7 +53,7 @@ namespace UtilisateursDAL
             return false;
         }
 
-        // Méthode qui ajoute un eleve dans la base de données
+        // Méthode qui ajoute un élève dans la base de données
         public static void AjoutEleve(Eleve eleve)
         {
             // Connexion à la BD
@@ -62,7 +62,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO ELEVE (nom_eleve, prenom_eleve, date_de_naissance_eleve, sante_eleve, numero_telephone_eleve, numero_telephone_parent_eleve, tiers_temps_eleve, commentaires_sante_libre_eleve, #id_classe_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve)";
+            cmd.CommandText = "INSERT INTO ELEVE (Nom_eleve, Prenom_eleve, Date_de_naissance_eleve, Sante_eleve, Numero_telephone_eleve, Numero_telephone_parent_eleve, Tiers_temps_eleve, Commentaires_sante_libre_eleve, #Id_classe_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve)";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@Nom_eleve", eleve.Nom);
@@ -157,11 +157,92 @@ namespace UtilisateursDAL
                 Eleve eleve = new Eleve(Convert.ToInt32(monReader["id_eleve"]), monReader["nom_eleve"].ToString(), monReader["prenom_eleve"].ToString(), Convert.ToDateTime(monReader["date_de_naissance_eleve"]), monReader["sante_eleve"].ToString(), monReader["numero_telephone_eleve"].ToString(), monReader["numero_telephone_parent_eleve"].ToString(), monReader["tiers_temps_eleve"].ToString(), monReader["commentaires_sante_libre_eleve"].ToString(), (Convert.ToInt32(monReader["id_classe_eleve"])));
 
                 lesEleves.Add(eleve);
+
+                monReader.Close();
+                maConnexion.Close();
             }
             monReader.Close();
             maConnexion.Close();
 
             return lesEleves;
+        }
+
+        // Méthode qui retourne un élève
+        public static Eleve GetUnEleve(int id)
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM ADHERENT WHERE Id_adherent = @id";
+
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@id", id);
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            while (monReader.Read())
+            {
+                Eleve eleve = new Eleve(Convert.ToInt32(monReader["id_eleve"]), monReader["nom_eleve"].ToString(), monReader["prenom_eleve"].ToString(), Convert.ToDateTime(monReader["date_de_naissance_eleve"]), monReader["sante_eleve"].ToString(), monReader["numero_telephone_eleve"].ToString(), monReader["numero_telephone_parent_eleve"].ToString(), monReader["tiers_temps_eleve"].ToString(), monReader["commentaires_sante_libre_eleve"].ToString(), (Convert.ToInt32(monReader["id_classe_eleve"])));
+
+                return eleve;
+            }
+
+            monReader.Close();
+            maConnexion.Close();
+
+            return null;
+        }
+
+        // Méthode qui supprime un élève dans la base de données
+        public static void SupprimeEleve(int id)
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM ELEVE WHERE Id_eleve = @id";
+
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@id", id);
+
+            // Execution de la requete
+            cmd.ExecuteNonQuery();
+
+            maConnexion.Close();
+        }
+
+        // Méthode qui modifie un élève dans la base de données
+        public static void ModifEleve(Eleve eleve)
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "UPDATE ELEVE SET Nom_eleve = @nom_eleve,  Prenom_eleve = @Prenom_eleve,  Date_de_naissance_eleve = @Date_de_naissance_eleve, Sante_eleve = @Sante_eleve, Numero_telephone_eleve = @Numero_detelephone_eleve, Numero_telephone_parent_eleve = @Numero_de_telephone_parent_eleve, Tiers_temps_eleve = @Tiers_temps_eleve, Commentaires_sante_libre_eleve = @Commentaires_sante_libre_eleve, #Id_classe_eleve = @Id_classe_id WHERE @Id_eleve = @id)";
+
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@Nom_eleve", eleve.Nom);
+            cmd.Parameters.AddWithValue("@Prenom_eleve", eleve.Prenom);
+            cmd.Parameters.AddWithValue("@Date_de_naissance_eleve", eleve.DateNaissance);
+            cmd.Parameters.AddWithValue("@Sante_eleve", eleve.Sante);
+            cmd.Parameters.AddWithValue("@Numero_telephone_eleve", eleve.NumTelEleve);
+            cmd.Parameters.AddWithValue("@Numero_telephine_parent_eleve", eleve.NumTelParent);
+            cmd.Parameters.AddWithValue("@Tiers_temps_eleve", eleve.TiersTemps);
+            cmd.Parameters.AddWithValue("@Commentaires_sante_libre_eleve", eleve.Commentaire);
+            cmd.Parameters.AddWithValue("@Id_classe_eleve", eleve.Classe);
+
+            // Execution de la requete
+            cmd.ExecuteNonQuery();
+
+            maConnexion.Close();
         }
     }
 }

@@ -85,6 +85,7 @@ namespace UtilisateursGUI
             this.txtMotdePasse.Name = "txtMotdePasse";
             this.txtMotdePasse.Size = new System.Drawing.Size(441, 20);
             this.txtMotdePasse.TabIndex = 5;
+            this.txtMotdePasse.UseSystemPasswordChar = true;
             // 
             // btnEnvoyer
             // 

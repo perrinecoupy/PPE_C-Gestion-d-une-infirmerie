@@ -114,7 +114,30 @@ namespace UtilisateursGUI
             FrmGestion choixAdmin = new FrmGestion();
             choixAdmin.Show();
 
-            this.Close();
+            this.Hide();
+        }
+
+        private void dataGridViewEleve_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                FrmModificationEleve frmModificationEleve = new FrmModificationEleve();
+                frmModificationEleve.ShowDialog();
+
+                this.Close();
+            }
+
+            var senderGrid2 = (DataGridView)sender;
+
+            if (senderGrid2.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                FrmSuppressionEleve frmSuppressionEleve = new FrmSuppressionEleve();
+                frmSuppressionEleve.ShowDialog();
+
+                this.Close();
+            }
         }
     }
 }

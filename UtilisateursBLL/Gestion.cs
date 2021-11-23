@@ -61,5 +61,24 @@ namespace UtilisateursBLL
         {
             return GestionDAO.GetEleves();
         }
+
+        // Méthode qui retourne une liste contenant un élève
+        public static Eleve GetUnEleve(int id)
+        {
+            return GestionDAO.GetUnEleve(id);
+        }
+
+        // méthode qui supprime un adhérent de la base de données
+        public static void SupprimeEleve(int id)
+        {
+            GestionDAO.SupprimeEleve(id);
+        }
+
+        // Méthode qui modifie un adhérent dans la base de données
+        public static void ModifEleve(Eleve eleve)
+        {
+            GestionDAO.ModifEleve(eleve);
+        }
+
     }
 }

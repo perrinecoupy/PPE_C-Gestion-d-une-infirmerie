@@ -26,6 +26,7 @@ namespace UtilisateursGUI
         {
             FrmConnexion frmConnexion = new FrmConnexion();
             frmConnexion.ShowDialog();
+            this.Hide();
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)

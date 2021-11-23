@@ -23,7 +23,7 @@ namespace UtilisateursGUI
             FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
             frmDetailELeve.ShowDialog();
 
-            this.Close();
+            this.Hide();
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
