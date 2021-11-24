@@ -89,7 +89,7 @@ namespace UtilisateursGUI
             // 
             // btnEnvoyer
             // 
-            this.btnEnvoyer.Location = new System.Drawing.Point(200, 339);
+            this.btnEnvoyer.Location = new System.Drawing.Point(90, 333);
             this.btnEnvoyer.Name = "btnEnvoyer";
             this.btnEnvoyer.Size = new System.Drawing.Size(122, 44);
             this.btnEnvoyer.TabIndex = 6;
@@ -156,7 +156,7 @@ namespace UtilisateursGUI
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(200, 394);
+            this.btnQuitter.Location = new System.Drawing.Point(307, 333);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(122, 44);
             this.btnQuitter.TabIndex = 28;
