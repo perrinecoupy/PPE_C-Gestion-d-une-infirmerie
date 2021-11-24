@@ -45,9 +45,9 @@ namespace UtilisateursBLL
         }
 
         // Méthode qui retourne l'id qui correspond au libelle de la classe de l'élève
-        public static int GetIdClasseEleve(string libelle)
+        public static int GetIdClasseEleve(int id)
         {
-            return GestionDAO.GetIdClasseEleve(libelle);
+            return GestionDAO.GetIdClasseEleve(id);
         }
 
         // Méthode qui ajoute un adhérent dans la base de données

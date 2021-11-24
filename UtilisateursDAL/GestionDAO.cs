@@ -107,7 +107,7 @@ namespace UtilisateursDAL
         }
 
         // méthode qui retourne l'id qui correspond au libelle de la classe de l'élève
-        public static int GetIdClasseEleve(string libelle)
+        public static int GetIdClasseEleve(int id)
         {
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
@@ -115,25 +115,24 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT id_classe FROM CLASSE WHERE libelle_classe = @libelle";
+            cmd.CommandText = "SELECT id_classe FROM CLASSE WHERE id_classe = @id";
 
             // Ajout des paramètres
-            cmd.Parameters.AddWithValue("@libelle", libelle);
+            cmd.Parameters.AddWithValue("@libelle", id);
 
             // Lecture des données
             SqlDataReader monReader = cmd.ExecuteReader();
 
-            var idClasse = new List<int>();
 
-            while (monReader.Read())
-            {
-                return Convert.ToInt32(monReader["id_classe"]);
-            }
 
+            monReader.Read();
+            
+            int idClasse = (int)monReader["id_classe"];
+            
             monReader.Close();
             maConnexion.Close();
 
-            return 0;
+            return idClasse;
         }
 
         // Méthode qui retourne la liste des élèves

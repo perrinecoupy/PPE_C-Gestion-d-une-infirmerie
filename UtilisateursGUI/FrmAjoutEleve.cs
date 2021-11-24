@@ -51,7 +51,7 @@ namespace UtilisateursGUI
                         // Ajout de l'élève
                         if (erreurChampsVides.Visible == false)
                         {
-                            int idClasse = Gestion.GetIdClasseEleve(dpdClasse.Text);
+                            int idClasse = Gestion.GetIdClasseEleve(Convert.ToInt32(dpdClasse.Text));
 
                             Eleve eleve = new Eleve(txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, idClasse);
 
