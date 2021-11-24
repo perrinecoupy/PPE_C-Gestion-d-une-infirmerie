@@ -42,7 +42,7 @@ namespace UtilisateursGUI
             this.lblSuppressionEleve.AutoSize = true;
             this.lblSuppressionEleve.Location = new System.Drawing.Point(50, 188);
             this.lblSuppressionEleve.Name = "lblSuppressionEleve";
-            this.lblSuppressionEleve.Size = new System.Drawing.Size(169, 13);
+            this.lblSuppressionEleve.Size = new System.Drawing.Size(267, 20);
             this.lblSuppressionEleve.TabIndex = 24;
             this.lblSuppressionEleve.Text = "Voulez-vous supprimer cet élève ?";
             // 
@@ -50,7 +50,7 @@ namespace UtilisateursGUI
             // 
             this.bnbOuiSuppressionEleve.Location = new System.Drawing.Point(99, 234);
             this.bnbOuiSuppressionEleve.Name = "bnbOuiSuppressionEleve";
-            this.bnbOuiSuppressionEleve.Size = new System.Drawing.Size(89, 22);
+            this.bnbOuiSuppressionEleve.Size = new System.Drawing.Size(87, 32);
             this.bnbOuiSuppressionEleve.TabIndex = 25;
             this.bnbOuiSuppressionEleve.Text = "Oui";
             this.bnbOuiSuppressionEleve.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@ namespace UtilisateursGUI
             // 
             this.button2.Location = new System.Drawing.Point(294, 234);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 22);
+            this.button2.Size = new System.Drawing.Size(94, 32);
             this.button2.TabIndex = 29;
             this.button2.Text = "Non";
             this.button2.UseVisualStyleBackColor = true;
@@ -81,15 +81,15 @@ namespace UtilisateursGUI
             this.label1.Location = new System.Drawing.Point(47, 132);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(377, 31);
+            this.label1.Size = new System.Drawing.Size(566, 47);
             this.label1.TabIndex = 30;
             this.label1.Text = "SUPPRESSION D\'UN ELEVE";
             // 
             // FrmSuppressionEleve
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 321);
+            this.ClientSize = new System.Drawing.Size(746, 388);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
