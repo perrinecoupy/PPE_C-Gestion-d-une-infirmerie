@@ -39,9 +39,10 @@ namespace UtilisateursGUI
             // 
             // btnConnexion
             // 
-            this.btnConnexion.Location = new System.Drawing.Point(176, 260);
+            this.btnConnexion.Location = new System.Drawing.Point(264, 400);
+            this.btnConnexion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConnexion.Name = "btnConnexion";
-            this.btnConnexion.Size = new System.Drawing.Size(176, 50);
+            this.btnConnexion.Size = new System.Drawing.Size(264, 77);
             this.btnConnexion.TabIndex = 2;
             this.btnConnexion.Text = "Connexion";
             this.btnConnexion.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@ namespace UtilisateursGUI
             // pictureBox2
             // 
             this.pictureBox2.Image = global::UtilisateursGUI.Properties.Resources.logoinfirmiere;
-            this.pictureBox2.Location = new System.Drawing.Point(98, 120);
+            this.pictureBox2.Location = new System.Drawing.Point(147, 185);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(340, 90);
+            this.pictureBox2.Size = new System.Drawing.Size(510, 138);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -60,17 +62,19 @@ namespace UtilisateursGUI
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UtilisateursGUI.Properties.Resources.logosaintvincent;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(74, 66);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(176, 72);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(176, 325);
+            this.btnQuitter.Location = new System.Drawing.Point(264, 500);
+            this.btnQuitter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(176, 50);
+            this.btnQuitter.Size = new System.Drawing.Size(264, 77);
             this.btnQuitter.TabIndex = 3;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
@@ -78,14 +82,15 @@ namespace UtilisateursGUI
             // 
             // FrmHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(554, 450);
+            this.ClientSize = new System.Drawing.Size(831, 692);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmHome";
             this.Text = "FrmHome";
             this.Load += new System.EventHandler(this.FrmHome_Load);

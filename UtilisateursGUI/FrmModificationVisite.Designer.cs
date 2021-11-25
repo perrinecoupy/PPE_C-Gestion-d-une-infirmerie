@@ -33,6 +33,7 @@ namespace UtilisateursGUI
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtTiersTempsEleve = new System.Windows.Forms.TextBox();
             this.lblNomEleve = new System.Windows.Forms.Label();
             this.txtTelephoneParentEleve = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@ namespace UtilisateursGUI
             this.txtNomEleve = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -107,6 +107,14 @@ namespace UtilisateursGUI
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(495, 411);
             this.panel3.TabIndex = 23;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(38, 213);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(395, 26);
+            this.textBox2.TabIndex = 21;
             // 
             // txtTiersTempsEleve
             // 
@@ -281,9 +289,10 @@ namespace UtilisateursGUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(446, 123);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(280, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 20);
+            this.label1.Size = new System.Drawing.Size(577, 46);
             this.label1.TabIndex = 29;
             this.label1.Text = "MODIFICATION D\'UNE VISITE";
             // 
@@ -297,14 +306,6 @@ namespace UtilisateursGUI
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(38, 213);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(395, 26);
-            this.textBox2.TabIndex = 21;
             // 
             // FrmModificationVisite
             // 

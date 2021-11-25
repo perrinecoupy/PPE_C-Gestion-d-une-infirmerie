@@ -46,7 +46,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="UtilisateursBLL">
-      <HintPath>..\UtilisateursBLL\bin\Debug\UtilisateursBLL.dll</HintPath>
+      <HintPath>..\UtilisateursBLL\obj\Debug\UtilisateursBLL.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

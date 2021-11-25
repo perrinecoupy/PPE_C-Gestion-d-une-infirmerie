@@ -102,10 +102,11 @@ namespace UtilisateursGUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(281, 150);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(137, 140);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(278, 20);
+            this.label1.Size = new System.Drawing.Size(558, 37);
             this.label1.TabIndex = 27;
             this.label1.Text = "MODIFICATION D\'UN MEDICAMENT";
             // 
