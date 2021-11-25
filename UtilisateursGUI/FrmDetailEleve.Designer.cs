@@ -40,6 +40,8 @@ namespace UtilisateursGUI
             this.gestionInfirmerieDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eLEVETableAdapter = new UtilisateursGUI.Gestion_InfirmerieDataSet1TableAdapters.ELEVETableAdapter();
             this.btnRetour = new System.Windows.Forms.Button();
+            this.btnModifier = new System.Windows.Forms.Button();
+            this.btnSupprimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEleve)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLEVEBindingSource)).BeginInit();
@@ -112,7 +114,7 @@ namespace UtilisateursGUI
             // 
             // btnRetour
             // 
-            this.btnRetour.Location = new System.Drawing.Point(195, 137);
+            this.btnRetour.Location = new System.Drawing.Point(483, 137);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(138, 23);
             this.btnRetour.TabIndex = 29;
@@ -120,11 +122,33 @@ namespace UtilisateursGUI
             this.btnRetour.UseVisualStyleBackColor = true;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
+            // btnModifier
+            // 
+            this.btnModifier.Location = new System.Drawing.Point(195, 137);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(138, 23);
+            this.btnModifier.TabIndex = 30;
+            this.btnModifier.Text = "Modifier un élève";
+            this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+            // 
+            // btnSupprimer
+            // 
+            this.btnSupprimer.Location = new System.Drawing.Point(339, 137);
+            this.btnSupprimer.Name = "btnSupprimer";
+            this.btnSupprimer.Size = new System.Drawing.Size(138, 23);
+            this.btnSupprimer.TabIndex = 31;
+            this.btnSupprimer.Text = "Supprimer un élève";
+            this.btnSupprimer.UseVisualStyleBackColor = true;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
+            // 
             // FrmDetailEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 450);
+            this.Controls.Add(this.btnSupprimer);
+            this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.lblDetailsEleve);
             this.Controls.Add(this.dataGridViewEleve);
@@ -155,5 +179,7 @@ namespace UtilisateursGUI
         private System.Windows.Forms.BindingSource eLEVEBindingSource;
         private Gestion_InfirmerieDataSet1TableAdapters.ELEVETableAdapter eLEVETableAdapter;
         private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.Button btnModifier;
+        private System.Windows.Forms.Button btnSupprimer;
     }
 }

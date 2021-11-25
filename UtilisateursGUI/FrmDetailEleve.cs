@@ -65,16 +65,6 @@ namespace UtilisateursGUI
             colonneClasse.DataPropertyName = "classe";
             colonneClasse.HeaderText = "CLASSE";
 
-            // Création d'une en-tête de colonne pour la colonne 10
-            DataGridViewTextBoxColumn colonneModifier = new DataGridViewTextBoxColumn();
-            colonneModifier.DataPropertyName = "MODIFIER";
-            colonneModifier.HeaderText = "MODIFIER";
-
-            // Création d'une en-tête de colonne pour la colonne 11
-            DataGridViewTextBoxColumn colonneSupprimer = new DataGridViewTextBoxColumn();
-            colonneSupprimer.DataPropertyName = "SUPPRIMER";
-            colonneSupprimer.HeaderText = "SUPPRIMER";
-
             // Ajout des 9 en-têtes de colonne au datagridview
             dataGridViewEleve.Columns.Add(colonneNom);
             dataGridViewEleve.Columns.Add(colonnePrenom);
@@ -84,8 +74,6 @@ namespace UtilisateursGUI
             dataGridViewEleve.Columns.Add(colonneTiersTemps);
             dataGridViewEleve.Columns.Add(colonneCommentaire);
             dataGridViewEleve.Columns.Add(colonneClasse);
-            dataGridViewEleve.Columns.Add(colonneModifier);
-            dataGridViewEleve.Columns.Add(colonneSupprimer);
 
             // Définition du style apporté au datagridview
             dataGridViewEleve.ColumnHeadersVisible = true;
@@ -97,8 +85,6 @@ namespace UtilisateursGUI
             colonneTiersTemps.Width = 140;
             colonneCommentaire.Width = 140;
             colonneClasse.Width = 140;
-            colonneModifier.Width = 140;
-            colonneSupprimer.Width = 140;
 
             var lesEleves = new List<Eleve>();
 
@@ -128,6 +114,22 @@ namespace UtilisateursGUI
             choixAdmin.Show();
 
             this.Hide();
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            FrmModificationEleve FrmModifierEleve;
+            FrmModifierEleve = new FrmModificationEleve();
+            FrmModifierEleve.ShowDialog();
+            FrmModifierEleve.Close();
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+            FrmSuppressionEleve FrmSupprimerEleve;
+            FrmSupprimerEleve = new FrmSuppressionEleve();
+            FrmSupprimerEleve.ShowDialog();
+            FrmSupprimerEleve.Close();
         }
     }
 }
