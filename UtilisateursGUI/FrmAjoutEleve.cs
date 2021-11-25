@@ -17,6 +17,9 @@ namespace UtilisateursGUI
         public lblAjoutEleve()
         {
             InitializeComponent();
+            List<Classe> liste = Gestion.GetLesClasses();
+
+            dpdClasse.DataSource = liste;
         }
 
         private void lblNomEleve_Click(object sender, EventArgs e)
@@ -51,9 +54,9 @@ namespace UtilisateursGUI
                         // Ajout de l'élève
                         if (erreurChampsVides.Visible == false)
                         {
-                            int idClasse = Gestion.GetIdClasseEleve(Convert.ToInt32(dpdClasse.Text));
+                        List<Classe> idClasse = Gestion.GetLesClasses();
 
-                            Eleve eleve = new Eleve(txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, idClasse);
+                            Eleve eleve = new Eleve(txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id);
 
                             Gestion.AjoutEleve(eleve);
 
@@ -82,6 +85,10 @@ namespace UtilisateursGUI
             frmDetailELeve.ShowDialog();
 
             this.Hide();
+        }
+
+        private void dpdClasse_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -139,6 +139,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Gestion_InfirmerieDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Gestion_InfirmerieDataSet1.cs">
+      <DependentUpon>Gestion_InfirmerieDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Gestion_InfirmerieDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

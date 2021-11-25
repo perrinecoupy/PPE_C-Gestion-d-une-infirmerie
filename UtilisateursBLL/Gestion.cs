@@ -50,6 +50,11 @@ namespace UtilisateursBLL
             return GestionDAO.GetIdClasseEleve(id);
         }
 
+        public static List<Classe> GetLesClasses()
+        {
+            return GestionDAO.GetLesClasses();
+        }
+
         // Méthode qui ajoute un adhérent dans la base de données
         public static int GetDernierIdEleve()
         {

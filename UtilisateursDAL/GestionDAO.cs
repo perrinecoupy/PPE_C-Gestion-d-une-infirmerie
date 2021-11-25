@@ -62,7 +62,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO ELEVE (Nom_eleve, Prenom_eleve, Date_de_naissance_eleve, Sante_eleve, Numero_telephone_eleve, Numero_telephone_parent_eleve, Tiers_temps_eleve, Commentaires_sante_libre_eleve, #Id_classe_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve)";
+            cmd.CommandText = "INSERT INTO ELEVE (Nom_eleve, Prenom_eleve, Date_de_naissance_eleve, Sante_eleve, Numero_telephone_eleve, Numero_telephone_parent_eleve, Tiers_temps_eleve, Commentaires_sante_libre_eleve, Id_classe_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve)";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@Nom_eleve", eleve.Nom);
@@ -70,7 +70,7 @@ namespace UtilisateursDAL
             cmd.Parameters.AddWithValue("@Date_de_naissance_eleve", eleve.DateNaissance);
             cmd.Parameters.AddWithValue("@Sante_eleve", eleve.Sante);
             cmd.Parameters.AddWithValue("@Numero_telephone_eleve", eleve.NumTelEleve);
-            cmd.Parameters.AddWithValue("@Numero_telephine_parent_eleve", eleve.NumTelParent);
+            cmd.Parameters.AddWithValue("@Numero_telephone_parent_eleve", eleve.NumTelParent);
             cmd.Parameters.AddWithValue("@Tiers_temps_eleve", eleve.TiersTemps);
             cmd.Parameters.AddWithValue("@Commentaires_sante_libre_eleve", eleve.Commentaire);
             cmd.Parameters.AddWithValue("@Id_classe_eleve", eleve.Classe);
@@ -135,6 +135,38 @@ namespace UtilisateursDAL
             return idClasse;
         }
 
+        public static List<Classe> GetLesClasses()
+        {
+            int id;
+            string libelle;
+            Classe uneClasse;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM CLASSE";
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            List<Classe> lesClasses = new List<Classe>();
+
+            while (monReader.Read())
+            {
+                id = (int)monReader["id_classe"];
+                libelle = monReader["libelle_classe"].ToString();
+                uneClasse = new Classe(id, libelle);
+                lesClasses.Add(uneClasse);
+            }
+
+            monReader.Close();
+            maConnexion.Close();
+
+            return lesClasses;
+        }
+
         // Méthode qui retourne la liste des élèves
         public static List<Eleve> GetEleves()
         {
@@ -156,9 +188,6 @@ namespace UtilisateursDAL
                 Eleve eleve = new Eleve(Convert.ToInt32(monReader["id_eleve"]), monReader["nom_eleve"].ToString(), monReader["prenom_eleve"].ToString(), Convert.ToDateTime(monReader["date_de_naissance_eleve"]), monReader["sante_eleve"].ToString(), monReader["numero_telephone_eleve"].ToString(), monReader["numero_telephone_parent_eleve"].ToString(), monReader["tiers_temps_eleve"].ToString(), monReader["commentaires_sante_libre_eleve"].ToString(), (Convert.ToInt32(monReader["id_classe_eleve"])));
 
                 lesEleves.Add(eleve);
-
-                monReader.Close();
-                maConnexion.Close();
             }
             monReader.Close();
             maConnexion.Close();
@@ -175,7 +204,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT * FROM ADHERENT WHERE Id_adherent = @id";
+            cmd.CommandText = "SELECT * FROM ELEVE WHERE Id_eleve = @id";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@id", id);

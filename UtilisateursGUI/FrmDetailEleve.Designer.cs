@@ -34,17 +34,6 @@ namespace UtilisateursGUI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDetailsEleve = new System.Windows.Forms.Label();
             this.dataGridViewEleve = new System.Windows.Forms.DataGridView();
-            this.nomeleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenomeleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datedenaissanceeleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.santeeleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numerotelephoneeleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numerotelephoneparenteleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tierstempseleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentairessantelibreeleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idclasseeleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnModifier = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnSupprimer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.eLEVEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gestion_InfirmerieDataSet1 = new UtilisateursGUI.Gestion_InfirmerieDataSet1();
             this.gestion_InfirmerieDataSet = new UtilisateursGUI.Gestion_InfirmerieDataSet();
@@ -91,94 +80,11 @@ namespace UtilisateursGUI
             // 
             // dataGridViewEleve
             // 
-            this.dataGridViewEleve.AutoGenerateColumns = false;
             this.dataGridViewEleve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEleve.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomeleveDataGridViewTextBoxColumn,
-            this.prenomeleveDataGridViewTextBoxColumn,
-            this.datedenaissanceeleveDataGridViewTextBoxColumn,
-            this.santeeleveDataGridViewTextBoxColumn,
-            this.numerotelephoneeleveDataGridViewTextBoxColumn,
-            this.numerotelephoneparenteleveDataGridViewTextBoxColumn,
-            this.tierstempseleveDataGridViewTextBoxColumn,
-            this.commentairessantelibreeleveDataGridViewTextBoxColumn,
-            this.idclasseeleveDataGridViewTextBoxColumn,
-            this.btnModifier,
-            this.btnSupprimer});
-            this.dataGridViewEleve.DataSource = this.eLEVEBindingSource;
             this.dataGridViewEleve.Location = new System.Drawing.Point(12, 166);
             this.dataGridViewEleve.Name = "dataGridViewEleve";
             this.dataGridViewEleve.Size = new System.Drawing.Size(1158, 150);
             this.dataGridViewEleve.TabIndex = 27;
-            this.dataGridViewEleve.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEleve_CellContentClick);
-            // 
-            // nomeleveDataGridViewTextBoxColumn
-            // 
-            this.nomeleveDataGridViewTextBoxColumn.DataPropertyName = "nom_eleve";
-            this.nomeleveDataGridViewTextBoxColumn.HeaderText = "NOM";
-            this.nomeleveDataGridViewTextBoxColumn.Name = "nomeleveDataGridViewTextBoxColumn";
-            // 
-            // prenomeleveDataGridViewTextBoxColumn
-            // 
-            this.prenomeleveDataGridViewTextBoxColumn.DataPropertyName = "prenom_eleve";
-            this.prenomeleveDataGridViewTextBoxColumn.HeaderText = "PRENOM";
-            this.prenomeleveDataGridViewTextBoxColumn.Name = "prenomeleveDataGridViewTextBoxColumn";
-            // 
-            // datedenaissanceeleveDataGridViewTextBoxColumn
-            // 
-            this.datedenaissanceeleveDataGridViewTextBoxColumn.DataPropertyName = "date_de_naissance_eleve";
-            this.datedenaissanceeleveDataGridViewTextBoxColumn.HeaderText = "DATE DE NAISSANCE";
-            this.datedenaissanceeleveDataGridViewTextBoxColumn.Name = "datedenaissanceeleveDataGridViewTextBoxColumn";
-            // 
-            // santeeleveDataGridViewTextBoxColumn
-            // 
-            this.santeeleveDataGridViewTextBoxColumn.DataPropertyName = "sante_eleve";
-            this.santeeleveDataGridViewTextBoxColumn.HeaderText = "SANTE";
-            this.santeeleveDataGridViewTextBoxColumn.Name = "santeeleveDataGridViewTextBoxColumn";
-            // 
-            // numerotelephoneeleveDataGridViewTextBoxColumn
-            // 
-            this.numerotelephoneeleveDataGridViewTextBoxColumn.DataPropertyName = "numero_telephone_eleve";
-            this.numerotelephoneeleveDataGridViewTextBoxColumn.HeaderText = "N° TEL ELEVE";
-            this.numerotelephoneeleveDataGridViewTextBoxColumn.Name = "numerotelephoneeleveDataGridViewTextBoxColumn";
-            // 
-            // numerotelephoneparenteleveDataGridViewTextBoxColumn
-            // 
-            this.numerotelephoneparenteleveDataGridViewTextBoxColumn.DataPropertyName = "numero_telephone_parent_eleve";
-            this.numerotelephoneparenteleveDataGridViewTextBoxColumn.HeaderText = "N° TEL PARENT ELEVE";
-            this.numerotelephoneparenteleveDataGridViewTextBoxColumn.Name = "numerotelephoneparenteleveDataGridViewTextBoxColumn";
-            // 
-            // tierstempseleveDataGridViewTextBoxColumn
-            // 
-            this.tierstempseleveDataGridViewTextBoxColumn.DataPropertyName = "tiers_temps_eleve";
-            this.tierstempseleveDataGridViewTextBoxColumn.HeaderText = "TIERS TEMPS";
-            this.tierstempseleveDataGridViewTextBoxColumn.Name = "tierstempseleveDataGridViewTextBoxColumn";
-            // 
-            // commentairessantelibreeleveDataGridViewTextBoxColumn
-            // 
-            this.commentairessantelibreeleveDataGridViewTextBoxColumn.DataPropertyName = "commentaires_sante_libre_eleve";
-            this.commentairessantelibreeleveDataGridViewTextBoxColumn.HeaderText = "COMMENTAIRE SANTE";
-            this.commentairessantelibreeleveDataGridViewTextBoxColumn.Name = "commentairessantelibreeleveDataGridViewTextBoxColumn";
-            // 
-            // idclasseeleveDataGridViewTextBoxColumn
-            // 
-            this.idclasseeleveDataGridViewTextBoxColumn.DataPropertyName = "id_classe_eleve";
-            this.idclasseeleveDataGridViewTextBoxColumn.HeaderText = "CLASSE ELEVE";
-            this.idclasseeleveDataGridViewTextBoxColumn.Name = "idclasseeleveDataGridViewTextBoxColumn";
-            // 
-            // btnModifier
-            // 
-            this.btnModifier.HeaderText = "MODIFIER";
-            this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Text = "MODIFIER";
-            this.btnModifier.UseColumnTextForButtonValue = true;
-            // 
-            // btnSupprimer
-            // 
-            this.btnSupprimer.HeaderText = "SUPPRIMER";
-            this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Text = "SUPPRIMER";
-            this.btnSupprimer.UseColumnTextForButtonValue = true;
             // 
             // eLEVEBindingSource
             // 
@@ -249,16 +155,5 @@ namespace UtilisateursGUI
         private System.Windows.Forms.BindingSource eLEVEBindingSource;
         private Gestion_InfirmerieDataSet1TableAdapters.ELEVETableAdapter eLEVETableAdapter;
         private System.Windows.Forms.Button btnRetour;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeleveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prenomeleveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datedenaissanceeleveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn santeeleveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numerotelephoneeleveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numerotelephoneparenteleveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tierstempseleveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn commentairessantelibreeleveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idclasseeleveDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn btnModifier;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSupprimer;
     }
 }
