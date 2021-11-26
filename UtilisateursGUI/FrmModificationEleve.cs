@@ -55,9 +55,11 @@ namespace UtilisateursGUI
         private void btnModifier_Click(object sender, EventArgs e)
         {
 
-            Eleve eleve = new Eleve(nom, prenom, dateNaissance, sante, numTelEleve, numTelParent, tiersTemps, commentaire, classe);
+            Eleve eleve = new Eleve(this.eleve.Id,txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id);
 
             Gestion.ModifEleve(eleve);
+
+            lblSuccess.Visible = true;
         }
     }
 }
