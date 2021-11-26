@@ -50,6 +50,7 @@ namespace UtilisateursBLL
             return GestionDAO.GetIdClasseEleve(id);
         }
 
+        // Méthode qui retourne les classes
         public static List<Classe> GetLesClasses()
         {
             return GestionDAO.GetLesClasses();

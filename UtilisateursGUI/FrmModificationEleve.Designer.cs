@@ -324,9 +324,9 @@ namespace UtilisateursGUI
             this.lblSuccess.Location = new System.Drawing.Point(596, 98);
             this.lblSuccess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSuccess.Name = "lblSuccess";
-            this.lblSuccess.Size = new System.Drawing.Size(168, 19);
+            this.lblSuccess.Size = new System.Drawing.Size(176, 19);
             this.lblSuccess.TabIndex = 36;
-            this.lblSuccess.Text = "L\'élève a bien été ajouté";
+            this.lblSuccess.Text = "L\'élève a bien été modifié";
             this.lblSuccess.Visible = false;
             // 
             // FrmModificationEleve

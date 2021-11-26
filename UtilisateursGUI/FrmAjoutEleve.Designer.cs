@@ -76,7 +76,6 @@ namespace UtilisateursGUI
             this.lblNomEleve.Size = new System.Drawing.Size(29, 13);
             this.lblNomEleve.TabIndex = 4;
             this.lblNomEleve.Text = "Nom";
-            this.lblNomEleve.Click += new System.EventHandler(this.lblNomEleve_Click);
             // 
             // txtTelephoneParentEleve
             // 
@@ -288,7 +287,6 @@ namespace UtilisateursGUI
             this.dpdClasse.Name = "dpdClasse";
             this.dpdClasse.Size = new System.Drawing.Size(265, 21);
             this.dpdClasse.TabIndex = 34;
-            this.dpdClasse.SelectedIndexChanged += new System.EventHandler(this.dpdClasse_SelectedIndexChanged);
             // 
             // cLASSEBindingSource
             // 
@@ -334,7 +332,6 @@ namespace UtilisateursGUI
             this.label1.Size = new System.Drawing.Size(270, 31);
             this.label1.TabIndex = 23;
             this.label1.Text = "AJOUT D\'UN ELEVE";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblSuccess
             // 
@@ -363,7 +360,6 @@ namespace UtilisateursGUI
             this.Controls.Add(this.pictureBox1);
             this.Name = "lblAjoutEleve";
             this.Text = "AjoutEleve";
-            this.Load += new System.EventHandler(this.lblAjoutEleve_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

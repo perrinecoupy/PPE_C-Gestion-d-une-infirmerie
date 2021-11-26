@@ -14,70 +14,34 @@ namespace UtilisateursGUI
 {
     public partial class FrmModificationEleve : Form
     {
-        public FrmModificationEleve()
+        private Eleve eleve;
+        private string nom;
+        private string prenom;
+        //private DateTime dateNaissance;
+        private DateTime dateNaissance = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+        private string sante;
+        private string numTelEleve;
+        private string numTelParent;
+        private string tiersTemps;
+        private string commentaire;
+        private int classe;
+
+        
+
+        public FrmModificationEleve(Eleve eleve)
         {
             InitializeComponent();
-
-            Eleve eleve = Gestion.GetUnEleve(Convert.ToInt32(idEleve.Text));
-
-            if (txtNomEleve.Text != "")
-            {
-                eleve.Nom = txtNomEleve.Text;
-            }
-
-            if (txtPrenomEleve.Text != "")
-            {
-                eleve.Nom = txtPrenomEleve.Text;
-            }
-
-            if (dpdClasse.Text != "")
-            {
-                eleve.Nom = dpdClasse.Text;
-            }
-
-            if (dtmDateDeNaissanceEleve.Text != "")
-            {
-                eleve.Nom = dtmDateDeNaissanceEleve.Text;
-            }
-
-            if (txtSanteEleve.Text != "")
-            {
-                eleve.Nom = txtSanteEleve.Text;
-            }
-
-            if (txtTelephoneEleve.Text != "")
-            {
-                eleve.Nom = txtTelephoneEleve.Text;
-            }
-
-            if (txtTelephoneParentEleve.Text != "")
-            {
-                eleve.Nom = txtTelephoneParentEleve.Text;
-            }
-
-            if (txtTiersTempsEleve.Text != "")
-            {
-                eleve.Nom = txtTiersTempsEleve.Text;
-            }
-
-            if (txtCommentairesSanteEleve.Text != "")
-            {
-                eleve.Nom = txtCommentairesSanteEleve.Text;
-            }
-
-            Gestion.ModifEleve(eleve);
-
-            string LibelleClasse = Gestion.GetLibelleClasseEleve(eleve.Classe);
-
-            txtNomEleve.Text = eleve.Id.ToString();
-            txtPrenomEleve.Text = eleve.Nom;
-            dpdClasse.Text = eleve.Prenom;
-            dtmDateDeNaissanceEleve.Text = eleve.DateNaissance.ToString();
-            txtSanteEleve.Text = eleve.Sante.ToString();
-            txtTelephoneEleve.Text = eleve.NumTelEleve;
-            txtTelephoneParentEleve.Text = eleve.NumTelParent;
-            txtTiersTempsEleve.Text = eleve.TiersTemps;
-            txtCommentairesSanteEleve.Text = eleve.Commentaire;
+            this.eleve = eleve;
+            txtNomEleve.Text = this.eleve.Nom;
+            txtPrenomEleve.Text = this.eleve.Prenom;
+            dtmDateDeNaissanceEleve.Text = this.eleve.DateNaissance.ToString();
+            txtSanteEleve.Text = this.eleve.Sante;
+            txtTelephoneEleve.Text = this.eleve.NumTelEleve;
+            txtTelephoneParentEleve.Text = this.eleve.NumTelParent;
+            txtTiersTempsEleve.Text = this.eleve.TiersTemps;
+            txtCommentairesSanteEleve.Text = this.eleve.Commentaire;
+            List<Classe> liste = Gestion.GetLesClasses();
+            dpdClasse.DataSource = liste;
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
@@ -90,22 +54,10 @@ namespace UtilisateursGUI
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            Eleve eleve = Gestion.GetUnEleve(Convert.ToInt32(idEleve.Text));
 
-            string LibelleClasse = Gestion.GetLibelleClasseEleve(eleve.Classe);
+            Eleve eleve = new Eleve(nom, prenom, dateNaissance, sante, numTelEleve, numTelParent, tiersTemps, commentaire, classe);
 
-            idEleve.Text = eleve.Id.ToString();
-            txtNomEleve.Text = eleve.Nom;
-            txtPrenomEleve.Text = eleve.Prenom;
-            dpdClasse.Text = eleve.Classe.ToString();
-            dtmDateDeNaissanceEleve.Text = eleve.DateNaissance.ToString();
-            txtSanteEleve.Text = eleve.Sante;
-            txtTelephoneEleve.Text = eleve.NumTelEleve;
-            txtTelephoneParentEleve.Text = eleve.NumTelParent;
-            txtTiersTempsEleve.Text = eleve.TiersTemps;
-            txtCommentairesSanteEleve.Text = eleve.Commentaire;
-
-            lblSuccess.Visible = false;
+            Gestion.ModifEleve(eleve);
         }
     }
 }

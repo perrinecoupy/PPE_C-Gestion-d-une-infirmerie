@@ -42,7 +42,6 @@ namespace UtilisateursGUI
             this.cmbConfirmation.Name = "cmbConfirmation";
             this.cmbConfirmation.Size = new System.Drawing.Size(121, 21);
             this.cmbConfirmation.TabIndex = 0;
-            this.cmbConfirmation.SelectedIndexChanged += new System.EventHandler(this.cmb_SelectedIndexChanged);
             // 
             // lblConfirmation
             // 

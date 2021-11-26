@@ -30,15 +30,10 @@ namespace UtilisateursGUI
             cmbConfirmation.DataSource = liste;
         }
 
-        private void cmb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnValider_Click(object sender, EventArgs e)
         {
             FrmModificationEleve FrmModificationEleve;
-            FrmModificationEleve = new FrmModificationEleve();
+            FrmModificationEleve = new FrmModificationEleve((Eleve)cmbConfirmation.SelectedItem);
             FrmModificationEleve.ShowDialog();
             FrmModificationEleve.Close();
         }

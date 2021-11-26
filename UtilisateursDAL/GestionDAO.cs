@@ -204,7 +204,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT * FROM ELEVE WHERE Id_eleve = @id";
+            cmd.CommandText = "SELECT * FROM ELEVE WHERE id_eleve = @id";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@id", id);
@@ -277,15 +277,16 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE ELEVE SET Nom_eleve = @nom_eleve,  Prenom_eleve = @Prenom_eleve,  Date_de_naissance_eleve = @Date_de_naissance_eleve, Sante_eleve = @Sante_eleve, Numero_telephone_eleve = @Numero_detelephone_eleve, Numero_telephone_parent_eleve = @Numero_de_telephone_parent_eleve, Tiers_temps_eleve = @Tiers_temps_eleve, Commentaires_sante_libre_eleve = @Commentaires_sante_libre_eleve, #Id_classe_eleve = @Id_classe_id WHERE @Id_eleve = @id)";
+            cmd.CommandText = "UPDATE ELEVE SET Nom_eleve = @Nom_eleve,  Prenom_eleve = @Prenom_eleve,  Date_de_naissance_eleve = @Date_de_naissance_eleve, Sante_eleve = @Sante_eleve, Numero_telephone_eleve = @Numero_telephone_eleve, Numero_telephone_parent_eleve = @Numero_telephone_parent_eleve, Tiers_temps_eleve = @Tiers_temps_eleve, Commentaires_sante_libre_eleve = @Commentaires_sante_libre_eleve, Id_classe_eleve = @Id_classe_eleve WHERE Id_eleve = @Id_eleve";
 
             // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@Id_eleve", eleve.Id);
             cmd.Parameters.AddWithValue("@Nom_eleve", eleve.Nom);
             cmd.Parameters.AddWithValue("@Prenom_eleve", eleve.Prenom);
             cmd.Parameters.AddWithValue("@Date_de_naissance_eleve", eleve.DateNaissance);
             cmd.Parameters.AddWithValue("@Sante_eleve", eleve.Sante);
             cmd.Parameters.AddWithValue("@Numero_telephone_eleve", eleve.NumTelEleve);
-            cmd.Parameters.AddWithValue("@Numero_telephine_parent_eleve", eleve.NumTelParent);
+            cmd.Parameters.AddWithValue("@Numero_telephone_parent_eleve", eleve.NumTelParent);
             cmd.Parameters.AddWithValue("@Tiers_temps_eleve", eleve.TiersTemps);
             cmd.Parameters.AddWithValue("@Commentaires_sante_libre_eleve", eleve.Commentaire);
             cmd.Parameters.AddWithValue("@Id_classe_eleve", eleve.Classe);
