@@ -34,6 +34,7 @@ namespace UtilisateursGUI
             this.btnModifier = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.idEleve = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtmDateDeNaissanceEleve = new System.Windows.Forms.DateTimePicker();
             this.dpdClasse = new System.Windows.Forms.ComboBox();
@@ -54,7 +55,7 @@ namespace UtilisateursGUI
             this.lblTelephoneEleve = new System.Windows.Forms.Label();
             this.lblTelephoneParentEleve = new System.Windows.Forms.Label();
             this.txtTelephoneParentEleve = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.Label();
+            this.lblSuccess = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -107,7 +108,7 @@ namespace UtilisateursGUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Controls.Add(this.id);
+            this.panel1.Controls.Add(this.idEleve);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnAnnuler);
@@ -117,6 +118,17 @@ namespace UtilisateursGUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(709, 299);
             this.panel1.TabIndex = 25;
+            // 
+            // idEleve
+            // 
+            this.idEleve.AutoSize = true;
+            this.idEleve.Location = new System.Drawing.Point(-3, 1);
+            this.idEleve.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.idEleve.Name = "idEleve";
+            this.idEleve.Size = new System.Drawing.Size(35, 13);
+            this.idEleve.TabIndex = 77;
+            this.idEleve.Text = "label8";
+            this.idEleve.Visible = false;
             // 
             // panel3
             // 
@@ -305,22 +317,24 @@ namespace UtilisateursGUI
             this.txtTelephoneParentEleve.Size = new System.Drawing.Size(259, 20);
             this.txtTelephoneParentEleve.TabIndex = 5;
             // 
-            // id
+            // lblSuccess
             // 
-            this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(-3, 1);
-            this.id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(35, 13);
-            this.id.TabIndex = 77;
-            this.id.Text = "label8";
-            this.id.Visible = false;
+            this.lblSuccess.AutoSize = true;
+            this.lblSuccess.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuccess.Location = new System.Drawing.Point(596, 98);
+            this.lblSuccess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSuccess.Name = "lblSuccess";
+            this.lblSuccess.Size = new System.Drawing.Size(168, 19);
+            this.lblSuccess.TabIndex = 36;
+            this.lblSuccess.Text = "L\'élève a bien été ajouté";
+            this.lblSuccess.Visible = false;
             // 
             // FrmModificationEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSuccess);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -365,6 +379,7 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Label lblTelephoneEleve;
         private System.Windows.Forms.Label lblTelephoneParentEleve;
         private System.Windows.Forms.TextBox txtTelephoneParentEleve;
-        public System.Windows.Forms.Label id;
+        public System.Windows.Forms.Label idEleve;
+        private System.Windows.Forms.Label lblSuccess;
     }
 }

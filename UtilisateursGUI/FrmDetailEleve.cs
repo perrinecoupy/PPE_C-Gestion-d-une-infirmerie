@@ -118,10 +118,10 @@ namespace UtilisateursGUI
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            FrmModificationEleve FrmModifierEleve;
-            FrmModifierEleve = new FrmModificationEleve();
-            FrmModifierEleve.ShowDialog();
-            FrmModifierEleve.Close();
+            FrmConfirmModification FrmConfirmation;
+            FrmConfirmation = new FrmConfirmModification();
+            FrmConfirmation.ShowDialog();
+            FrmConfirmation.Close();
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)

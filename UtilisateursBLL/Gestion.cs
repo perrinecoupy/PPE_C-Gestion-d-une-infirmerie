@@ -73,10 +73,16 @@ namespace UtilisateursBLL
             return GestionDAO.GetUnEleve(id);
         }
 
-        // méthode qui supprime un adhérent de la base de données
-        public static void SupprimeEleve(int id)
+        // méthode qui retourne le libellé qui correspond à l'id de la classe de l'adhérent
+        public static string GetLibelleClasseAdherent(int id)
         {
-            GestionDAO.SupprimeEleve(id);
+            return GestionDAO.GetLibelleClasseAdherent(id);
+        }
+
+        // méthode qui supprime un adhérent de la base de données
+        public static void SupprimeEleve(Eleve unEleve)
+        {
+            GestionDAO.SupprimeEleve(unEleve);
         }
 
         // Méthode qui modifie un adhérent dans la base de données

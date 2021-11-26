@@ -31,9 +31,10 @@ namespace UtilisateursGUI
         {
             this.lblSuppressionEleve = new System.Windows.Forms.Label();
             this.bnbOuiSuppressionEleve = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnNon = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.combotBoxSupprimer = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,29 +50,19 @@ namespace UtilisateursGUI
             // 
             // bnbOuiSuppressionEleve
             // 
-            this.bnbOuiSuppressionEleve.Location = new System.Drawing.Point(59, 152);
-            this.bnbOuiSuppressionEleve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bnbOuiSuppressionEleve.Location = new System.Drawing.Point(34, 184);
+            this.bnbOuiSuppressionEleve.Margin = new System.Windows.Forms.Padding(2);
             this.bnbOuiSuppressionEleve.Name = "bnbOuiSuppressionEleve";
             this.bnbOuiSuppressionEleve.Size = new System.Drawing.Size(52, 21);
             this.bnbOuiSuppressionEleve.TabIndex = 25;
             this.bnbOuiSuppressionEleve.Text = "Oui";
             this.bnbOuiSuppressionEleve.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::UtilisateursGUI.Properties.Resources.logoinfirmiere;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
+            this.bnbOuiSuppressionEleve.Click += new System.EventHandler(this.bnbOuiSuppressionEleve_Click);
             // 
             // btnNon
             // 
-            this.btnNon.Location = new System.Drawing.Point(176, 152);
-            this.btnNon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNon.Location = new System.Drawing.Point(143, 184);
+            this.btnNon.Margin = new System.Windows.Forms.Padding(2);
             this.btnNon.Name = "btnNon";
             this.btnNon.Size = new System.Drawing.Size(56, 21);
             this.btnNon.TabIndex = 29;
@@ -90,18 +81,38 @@ namespace UtilisateursGUI
             this.label1.TabIndex = 30;
             this.label1.Text = "SUPPRESSION D\'UN ELEVE";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UtilisateursGUI.Properties.Resources.logoinfirmiere;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(98, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // combotBoxSupprimer
+            // 
+            this.combotBoxSupprimer.FormattingEnabled = true;
+            this.combotBoxSupprimer.Location = new System.Drawing.Point(34, 152);
+            this.combotBoxSupprimer.Name = "combotBoxSupprimer";
+            this.combotBoxSupprimer.Size = new System.Drawing.Size(121, 21);
+            this.combotBoxSupprimer.TabIndex = 31;
+            // 
             // FrmSuppressionEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 252);
+            this.Controls.Add(this.combotBoxSupprimer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNon);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bnbOuiSuppressionEleve);
             this.Controls.Add(this.lblSuppressionEleve);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmSuppressionEleve";
             this.Text = "SuppressionEleve";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -116,5 +127,6 @@ namespace UtilisateursGUI
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnNon;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox combotBoxSupprimer;
     }
 }

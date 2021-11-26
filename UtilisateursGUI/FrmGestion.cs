@@ -28,7 +28,10 @@ namespace UtilisateursGUI
 
         private void btnQuitter_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FrmConnexion frmConnexion = new FrmConnexion();
+            frmConnexion.ShowDialog();
+
+            this.Close();
         }
     }
 }

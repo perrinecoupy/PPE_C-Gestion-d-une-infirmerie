@@ -17,24 +17,8 @@ namespace UtilisateursGUI
         public FrmModificationEleve()
         {
             InitializeComponent();
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAnnuler_Click(object sender, EventArgs e)
-        {
-            FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
-            frmDetailELeve.ShowDialog();
-
-            this.Close();
-        }
-
-        private void btnModifier_Click(object sender, EventArgs e)
-        {
-            Eleve eleve = Gestion.GetUnEleve(Convert.ToInt32(id.Text));
+            Eleve eleve = Gestion.GetUnEleve(Convert.ToInt32(idEleve.Text));
 
             if (txtNomEleve.Text != "")
             {
@@ -80,6 +64,53 @@ namespace UtilisateursGUI
             {
                 eleve.Nom = txtCommentairesSanteEleve.Text;
             }
+
+            Gestion.ModifEleve(eleve);
+
+            string LibelleClasse = Gestion.GetLibelleClasseAdherent(eleve.Classe);
+
+            txtNomEleve.Text = eleve.Id.ToString();
+            txtPrenomEleve.Text = eleve.Nom;
+            dpdClasse.Text = eleve.Prenom;
+            dtmDateDeNaissanceEleve.Text = eleve.DateNaissance.ToString();
+            txtSanteEleve.Text = eleve.Sante.ToString();
+            txtTelephoneEleve.Text = eleve.NumTelEleve;
+            txtTelephoneParentEleve.Text = eleve.NumTelParent;
+            txtTiersTempsEleve.Text = eleve.TiersTemps;
+            txtCommentairesSanteEleve.Text = eleve.Commentaire;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
+            frmDetailELeve.ShowDialog();
+
+            this.Close();
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            Eleve eleve = Gestion.GetUnEleve(Convert.ToInt32(idEleve.Text));
+
+            string LibelleClasse = Gestion.GetLibelleClasseAdherent(eleve.Classe);
+
+            idEleve.Text = eleve.Id.ToString();
+            txtNomEleve.Text = eleve.Nom;
+            txtPrenomEleve.Text = eleve.Prenom;
+            dpdClasse.Text = eleve.Classe.ToString();
+            dtmDateDeNaissanceEleve.Text = eleve.DateNaissance.ToString();
+            txtSanteEleve.Text = eleve.Sante;
+            txtTelephoneEleve.Text = eleve.NumTelEleve;
+            txtTelephoneParentEleve.Text = eleve.NumTelParent;
+            txtTiersTempsEleve.Text = eleve.TiersTemps;
+            txtCommentairesSanteEleve.Text = eleve.Commentaire;
+
+            lblSuccess.Visible = false;
         }
     }
 }

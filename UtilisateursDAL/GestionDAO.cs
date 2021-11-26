@@ -225,8 +225,8 @@ namespace UtilisateursDAL
             return null;
         }
 
-        // Méthode qui supprime un élève dans la base de données
-        public static void SupprimeEleve(int id)
+        // méthode qui retourne une liste qui contient le libellé qui correspond à l'id de la classe de l'adhérent
+        public static string GetLibelleClasseAdherent(int id)
         {
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
@@ -234,15 +234,38 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "DELETE FROM ELEVE WHERE Id_eleve = @id";
+            cmd.CommandText = "SELECT libelle_classe FROM CLASSE WHERE id_classe = @id";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@id", id);
 
-            // Execution de la requete
-            cmd.ExecuteNonQuery();
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
 
+            while (monReader.Read())
+            {
+                return monReader["libelle_classe"].ToString();
+            }
+
+            monReader.Close();
             maConnexion.Close();
+
+            return null;
+        }
+
+        // Méthode qui supprime un élève dans la base de données
+        public static int SupprimeEleve(Eleve unEleve)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM ELEVE WHERE id_eleve = " + unEleve.Id;
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
         }
 
         // Méthode qui modifie un élève dans la base de données

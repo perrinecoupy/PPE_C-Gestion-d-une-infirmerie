@@ -19,6 +19,12 @@ namespace UtilisateursBO
         string commentaire;
         int classe;
 
+        // Constructeur utilisé pour sauvegarder l'id de l'élève pour appliquer les modifications et la suppression
+        public Eleve(int id)
+        {
+            this.id = id;
+        }
+
         // constructeur utilisé pour afficher les données des élèves
         public Eleve(int id, string nom, string prenom, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe)
         {

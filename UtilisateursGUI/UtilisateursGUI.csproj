@@ -56,6 +56,12 @@
     <Compile Include="FrmAjoutEleve.Designer.cs">
       <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConfirmModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfirmModification.Designer.cs">
+      <DependentUpon>FrmConfirmModification.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAjoutVisite.resx">
       <DependentUpon>FrmAjoutVisite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfirmModification.resx">
+      <DependentUpon>FrmConfirmModification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
