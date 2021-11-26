@@ -68,6 +68,7 @@ namespace UtilisateursGUI
             }
         }
 
+        // Bouton qui permet de quitter l'application
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             Application.Exit();

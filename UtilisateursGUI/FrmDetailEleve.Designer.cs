@@ -156,7 +156,6 @@ namespace UtilisateursGUI
             this.Controls.Add(this.btnAjoutEleve);
             this.Name = "FrmDetailEleve";
             this.Text = "DetailEleve";
-            this.Load += new System.EventHandler(this.FrmDetailEleve_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEleve)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLEVEBindingSource)).EndInit();

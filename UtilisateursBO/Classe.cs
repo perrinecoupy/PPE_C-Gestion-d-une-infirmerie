@@ -18,11 +18,13 @@ namespace UtilisateursBO
             this.libelle = libelle;
         }
 
+        // Fonction magique qui permet d'afficher le nom des classes
         public override string ToString()
         {
             return libelle;
         }
 
+        // Setters et getters
         public int Id { get => id; set => id = value; }
         public string Libelle { get => libelle; set => libelle = value; }
     }

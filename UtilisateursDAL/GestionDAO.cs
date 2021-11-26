@@ -226,7 +226,7 @@ namespace UtilisateursDAL
         }
 
         // méthode qui retourne une liste qui contient le libellé qui correspond à l'id de la classe de l'adhérent
-        public static string GetLibelleClasseAdherent(int id)
+        public static string GetLibelleClasseEleve(int id)
         {
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();

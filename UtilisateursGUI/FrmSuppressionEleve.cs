@@ -30,11 +30,6 @@ namespace UtilisateursGUI
             combotBoxSupprimer.DataSource = liste;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNon_Click(object sender, EventArgs e)
         {
             FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
@@ -45,13 +40,11 @@ namespace UtilisateursGUI
 
         private void bnbOuiSuppressionEleve_Click(object sender, EventArgs e)
         {
-            Eleve unEleve = new Eleve((int)combotBoxSupprimer.SelectedValue);
+            Eleve unEleve = (Eleve)combotBoxSupprimer.SelectedItem;
 
-            DialogResult dialogResult = MessageBox.Show("L'élève a bien été supprimer de la base de données.", "Enregistrement", MessageBoxButtons.OK);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Gestion.SupprimeEleve(unEleve);
-            }
+            Gestion.SupprimeEleve(unEleve);
+            DialogResult dialogResult = MessageBox.Show("L'élève a bien été supprimé de la base de données.", "Enregistrement", MessageBoxButtons.OK);
+            
         }
     }
 }

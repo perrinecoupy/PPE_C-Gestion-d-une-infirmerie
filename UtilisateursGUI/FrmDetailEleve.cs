@@ -93,13 +93,6 @@ namespace UtilisateursGUI
             dataGridViewEleve.DataSource = lesEleves;
         }
 
-        private void FrmDetailEleve_Load(object sender, EventArgs e)
-        {
-            // TODO: cette ligne de code charge les données dans la table 'gestion_InfirmerieDataSet1.ELEVE'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.eLEVETableAdapter.Fill(this.gestion_InfirmerieDataSet1.ELEVE);
-
-        }
-
         private void btnAjoutEleve_Click(object sender, EventArgs e)
         {
             lblAjoutEleve frmAjoutEleve = new lblAjoutEleve();

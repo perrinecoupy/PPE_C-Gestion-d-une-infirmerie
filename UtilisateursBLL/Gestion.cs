@@ -55,7 +55,7 @@ namespace UtilisateursBLL
             return GestionDAO.GetLesClasses();
         }
 
-        // Méthode qui ajoute un adhérent dans la base de données
+        // Méthode qui ajoute un élève dans la base de données
         public static int GetDernierIdEleve()
         {
             return GestionDAO.GetDernierIdEleve();
@@ -73,10 +73,10 @@ namespace UtilisateursBLL
             return GestionDAO.GetUnEleve(id);
         }
 
-        // méthode qui retourne le libellé qui correspond à l'id de la classe de l'adhérent
-        public static string GetLibelleClasseAdherent(int id)
+        // méthode qui retourne le libellé qui correspond à l'id de la classe de l'élève
+        public static string GetLibelleClasseEleve(int id)
         {
-            return GestionDAO.GetLibelleClasseAdherent(id);
+            return GestionDAO.GetLibelleClasseEleve(id);
         }
 
         // méthode qui supprime un adhérent de la base de données

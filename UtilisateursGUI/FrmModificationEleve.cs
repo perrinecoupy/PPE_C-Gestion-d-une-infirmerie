@@ -67,7 +67,7 @@ namespace UtilisateursGUI
 
             Gestion.ModifEleve(eleve);
 
-            string LibelleClasse = Gestion.GetLibelleClasseAdherent(eleve.Classe);
+            string LibelleClasse = Gestion.GetLibelleClasseEleve(eleve.Classe);
 
             txtNomEleve.Text = eleve.Id.ToString();
             txtPrenomEleve.Text = eleve.Nom;
@@ -78,11 +78,6 @@ namespace UtilisateursGUI
             txtTelephoneParentEleve.Text = eleve.NumTelParent;
             txtTiersTempsEleve.Text = eleve.TiersTemps;
             txtCommentairesSanteEleve.Text = eleve.Commentaire;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
@@ -97,7 +92,7 @@ namespace UtilisateursGUI
         {
             Eleve eleve = Gestion.GetUnEleve(Convert.ToInt32(idEleve.Text));
 
-            string LibelleClasse = Gestion.GetLibelleClasseAdherent(eleve.Classe);
+            string LibelleClasse = Gestion.GetLibelleClasseEleve(eleve.Classe);
 
             idEleve.Text = eleve.Id.ToString();
             txtNomEleve.Text = eleve.Nom;
