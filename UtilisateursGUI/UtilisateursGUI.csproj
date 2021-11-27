@@ -56,11 +56,17 @@
     <Compile Include="FrmAjoutEleve.Designer.cs">
       <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConfirmModification.cs">
+    <Compile Include="FrmConfirmationModificationEleve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConfirmModification.Designer.cs">
-      <DependentUpon>FrmConfirmModification.cs</DependentUpon>
+    <Compile Include="FrmConfirmationModificationEleve.Designer.cs">
+      <DependentUpon>FrmConfirmationModificationEleve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfirmationModificationMedicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfirmationModificationMedicament.Designer.cs">
+      <DependentUpon>FrmConfirmationModificationMedicament.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmConnexion.cs">
       <SubType>Form</SubType>
@@ -176,14 +182,20 @@
     <EmbeddedResource Include="FrmAjoutVisite.resx">
       <DependentUpon>FrmAjoutVisite.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConfirmModification.resx">
-      <DependentUpon>FrmConfirmModification.cs</DependentUpon>
+    <EmbeddedResource Include="FrmConfirmationModificationEleve.resx">
+      <DependentUpon>FrmConfirmationModificationEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfirmationModificationMedicament.resx">
+      <DependentUpon>FrmConfirmationModificationMedicament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDetailEleve.resx">
       <DependentUpon>FrmDetailEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailsMedicament.resx">
+      <DependentUpon>FrmDetailsMedicament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDetailsVisite.resx">
       <DependentUpon>FrmDetailsVisite.cs</DependentUpon>

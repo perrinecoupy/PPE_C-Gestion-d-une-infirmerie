@@ -111,8 +111,8 @@ namespace UtilisateursGUI
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            FrmConfirmModification FrmConfirmation;
-            FrmConfirmation = new FrmConfirmModification();
+            FrmConfirmationModificationEleve FrmConfirmation;
+            FrmConfirmation = new FrmConfirmationModificationEleve();
             FrmConfirmation.ShowDialog();
             FrmConfirmation.Close();
         }

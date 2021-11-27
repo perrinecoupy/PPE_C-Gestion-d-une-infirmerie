@@ -80,16 +80,40 @@ namespace UtilisateursBLL
             return GestionDAO.GetLibelleClasseEleve(id);
         }
 
-        // méthode qui supprime un adhérent de la base de données
+        // méthode qui supprime un élève de la base de données
         public static void SupprimeEleve(Eleve unEleve)
         {
             GestionDAO.SupprimeEleve(unEleve);
         }
 
-        // Méthode qui modifie un adhérent dans la base de données
+        // Méthode qui modifie un élève dans la base de données
         public static void ModifEleve(Eleve eleve)
         {
             GestionDAO.ModifEleve(eleve);
+        }
+
+        // Méthode qui retourne la liste des médicaments
+        public static List<Medicament> GetMedicaments()
+        {
+            return GestionDAO.GetMedicaments();
+        }
+
+        // Méthode qui ajoute un médicament dans la base de données
+        public static void AjoutMedicament(Medicament medicament)
+        {
+            GestionDAO.AjoutMedicament(medicament);
+        }
+
+        // Méthode qui modifie un médicament dans la base de données
+        public static void ModifMedicament(Medicament medicament)
+        {
+            GestionDAO.ModifMedicament(medicament);
+        }
+
+        // méthode qui supprime un médicament de la base de données
+        public static void SupprimeMedicament(Medicament unMedicament)
+        {
+            GestionDAO.SupprimeMedicament(unMedicament);
         }
 
     }

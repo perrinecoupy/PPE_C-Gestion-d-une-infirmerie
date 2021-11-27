@@ -13,9 +13,9 @@ using UtilisateursDAL;
 
 namespace UtilisateursGUI
 {
-    public partial class FrmConfirmModification : Form
+    public partial class FrmConfirmationModificationEleve : Form
     {
-        public FrmConfirmModification()
+        public FrmConfirmationModificationEleve()
         {
             InitializeComponent();
 

@@ -62,6 +62,7 @@ namespace UtilisateursGUI
             this.btnGestionMedicament.TabIndex = 2;
             this.btnGestionMedicament.Text = "Gestion des médicaments";
             this.btnGestionMedicament.UseVisualStyleBackColor = true;
+            this.btnGestionMedicament.Click += new System.EventHandler(this.btnGestionMedicament_Click);
             // 
             // btnQuitter
             // 

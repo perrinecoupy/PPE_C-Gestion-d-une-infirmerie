@@ -296,5 +296,89 @@ namespace UtilisateursDAL
 
             maConnexion.Close();
         }
+
+        // Méthode qui retourne la liste des médicaments
+        public static List<Medicament> GetMedicaments()
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM MEDICAMENT";
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            var lesMedicaments = new List<Medicament>();
+
+            while (monReader.Read())
+            {
+                Medicament medicament = new Medicament(Convert.ToInt32(monReader["id_medicament"]), monReader["nom_medicament"].ToString());
+
+                lesMedicaments.Add(medicament);
+            }
+            monReader.Close();
+            maConnexion.Close();
+
+            return lesMedicaments;
+        }
+
+        // Méthode qui ajoute un élève dans la base de données
+        public static void AjoutMedicament(Medicament medicament)
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "INSERT INTO  MEDICAMENT (Nom_medicament) VALUES (@Nom_medicament)";
+
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@Nom_medicament", medicament.Nom);
+
+            // Execution de la requete
+            cmd.ExecuteNonQuery();
+
+            maConnexion.Close();
+        }
+
+        // Méthode qui modifie un médicament dans la base de données
+        public static void ModifMedicament(Medicament medicament)
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "UPDATE MEDICAMENT SET Nom_medicament = @Nom_medicament WHERE Id_medicament = @Id_medicament";
+
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@Id_medicament", medicament.Id);
+            cmd.Parameters.AddWithValue("@Nom_medicament", medicament.Nom);
+
+            // Execution de la requete
+            cmd.ExecuteNonQuery();
+
+            maConnexion.Close();
+        }
+
+        // Méthode qui supprime un médicament dans la base de données
+        public static int SupprimeMedicament(Medicament unMedicament)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM MEDICAMENT WHERE id_medicament = " + unMedicament.Id;
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
     }
 }
