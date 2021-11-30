@@ -25,8 +25,8 @@ namespace UtilisateursGUI
         private void button1_Click(object sender, EventArgs e)
         {
             FrmConnexion frmConnexion = new FrmConnexion();
-            frmConnexion.ShowDialog();
             this.Hide();
+            frmConnexion.ShowDialog();
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)

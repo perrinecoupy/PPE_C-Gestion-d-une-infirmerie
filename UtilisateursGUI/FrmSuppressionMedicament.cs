@@ -32,9 +32,8 @@ namespace UtilisateursGUI
         private void bnbNonSuppressionMedicament_Click(object sender, EventArgs e)
         {
             FrmDetailsMedicament frmDetailsMedicament = new FrmDetailsMedicament();
-            frmDetailsMedicament.ShowDialog();
-
             this.Hide();
+            frmDetailsMedicament.ShowDialog();
         }
 
         private void bnbOuiSuppressionMedicament_Click(object sender, EventArgs e)

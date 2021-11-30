@@ -33,16 +33,15 @@ namespace UtilisateursGUI
         {
             FrmModificationMedicament FrmModificationMedicament;
             FrmModificationMedicament = new FrmModificationMedicament((Medicament)cmbConfirmation.SelectedItem);
-            FrmModificationMedicament.ShowDialog();
             FrmModificationMedicament.Close();
+            FrmModificationMedicament.ShowDialog();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
         {
             FrmDetailsMedicament frmDetailsMedicament = new FrmDetailsMedicament();
-            frmDetailsMedicament.ShowDialog();
-
             this.Close();
+            frmDetailsMedicament.ShowDialog();
         }
     }
 }

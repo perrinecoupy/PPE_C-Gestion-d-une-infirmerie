@@ -35,9 +35,8 @@ namespace UtilisateursGUI
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
-            frmDetailELeve.ShowDialog();
-
             this.Close();
+            frmDetailELeve.ShowDialog();
         }
     }
 }

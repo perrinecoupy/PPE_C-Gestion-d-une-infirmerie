@@ -21,25 +21,22 @@ namespace UtilisateursGUI
         private void btnGestionEleve_Click(object sender, EventArgs e)
         {
             FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
-            frmDetailELeve.ShowDialog();
-
             this.Hide();
+            frmDetailELeve.ShowDialog();
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             FrmConnexion frmConnexion = new FrmConnexion();
-            frmConnexion.ShowDialog();
-
             this.Close();
+            frmConnexion.ShowDialog();
         }
 
         private void btnGestionMedicament_Click(object sender, EventArgs e)
         {
             FrmDetailsMedicament frmDetailMedicament = new FrmDetailsMedicament();
-            frmDetailMedicament.ShowDialog();
-
             this.Hide();
+            frmDetailMedicament.ShowDialog();
         }
     }
 }

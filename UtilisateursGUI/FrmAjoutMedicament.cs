@@ -44,5 +44,12 @@ namespace UtilisateursGUI
                 }
             }
         }
+
+        private void btnAnnulerMedicament_Click(object sender, EventArgs e)
+        {
+            FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
+            this.Hide();
+            frmDetailELeve.ShowDialog();
+        }
     }
 }

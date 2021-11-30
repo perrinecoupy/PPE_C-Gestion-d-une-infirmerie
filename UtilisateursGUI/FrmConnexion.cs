@@ -64,6 +64,7 @@ namespace UtilisateursGUI
             else
             {
                 FrmGestion choixAdmin = new FrmGestion();
+                this.Hide();
                 choixAdmin.Show();
             }
         }

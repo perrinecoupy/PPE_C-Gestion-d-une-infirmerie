@@ -73,7 +73,7 @@ namespace UtilisateursGUI
             this.panel1.Controls.Add(this.btnAjoutMedicament);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(39, 157);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 176);
             this.panel1.TabIndex = 25;
@@ -81,17 +81,18 @@ namespace UtilisateursGUI
             // btnAnnulerMedicament
             // 
             this.btnAnnulerMedicament.Location = new System.Drawing.Point(126, 137);
-            this.btnAnnulerMedicament.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAnnulerMedicament.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnnulerMedicament.Name = "btnAnnulerMedicament";
             this.btnAnnulerMedicament.Size = new System.Drawing.Size(80, 25);
             this.btnAnnulerMedicament.TabIndex = 25;
             this.btnAnnulerMedicament.Text = "ANNULER";
             this.btnAnnulerMedicament.UseVisualStyleBackColor = true;
+            this.btnAnnulerMedicament.Click += new System.EventHandler(this.btnAnnulerMedicament_Click);
             // 
             // btnAjoutMedicament
             // 
             this.btnAjoutMedicament.Location = new System.Drawing.Point(211, 137);
-            this.btnAjoutMedicament.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAjoutMedicament.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjoutMedicament.Name = "btnAjoutMedicament";
             this.btnAjoutMedicament.Size = new System.Drawing.Size(179, 25);
             this.btnAjoutMedicament.TabIndex = 24;
@@ -105,7 +106,7 @@ namespace UtilisateursGUI
             this.panel3.Controls.Add(this.lblNomEleve);
             this.panel3.Controls.Add(this.txtNomMedicament);
             this.panel3.Location = new System.Drawing.Point(25, 17);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(365, 106);
             this.panel3.TabIndex = 23;
@@ -161,7 +162,7 @@ namespace UtilisateursGUI
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmAjoutMedicament";
             this.Text = "FrmAjoutMedicament";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -43,33 +43,31 @@ namespace UtilisateursGUI
         private void btnAjoutMedicament_Click(object sender, EventArgs e)
         {
             FrmAjoutMedicament frmAjoutMedicament = new FrmAjoutMedicament();
-            frmAjoutMedicament.ShowDialog();
-
             this.Hide();
+            frmAjoutMedicament.ShowDialog();
         }
 
         private void btnModifierMedicament_Click(object sender, EventArgs e)
         {
             FrmConfirmationModificationMedicament FrmConfirmation;
             FrmConfirmation = new FrmConfirmationModificationMedicament();
-            FrmConfirmation.ShowDialog();
             FrmConfirmation.Close();
+            FrmConfirmation.ShowDialog();
         }
 
         private void btnSupprimerMedicament_Click(object sender, EventArgs e)
         {
             FrmSuppressionMedicament FrmSupprimerMedicament;
             FrmSupprimerMedicament = new FrmSuppressionMedicament();
-            FrmSupprimerMedicament.ShowDialog();
             FrmSupprimerMedicament.Close();
+            FrmSupprimerMedicament.ShowDialog();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
         {
             FrmGestion choixAdmin = new FrmGestion();
-            choixAdmin.Show();
-
             this.Hide();
+            choixAdmin.Show();
         }
     }
 }

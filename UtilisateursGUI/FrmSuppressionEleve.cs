@@ -33,9 +33,8 @@ namespace UtilisateursGUI
         private void btnNon_Click(object sender, EventArgs e)
         {
             FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
-            frmDetailELeve.ShowDialog();
-
             this.Hide();
+            frmDetailELeve.ShowDialog();
         }
 
         private void bnbOuiSuppressionEleve_Click(object sender, EventArgs e)

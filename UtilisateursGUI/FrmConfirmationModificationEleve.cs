@@ -34,16 +34,15 @@ namespace UtilisateursGUI
         {
             FrmModificationEleve FrmModificationEleve;
             FrmModificationEleve = new FrmModificationEleve((Eleve)cmbConfirmation.SelectedItem);
-            FrmModificationEleve.ShowDialog();
             FrmModificationEleve.Close();
+            FrmModificationEleve.ShowDialog();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
         {
             FrmDetailEleve frmDetailELeve = new FrmDetailEleve();
-            frmDetailELeve.ShowDialog();
-
             this.Close();
+            frmDetailELeve.ShowDialog();
         }
     }
 }

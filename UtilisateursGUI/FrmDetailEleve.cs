@@ -96,33 +96,31 @@ namespace UtilisateursGUI
         private void btnAjoutEleve_Click(object sender, EventArgs e)
         {
             lblAjoutEleve frmAjoutEleve = new lblAjoutEleve();
-            frmAjoutEleve.ShowDialog();
-
             this.Hide();
+            frmAjoutEleve.ShowDialog();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
         {
             FrmGestion choixAdmin = new FrmGestion();
-            choixAdmin.Show();
-
             this.Hide();
+            choixAdmin.ShowDialog();
         }
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
             FrmConfirmationModificationEleve FrmConfirmation;
             FrmConfirmation = new FrmConfirmationModificationEleve();
+            FrmConfirmation.Hide();
             FrmConfirmation.ShowDialog();
-            FrmConfirmation.Close();
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
             FrmSuppressionEleve FrmSupprimerEleve;
             FrmSupprimerEleve = new FrmSuppressionEleve();
+            FrmSupprimerEleve.Hide();
             FrmSupprimerEleve.ShowDialog();
-            FrmSupprimerEleve.Close();
         }
     }
 }
