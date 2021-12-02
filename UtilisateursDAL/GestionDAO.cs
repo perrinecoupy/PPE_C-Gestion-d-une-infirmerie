@@ -262,6 +262,9 @@ namespace UtilisateursDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "DELETE FROM ELEVE WHERE id_eleve = " + unEleve.Id;
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@Id_eleve", unEleve.Id);
+            // Execution de la requete
             nbEnr = cmd.ExecuteNonQuery();
             // Fermeture de la connexion
             maConnexion.Close();
@@ -375,6 +378,9 @@ namespace UtilisateursDAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
             cmd.CommandText = "DELETE FROM MEDICAMENT WHERE id_medicament = " + unMedicament.Id;
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@Id_medicament", unMedicament.Id);
+            // Execution de la requete
             nbEnr = cmd.ExecuteNonQuery();
             // Fermeture de la connexion
             maConnexion.Close();
