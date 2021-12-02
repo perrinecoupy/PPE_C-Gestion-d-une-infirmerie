@@ -51,16 +51,16 @@ namespace UtilisateursGUI
         {
             FrmConfirmationModificationMedicament FrmConfirmation;
             FrmConfirmation = new FrmConfirmationModificationMedicament();
-            FrmConfirmation.Close();
             FrmConfirmation.ShowDialog();
+            FrmConfirmation.Close();
         }
 
         private void btnSupprimerMedicament_Click(object sender, EventArgs e)
         {
             FrmSuppressionMedicament FrmSupprimerMedicament;
             FrmSupprimerMedicament = new FrmSuppressionMedicament();
-            FrmSupprimerMedicament.Close();
             FrmSupprimerMedicament.ShowDialog();
+            FrmSupprimerMedicament.Close();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
