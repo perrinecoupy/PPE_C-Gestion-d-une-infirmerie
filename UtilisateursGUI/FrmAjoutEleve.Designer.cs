@@ -53,19 +53,16 @@ namespace UtilisateursGUI
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtmDateDeNaissanceEleve = new System.Windows.Forms.DateTimePicker();
             this.dpdClasse = new System.Windows.Forms.ComboBox();
-            this.cLASSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gestion_InfirmerieDataSet = new UtilisateursGUI.Gestion_InfirmerieDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTiersTempsEleve = new System.Windows.Forms.TextBox();
+            this.cLASSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.lblSuccess = new System.Windows.Forms.Label();
-            this.cLASSETableAdapter = new UtilisateursGUI.Gestion_InfirmerieDataSetTableAdapters.CLASSETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cLASSEBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestion_InfirmerieDataSet)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cLASSEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomEleve
@@ -210,7 +207,7 @@ namespace UtilisateursGUI
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(49, 128);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(709, 299);
             this.panel1.TabIndex = 22;
@@ -231,7 +228,7 @@ namespace UtilisateursGUI
             // btnAnnuler
             // 
             this.btnAnnuler.Location = new System.Drawing.Point(457, 252);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(80, 25);
             this.btnAnnuler.TabIndex = 25;
@@ -242,7 +239,7 @@ namespace UtilisateursGUI
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(541, 252);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 25);
             this.button1.TabIndex = 24;
@@ -264,7 +261,7 @@ namespace UtilisateursGUI
             this.panel3.Controls.Add(this.lblClasseEleve);
             this.panel3.Controls.Add(this.lblDateDeNaissance);
             this.panel3.Location = new System.Drawing.Point(25, 17);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(330, 267);
             this.panel3.TabIndex = 23;
@@ -273,7 +270,7 @@ namespace UtilisateursGUI
             // 
             this.dtmDateDeNaissanceEleve.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmDateDeNaissanceEleve.Location = new System.Drawing.Point(26, 186);
-            this.dtmDateDeNaissanceEleve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtmDateDeNaissanceEleve.Margin = new System.Windows.Forms.Padding(2);
             this.dtmDateDeNaissanceEleve.Name = "dtmDateDeNaissanceEleve";
             this.dtmDateDeNaissanceEleve.Size = new System.Drawing.Size(264, 24);
             this.dtmDateDeNaissanceEleve.TabIndex = 37;
@@ -288,16 +285,6 @@ namespace UtilisateursGUI
             this.dpdClasse.Size = new System.Drawing.Size(265, 21);
             this.dpdClasse.TabIndex = 34;
             // 
-            // cLASSEBindingSource
-            // 
-            this.cLASSEBindingSource.DataMember = "CLASSE";
-            this.cLASSEBindingSource.DataSource = this.gestion_InfirmerieDataSet;
-            // 
-            // gestion_InfirmerieDataSet
-            // 
-            this.gestion_InfirmerieDataSet.DataSetName = "Gestion_InfirmerieDataSet";
-            this.gestion_InfirmerieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
@@ -310,7 +297,7 @@ namespace UtilisateursGUI
             this.panel2.Controls.Add(this.lblTelephoneParentEleve);
             this.panel2.Controls.Add(this.txtTelephoneParentEleve);
             this.panel2.Location = new System.Drawing.Point(378, 17);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 217);
             this.panel2.TabIndex = 22;
@@ -321,6 +308,10 @@ namespace UtilisateursGUI
             this.txtTiersTempsEleve.Name = "txtTiersTempsEleve";
             this.txtTiersTempsEleve.Size = new System.Drawing.Size(259, 20);
             this.txtTiersTempsEleve.TabIndex = 22;
+            // 
+            // cLASSEBindingSource
+            // 
+            this.cLASSEBindingSource.DataMember = "CLASSE";
             // 
             // label1
             // 
@@ -345,10 +336,6 @@ namespace UtilisateursGUI
             this.lblSuccess.Text = "L\'élève a bien été ajouté";
             this.lblSuccess.Visible = false;
             // 
-            // cLASSETableAdapter
-            // 
-            this.cLASSETableAdapter.ClearBeforeFill = true;
-            // 
             // lblAjoutEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,10 +352,9 @@ namespace UtilisateursGUI
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cLASSEBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestion_InfirmerieDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cLASSEBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,8 +389,6 @@ namespace UtilisateursGUI
         private System.Windows.Forms.DateTimePicker dtmDateDeNaissanceEleve;
         private System.Windows.Forms.Label erreurChampsVides;
         private System.Windows.Forms.Label lblSuccess;
-        private Gestion_InfirmerieDataSet gestion_InfirmerieDataSet;
         private System.Windows.Forms.BindingSource cLASSEBindingSource;
-        private Gestion_InfirmerieDataSetTableAdapters.CLASSETableAdapter cLASSETableAdapter;
     }
 }

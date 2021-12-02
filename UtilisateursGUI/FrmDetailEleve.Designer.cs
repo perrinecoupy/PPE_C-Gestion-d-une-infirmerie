@@ -35,18 +35,13 @@ namespace UtilisateursGUI
             this.lblDetailsEleve = new System.Windows.Forms.Label();
             this.dataGridViewEleve = new System.Windows.Forms.DataGridView();
             this.eLEVEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gestion_InfirmerieDataSet1 = new UtilisateursGUI.Gestion_InfirmerieDataSet1();
-            this.gestion_InfirmerieDataSet = new UtilisateursGUI.Gestion_InfirmerieDataSet();
             this.gestionInfirmerieDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eLEVETableAdapter = new UtilisateursGUI.Gestion_InfirmerieDataSet1TableAdapters.ELEVETableAdapter();
             this.btnRetour = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEleve)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLEVEBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestion_InfirmerieDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestion_InfirmerieDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionInfirmerieDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,26 +86,19 @@ namespace UtilisateursGUI
             // eLEVEBindingSource
             // 
             this.eLEVEBindingSource.DataMember = "ELEVE";
-            this.eLEVEBindingSource.DataSource = this.gestion_InfirmerieDataSet1;
             // 
             // gestion_InfirmerieDataSet1
             // 
-            this.gestion_InfirmerieDataSet1.DataSetName = "Gestion_InfirmerieDataSet1";
-            this.gestion_InfirmerieDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gestion_InfirmerieDataSet
             // 
-            this.gestion_InfirmerieDataSet.DataSetName = "Gestion_InfirmerieDataSet";
-            this.gestion_InfirmerieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gestionInfirmerieDataSetBindingSource
             // 
-            this.gestionInfirmerieDataSetBindingSource.DataSource = this.gestion_InfirmerieDataSet;
             this.gestionInfirmerieDataSetBindingSource.Position = 0;
             // 
             // eLEVETableAdapter
             // 
-            this.eLEVETableAdapter.ClearBeforeFill = true;
             // 
             // btnRetour
             // 
@@ -159,8 +147,6 @@ namespace UtilisateursGUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEleve)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLEVEBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestion_InfirmerieDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gestion_InfirmerieDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionInfirmerieDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,11 +158,8 @@ namespace UtilisateursGUI
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblDetailsEleve;
         private System.Windows.Forms.DataGridView dataGridViewEleve;
-        private Gestion_InfirmerieDataSet gestion_InfirmerieDataSet;
         private System.Windows.Forms.BindingSource gestionInfirmerieDataSetBindingSource;
-        private Gestion_InfirmerieDataSet1 gestion_InfirmerieDataSet1;
         private System.Windows.Forms.BindingSource eLEVEBindingSource;
-        private Gestion_InfirmerieDataSet1TableAdapters.ELEVETableAdapter eLEVETableAdapter;
         private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Button btnSupprimer;

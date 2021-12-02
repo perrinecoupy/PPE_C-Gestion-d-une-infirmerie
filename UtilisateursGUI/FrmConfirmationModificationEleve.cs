@@ -34,8 +34,8 @@ namespace UtilisateursGUI
         {
             FrmModificationEleve FrmModificationEleve;
             FrmModificationEleve = new FrmModificationEleve((Eleve)cmbConfirmation.SelectedItem);
-            FrmModificationEleve.Close();
             FrmModificationEleve.ShowDialog();
+            FrmModificationEleve.Close();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
