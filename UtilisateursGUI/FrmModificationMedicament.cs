@@ -25,11 +25,21 @@ namespace UtilisateursGUI
 
         private void btnModifierMedicament_Click(object sender, EventArgs e)
         {
-            Medicament medicament = new Medicament(this.medicament.Id, txtNomMedicament.Text);
+            // vérification que les champs ne sont pas vides
+            if (txtNomMedicament.Text == string.Empty)
+            {
+                erreurChampsVides.Visible = true;
+            }
+            else
+            {
+                erreurChampsVides.Visible = false;
 
-            Gestion.ModifMedicament(medicament);
+                Medicament medicament = new Medicament(this.medicament.Id, txtNomMedicament.Text);
 
-            lblSuccess.Visible = true;
+                Gestion.ModifMedicament(medicament);
+
+                lblSuccess.Visible = true;
+            }
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)

@@ -38,6 +38,7 @@ namespace UtilisateursGUI
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSuccess = new System.Windows.Forms.Label();
+            this.erreurChampsVides = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -138,11 +139,25 @@ namespace UtilisateursGUI
             this.lblSuccess.Text = "Le médicament a bien été modifié";
             this.lblSuccess.Visible = false;
             // 
+            // erreurChampsVides
+            // 
+            this.erreurChampsVides.AutoSize = true;
+            this.erreurChampsVides.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erreurChampsVides.ForeColor = System.Drawing.Color.Red;
+            this.erreurChampsVides.Location = new System.Drawing.Point(55, 305);
+            this.erreurChampsVides.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.erreurChampsVides.Name = "erreurChampsVides";
+            this.erreurChampsVides.Size = new System.Drawing.Size(219, 19);
+            this.erreurChampsVides.TabIndex = 38;
+            this.erreurChampsVides.Text = "Veuillez remplir tous les champs";
+            this.erreurChampsVides.Visible = false;
+            // 
             // FrmModificationMedicament
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 348);
+            this.Controls.Add(this.erreurChampsVides);
             this.Controls.Add(this.lblSuccess);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -170,5 +185,6 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblSuccess;
+        private System.Windows.Forms.Label erreurChampsVides;
     }
 }

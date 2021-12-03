@@ -34,7 +34,6 @@ namespace UtilisateursGUI
             this.btnModifier = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.idEleve = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtmDateDeNaissanceEleve = new System.Windows.Forms.DateTimePicker();
             this.dpdClasse = new System.Windows.Forms.ComboBox();
@@ -56,6 +55,7 @@ namespace UtilisateursGUI
             this.lblTelephoneParentEleve = new System.Windows.Forms.Label();
             this.txtTelephoneParentEleve = new System.Windows.Forms.TextBox();
             this.lblSuccess = new System.Windows.Forms.Label();
+            this.erreurChampsVides = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -108,7 +108,7 @@ namespace UtilisateursGUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Controls.Add(this.idEleve);
+            this.panel1.Controls.Add(this.erreurChampsVides);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnAnnuler);
@@ -118,17 +118,6 @@ namespace UtilisateursGUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(709, 299);
             this.panel1.TabIndex = 25;
-            // 
-            // idEleve
-            // 
-            this.idEleve.AutoSize = true;
-            this.idEleve.Location = new System.Drawing.Point(-3, 1);
-            this.idEleve.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.idEleve.Name = "idEleve";
-            this.idEleve.Size = new System.Drawing.Size(35, 13);
-            this.idEleve.TabIndex = 77;
-            this.idEleve.Text = "label8";
-            this.idEleve.Visible = false;
             // 
             // panel3
             // 
@@ -329,6 +318,19 @@ namespace UtilisateursGUI
             this.lblSuccess.Text = "L\'élève a bien été modifié";
             this.lblSuccess.Visible = false;
             // 
+            // erreurChampsVides
+            // 
+            this.erreurChampsVides.AutoSize = true;
+            this.erreurChampsVides.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erreurChampsVides.ForeColor = System.Drawing.Color.Red;
+            this.erreurChampsVides.Location = new System.Drawing.Point(490, 279);
+            this.erreurChampsVides.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.erreurChampsVides.Name = "erreurChampsVides";
+            this.erreurChampsVides.Size = new System.Drawing.Size(219, 19);
+            this.erreurChampsVides.TabIndex = 37;
+            this.erreurChampsVides.Text = "Veuillez remplir tous les champs";
+            this.erreurChampsVides.Visible = false;
+            // 
             // FrmModificationEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,7 +381,7 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Label lblTelephoneEleve;
         private System.Windows.Forms.Label lblTelephoneParentEleve;
         private System.Windows.Forms.TextBox txtTelephoneParentEleve;
-        public System.Windows.Forms.Label idEleve;
         private System.Windows.Forms.Label lblSuccess;
+        private System.Windows.Forms.Label erreurChampsVides;
     }
 }

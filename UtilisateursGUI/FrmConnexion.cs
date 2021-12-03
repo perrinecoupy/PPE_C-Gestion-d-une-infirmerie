@@ -49,23 +49,17 @@ namespace UtilisateursGUI
 
             // vérification des informations de connexion
 
-            if (!Gestion.EstConnecte(txtIdentifiant.Text, txtMotdePasse.Text))
-            {
-                if (vide)
-                {
-                    erreurIdentification.Visible = true;
-                }
-                else
-                {
-                    erreurIdentification.Visible = false;
-                }
-            }
-
-            else
+            if (Gestion.EstConnecte(txtIdentifiant.Text, txtMotdePasse.Text))
             {
                 FrmGestion choixAdmin = new FrmGestion();
                 this.Hide();
                 choixAdmin.Show();
+            }
+
+            else
+            {
+                //message d'erreur si le nom d'utilisateur ou le mot de passe n'est pas bon
+                MessageBox.Show("Identifiant ou mot de passe incorrects");
             }
         }
 

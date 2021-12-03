@@ -53,12 +53,20 @@ namespace UtilisateursGUI
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
+            if (txtNomEleve.Text == string.Empty || txtPrenomEleve.Text == string.Empty || dpdClasse.Text == string.Empty || dtmDateDeNaissanceEleve.Text == string.Empty || txtSanteEleve.Text == string.Empty || txtTelephoneEleve.Text == string.Empty || txtTelephoneParentEleve.Text == string.Empty || txtTiersTempsEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty)
+            {
+                erreurChampsVides.Visible = true;
+            }
+            else
+            {
+                erreurChampsVides.Visible = false;
 
-            Eleve eleve = new Eleve(this.eleve.Id,txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id);
+                Eleve eleve = new Eleve(this.eleve.Id, txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id);
 
-            Gestion.ModifEleve(eleve);
+                Gestion.ModifEleve(eleve);
 
-            lblSuccess.Visible = true;
+                lblSuccess.Visible = true;
+            }
         }
     }
 }
