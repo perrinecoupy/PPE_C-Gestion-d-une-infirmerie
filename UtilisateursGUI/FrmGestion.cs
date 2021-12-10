@@ -38,5 +38,12 @@ namespace UtilisateursGUI
             this.Hide();
             frmDetailMedicament.ShowDialog();
         }
+
+        private void btnGestionVisite_Click(object sender, EventArgs e)
+        {
+            FrmDetailsVisite frmDetailVisite = new FrmDetailsVisite();
+            this.Hide();
+            frmDetailVisite.ShowDialog();
+        }
     }
 }

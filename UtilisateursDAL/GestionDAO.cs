@@ -386,5 +386,33 @@ namespace UtilisateursDAL
             maConnexion.Close();
             return nbEnr;
         }
+
+        // Méthode qui retourne la liste des visites
+        public static List<Visite> GetVisites()
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM VISITE";
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            var lesVisites = new List<Visite>();
+
+            while (monReader.Read())
+            {
+                Visite visite = new Visite(Convert.ToInt32(monReader["id_visite"]), Convert.ToDateTime(monReader["date_visite"]), Convert.ToDateTime(monReader["heure_arrive_visite"]), Convert.ToDateTime(monReader["heure_depart_visite"]), monReader["motif_visite"].ToString(), monReader["commentaires_visite"].ToString(), (Convert.ToChar(monReader["statut_visite"]), (Convert.ToChar(monReader["prevention_parents_visite"]), (Convert.ToInt32(monReader["id_eleve_visite"])))));
+
+                lesVisites.Add(visite);
+            }
+            monReader.Close();
+            maConnexion.Close();
+
+            return lesVisites;
+        }
     }
 }

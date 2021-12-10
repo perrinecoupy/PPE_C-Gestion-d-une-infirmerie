@@ -53,6 +53,7 @@ namespace UtilisateursGUI
             this.btnGestionVisite.TabIndex = 1;
             this.btnGestionVisite.Text = "Gestion des visites";
             this.btnGestionVisite.UseVisualStyleBackColor = true;
+            this.btnGestionVisite.Click += new System.EventHandler(this.btnGestionVisite_Click);
             // 
             // btnGestionMedicament
             // 

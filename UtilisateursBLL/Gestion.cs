@@ -116,5 +116,10 @@ namespace UtilisateursBLL
             GestionDAO.SupprimeMedicament(unMedicament);
         }
 
+        // Méthode qui retourne la liste des élèves
+        public static List<Eleve> GetVisites()
+        {
+            return GestionDAO.GetVisites();
+        }
     }
 }
