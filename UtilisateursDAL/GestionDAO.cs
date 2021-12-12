@@ -195,6 +195,34 @@ namespace UtilisateursDAL
             return lesEleves;
         }
 
+        // Méthode qui retourne la liste des élèves
+        public static List<Eleve> GetUnEleveNomPrenom()
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT id_eleve, nom_eleve, prenom_eleve FROM ELEVE";
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            var lesEleves = new List<Eleve>();
+
+            while (monReader.Read())
+            {
+                Eleve eleve = new Eleve(Convert.ToInt32(monReader["id_eleve"]), monReader["nom_eleve"].ToString(), monReader["prenom_eleve"].ToString());
+
+                lesEleves.Add(eleve);
+            }
+            monReader.Close();
+            maConnexion.Close();
+
+            return lesEleves;
+        }
+
         // Méthode qui retourne un élève
         public static Eleve GetUnEleve(int id)
         {
@@ -405,7 +433,7 @@ namespace UtilisateursDAL
 
             while (monReader.Read())
             {
-                Visite visite = new Visite(Convert.ToInt32(monReader["id_visite"]), Convert.ToDateTime(monReader["date_visite"]), Convert.ToDateTime(monReader["heure_arrive_visite"]), Convert.ToDateTime(monReader["heure_depart_visite"]), monReader["motif_visite"].ToString(), monReader["commentaires_visite"].ToString(), (Convert.ToChar(monReader["statut_visite"]), (Convert.ToChar(monReader["prevention_parents_visite"]), (Convert.ToInt32(monReader["id_eleve_visite"])))));
+                Visite visite = new Visite(Convert.ToInt32(monReader["id_visite"]), Convert.ToDateTime(monReader["date_visite"]), monReader["heure_arrive_visite"].ToString(), monReader["heure_depart_visite"].ToString(), monReader["motif_visite"].ToString(), monReader["commentaires_visite"].ToString(), monReader["prescription_medicament"].ToString(), monReader["statut_visite"].ToString(), monReader["prevention_parents_visite"].ToString(), (Convert.ToInt32(monReader["id_eleve_visite"])));
 
                 lesVisites.Add(visite);
             }
@@ -413,6 +441,64 @@ namespace UtilisateursDAL
             maConnexion.Close();
 
             return lesVisites;
+        }
+
+        public static List<Eleve> GetLesEleves()
+        {
+            int id;
+            Eleve unEleve;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM ELEVE";
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            List<Eleve> lesEleves = new List<Eleve>();
+
+            while (monReader.Read())
+            {
+                id = (int)monReader["id_eleve"];
+                unEleve = new Eleve(id);
+                lesEleves.Add(unEleve);
+            }
+
+            monReader.Close();
+            maConnexion.Close();
+
+            return lesEleves;
+        }
+
+        // Méthode qui ajoute un élève dans la base de données
+        public static void AjoutVisite(Visite visite)
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "INSERT INTO VISITE (Date_visite, Heure_arrivee_visite, Heure_depart_visite, Motif_visite, Commentaires_visite, Prescription_medicament, Statut_visite, Prevention_parents_visite, Id_eleve_visite) VALUES (@Date_visite, @Heure_arrivee_visite, @Heure_depart_visite, @Motif_visite, @Commentaires_visite, @Prescription_medicament, @Statut_visite, @Prevention_parents_visite, @Id_eleve_visite)";
+
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@Date_visite", visite.Date);
+            cmd.Parameters.AddWithValue("@Heure_arrivee_visite", visite.HeureArrive);
+            cmd.Parameters.AddWithValue("@Heure_depart_visite", visite.HeureDepart);
+            cmd.Parameters.AddWithValue("@Motif_visite", visite.Motif);
+            cmd.Parameters.AddWithValue("@Commentaires_visite", visite.Commentaires);
+            cmd.Parameters.AddWithValue("@Prescription_medicament", visite.Prescription);
+            cmd.Parameters.AddWithValue("@Statut_visite", visite.Statut);
+            cmd.Parameters.AddWithValue("@Prevention_parents_visite", visite.Prevention);
+            cmd.Parameters.AddWithValue("@Id_eleve_visite", visite.Id_eleve);
+
+            // Execution de la requete
+            cmd.ExecuteNonQuery();
+
+            maConnexion.Close();
         }
     }
 }

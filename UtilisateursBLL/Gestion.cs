@@ -74,6 +74,11 @@ namespace UtilisateursBLL
             return GestionDAO.GetUnEleve(id);
         }
 
+        public static List <Eleve> GetUnEleveNomPrenom()
+        {
+            return GestionDAO.GetUnEleveNomPrenom();
+        }
+
         // méthode qui retourne le libellé qui correspond à l'id de la classe de l'élève
         public static string GetLibelleClasseEleve(int id)
         {
@@ -117,9 +122,15 @@ namespace UtilisateursBLL
         }
 
         // Méthode qui retourne la liste des élèves
-        public static List<Eleve> GetVisites()
+        public static List<Visite> GetVisites()
         {
             return GestionDAO.GetVisites();
+        }
+
+        // Méthode qui ajoute une visite dans la base de données
+        public static void AjoutVisite(Visite visite)
+        {
+            GestionDAO.AjoutVisite(visite);
         }
     }
 }

@@ -34,9 +34,9 @@ namespace UtilisateursGUI
             this.btnModifierVisite = new System.Windows.Forms.Button();
             this.btnRetour = new System.Windows.Forms.Button();
             this.btnAjoutVisite = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewVisite = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVisite)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -86,20 +86,20 @@ namespace UtilisateursGUI
             this.btnAjoutVisite.Text = "Ajouter une nouvelle visite";
             this.btnAjoutVisite.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewVisite
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 163);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1159, 150);
-            this.dataGridView1.TabIndex = 36;
+            this.dataGridViewVisite.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVisite.Location = new System.Drawing.Point(12, 163);
+            this.dataGridViewVisite.Name = "dataGridViewVisite";
+            this.dataGridViewVisite.Size = new System.Drawing.Size(1159, 150);
+            this.dataGridViewVisite.TabIndex = 36;
             // 
             // FrmDetailsVisite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewVisite);
             this.Controls.Add(this.btnModifierVisite);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnAjoutVisite);
@@ -108,7 +108,7 @@ namespace UtilisateursGUI
             this.Name = "FrmDetailsVisite";
             this.Text = "DetailsVisite";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVisite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,6 +121,6 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Button btnModifierVisite;
         private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.Button btnAjoutVisite;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewVisite;
     }
 }

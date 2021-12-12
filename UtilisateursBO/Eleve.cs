@@ -25,6 +25,12 @@ namespace UtilisateursBO
             this.id = id;
         }
 
+        // Fonction magique qui permet d'afficher le nom des élèves
+        public override string ToString()
+        {
+            return nom;
+        }
+
         // constructeur utilisé pour afficher les données des élèves
         public Eleve(int id, string nom, string prenom, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe)
         {
@@ -38,6 +44,14 @@ namespace UtilisateursBO
             this.tiersTemps = tiersTemps;
             this.commentaire = commentaire;
             this.classe = classe;
+        }
+
+        // constructeur utilisé pour afficher les données des élèves
+        public Eleve(int id, string nom, string prenom)
+        {
+            this.id = id;
+            this.nom = nom;
+            this.prenom = prenom;
         }
 
         // constructeur utilisé pour ajouter un élève dans la base de données

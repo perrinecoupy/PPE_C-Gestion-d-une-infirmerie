@@ -24,6 +24,12 @@ namespace UtilisateursBO
             this.Nom = nom;
         }
 
+        // Fonction magique qui permet d'afficher le nom des médicaments
+        public override string ToString()
+        {
+            return nom;
+        }
+
         // Setters et getters
         public int Id { get => id; set => id = value; }
         public string Nom { get => nom; set => nom = value; }
