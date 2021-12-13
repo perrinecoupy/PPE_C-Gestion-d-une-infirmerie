@@ -84,6 +84,8 @@ namespace UtilisateursGUI
             var lesVisites = new List<Visite>();
 
             lesVisites = Gestion.GetVisites();
+
+            dataGridViewVisite.DataSource = lesVisites;
         }
 
         private void btnAjoutVisite_Click(object sender, EventArgs e)
