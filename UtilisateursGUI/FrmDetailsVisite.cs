@@ -22,73 +22,89 @@ namespace UtilisateursGUI
             dataGridViewVisite.AutoGenerateColumns = false;
 
             // Création d'une en-tête de colonne pour la colonne 1
-            DataGridViewTextBoxColumn colonneNom = new DataGridViewTextBoxColumn();
-            colonneNom.DataPropertyName = "date";
-            colonneNom.HeaderText = "DATE";
+            DataGridViewTextBoxColumn colonneDate = new DataGridViewTextBoxColumn();
+            colonneDate.DataPropertyName = "date";
+            colonneDate.HeaderText = "DATE";
             // Création d'une en-tête de colonne pour la colonne 2
-            DataGridViewTextBoxColumn colonnePrenom = new DataGridViewTextBoxColumn();
-            colonnePrenom.DataPropertyName = "heureArrive";
-            colonnePrenom.HeaderText = "HEURE D'ARRIVE";
+            DataGridViewTextBoxColumn colonneHeureArrivee = new DataGridViewTextBoxColumn();
+            colonneHeureArrivee.DataPropertyName = "heureArrive";
+            colonneHeureArrivee.HeaderText = "HEURE D'ARRIVE";
 
             // Création d'une en-tête de colonne pour la colonne 3
-            DataGridViewTextBoxColumn colonneDateNaissace = new DataGridViewTextBoxColumn();
-            colonneDateNaissace.DataPropertyName = "heureDepart";
-            colonneDateNaissace.HeaderText = "HEURE DE DEPART";
+            DataGridViewTextBoxColumn colonneHeureDepart = new DataGridViewTextBoxColumn();
+            colonneHeureDepart.DataPropertyName = "heureDepart";
+            colonneHeureDepart.HeaderText = "HEURE DE DEPART";
 
             // Création d'une en-tête de colonne pour la colonne 4
-            DataGridViewTextBoxColumn colonneSante = new DataGridViewTextBoxColumn();
-            colonneSante.DataPropertyName = "motif";
-            colonneSante.HeaderText = "MOTIF";
+            DataGridViewTextBoxColumn colonneMotif = new DataGridViewTextBoxColumn();
+            colonneMotif.DataPropertyName = "motif";
+            colonneMotif.HeaderText = "MOTIF";
 
             // Création d'une en-tête de colonne pour la colonne 5
-            DataGridViewTextBoxColumn colonneNumTelEleve = new DataGridViewTextBoxColumn();
-            colonneNumTelEleve.DataPropertyName = "commentaires";
-            colonneNumTelEleve.HeaderText = "COMMENTAIRES";
+            DataGridViewTextBoxColumn colonneCommentaires = new DataGridViewTextBoxColumn();
+            colonneCommentaires.DataPropertyName = "commentaires";
+            colonneCommentaires.HeaderText = "COMMENTAIRES";
 
             // Création d'une en-tête de colonne pour la colonne 6
-            DataGridViewTextBoxColumn colonneNumTelParentEleve = new DataGridViewTextBoxColumn();
-            colonneNumTelParentEleve.DataPropertyName = "statut";
-            colonneNumTelParentEleve.HeaderText = "STATUT";
+            DataGridViewTextBoxColumn colonneStatut = new DataGridViewTextBoxColumn();
+            colonneStatut.DataPropertyName = "statut";
+            colonneStatut.HeaderText = "STATUT";
 
             // Création d'une en-tête de colonne pour la colonne 7
-            DataGridViewTextBoxColumn colonneTiersTemps = new DataGridViewTextBoxColumn();
-            colonneTiersTemps.DataPropertyName = "prevention";
-            colonneTiersTemps.HeaderText = "PREVENTION";
+            DataGridViewTextBoxColumn colonnePrevention = new DataGridViewTextBoxColumn();
+            colonnePrevention.DataPropertyName = "prevention";
+            colonnePrevention.HeaderText = "PREVENTION";
 
             // Création d'une en-tête de colonne pour la colonne 8
-            DataGridViewTextBoxColumn colonneCommentaire = new DataGridViewTextBoxColumn();
-            colonneCommentaire.DataPropertyName = "id_eleve";
-            colonneCommentaire.HeaderText = "ID ELEVE";
-
-            // Création d'une en-tête de colonne pour la colonne 9
-            DataGridViewTextBoxColumn colonneClasse = new DataGridViewTextBoxColumn();
-            colonneClasse.DataPropertyName = "classe";
-            colonneClasse.HeaderText = "CLASSE";
+            DataGridViewTextBoxColumn colonneIdEleve = new DataGridViewTextBoxColumn();
+            colonneIdEleve.DataPropertyName = "id_eleve";
+            colonneIdEleve.HeaderText = "ID ELEVE";
 
             // Ajout des 9 en-têtes de colonne au datagridview
-            dataGridViewVisite.Columns.Add(colonneNom);
-            dataGridViewVisite.Columns.Add(colonnePrenom);
-            dataGridViewVisite.Columns.Add(colonneDateNaissace);
-            dataGridViewVisite.Columns.Add(colonneNumTelEleve);
-            dataGridViewVisite.Columns.Add(colonneNumTelParentEleve);
-            dataGridViewVisite.Columns.Add(colonneTiersTemps);
-            dataGridViewVisite.Columns.Add(colonneCommentaire);
-            dataGridViewVisite.Columns.Add(colonneClasse);
+            dataGridViewVisite.Columns.Add(colonneDate);
+            dataGridViewVisite.Columns.Add(colonneHeureArrivee);
+            dataGridViewVisite.Columns.Add(colonneHeureDepart);
+            dataGridViewVisite.Columns.Add(colonneMotif);
+            dataGridViewVisite.Columns.Add(colonneCommentaires);
+            dataGridViewVisite.Columns.Add(colonneStatut);
+            dataGridViewVisite.Columns.Add(colonnePrevention);
+            dataGridViewVisite.Columns.Add(colonneIdEleve);
 
             // Définition du style apporté au datagridview
             dataGridViewVisite.ColumnHeadersVisible = true;
-            colonneNom.Width = 140;
-            colonnePrenom.Width = 140;
-            colonneDateNaissace.Width = 140;
-            colonneNumTelEleve.Width = 140;
-            colonneNumTelParentEleve.Width = 140;
-            colonneTiersTemps.Width = 140;
-            colonneCommentaire.Width = 140;
-            colonneClasse.Width = 140;
+            colonneDate.Width = 140;
+            colonneHeureArrivee.Width = 140;
+            colonneHeureDepart.Width = 140;
+            colonneMotif.Width = 140;
+            colonneCommentaires.Width = 140;
+            colonneStatut.Width = 140;
+            colonnePrevention.Width = 140;
+            colonneIdEleve.Width = 140;
 
-            var lesEleves = new List<Visite>();
+            var lesVisites = new List<Visite>();
 
-            lesEleves = Gestion.GetVisites();
+            lesVisites = Gestion.GetVisites();
+        }
+
+        private void btnAjoutVisite_Click(object sender, EventArgs e)
+        {
+            FrmAjoutVisite frmAjoutVisite = new FrmAjoutVisite();
+            this.Hide();
+            frmAjoutVisite.ShowDialog();
+        }
+
+        private void btnModifierVisite_Click(object sender, EventArgs e)
+        {
+            FrmModificationVisite frmModificationVisite = new FrmModificationVisite();
+            this.Hide();
+            frmModificationVisite.ShowDialog();
+        }
+
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            FrmGestion frmGestion = new FrmGestion();
+            this.Close();
+            frmGestion.ShowDialog();
         }
     }
 }

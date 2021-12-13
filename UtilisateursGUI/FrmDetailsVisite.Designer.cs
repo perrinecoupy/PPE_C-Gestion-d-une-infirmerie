@@ -67,6 +67,7 @@ namespace UtilisateursGUI
             this.btnModifierVisite.TabIndex = 34;
             this.btnModifierVisite.Text = "Modifier une visite";
             this.btnModifierVisite.UseVisualStyleBackColor = true;
+            this.btnModifierVisite.Click += new System.EventHandler(this.btnModifierVisite_Click);
             // 
             // btnRetour
             // 
@@ -76,6 +77,7 @@ namespace UtilisateursGUI
             this.btnRetour.TabIndex = 33;
             this.btnRetour.Text = "Retour";
             this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
             // btnAjoutVisite
             // 
@@ -85,6 +87,7 @@ namespace UtilisateursGUI
             this.btnAjoutVisite.TabIndex = 32;
             this.btnAjoutVisite.Text = "Ajouter une nouvelle visite";
             this.btnAjoutVisite.UseVisualStyleBackColor = true;
+            this.btnAjoutVisite.Click += new System.EventHandler(this.btnAjoutVisite_Click);
             // 
             // dataGridViewVisite
             // 

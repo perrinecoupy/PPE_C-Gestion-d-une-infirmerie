@@ -433,7 +433,7 @@ namespace UtilisateursDAL
 
             while (monReader.Read())
             {
-                Visite visite = new Visite(Convert.ToInt32(monReader["id_visite"]), Convert.ToDateTime(monReader["date_visite"]), monReader["heure_arrive_visite"].ToString(), monReader["heure_depart_visite"].ToString(), monReader["motif_visite"].ToString(), monReader["commentaires_visite"].ToString(), monReader["prescription_medicament"].ToString(), monReader["statut_visite"].ToString(), monReader["prevention_parents_visite"].ToString(), (Convert.ToInt32(monReader["id_eleve_visite"])));
+                Visite visite = new Visite(Convert.ToInt32(monReader["id_visite"]), Convert.ToDateTime(monReader["date_visite"]), monReader["heure_arrivee_visite"].ToString(), monReader["heure_depart_visite"].ToString(), monReader["motif_visite"].ToString(), monReader["commentaires_visite"].ToString(), monReader["prescription_medicament"].ToString(), monReader["statut_visite"].ToString(), monReader["prevention_parents_visite"].ToString(), (Convert.ToInt32(monReader["id_eleve_visite"])));
 
                 lesVisites.Add(visite);
             }

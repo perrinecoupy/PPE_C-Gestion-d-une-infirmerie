@@ -41,7 +41,7 @@ namespace UtilisateursGUI
 
         private void btnGestionVisite_Click(object sender, EventArgs e)
         {
-            FrmAjoutVisite frmDetailVisite = new FrmAjoutVisite();
+            FrmDetailsVisite frmDetailVisite = new FrmDetailsVisite();
             this.Hide();
             frmDetailVisite.ShowDialog();
         }
