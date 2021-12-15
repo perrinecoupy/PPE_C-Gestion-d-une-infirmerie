@@ -19,6 +19,18 @@ namespace UtilisateursBO
         string prevention;
         int id_eleve;
 
+        public Visite(int id, DateTime date, string heureArrive, string heureDepart, string motif, string commentaires, string prescription, string statut, string prevention)
+        {
+            this.Id = id;
+            this.Date = date;
+            this.HeureArrive = heureArrive;
+            this.HeureDepart = heureDepart;
+            this.Motif = motif;
+            this.Commentaires = commentaires;
+            this.Prescription = prescription;
+            this.Statut = statut;
+            this.Prevention = prevention;
+        }
         public Visite(int id, DateTime date, string heureArrive, string heureDepart, string motif, string commentaires, string prescription, string statut, string prevention, int id_eleve)
         {
             this.Id = id;

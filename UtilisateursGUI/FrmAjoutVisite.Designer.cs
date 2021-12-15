@@ -42,20 +42,20 @@ namespace UtilisateursGUI
             this.tiersTempsEleve = new System.Windows.Forms.Label();
             this.lblClasseEleve = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.listBoxMedicamentVisite = new System.Windows.Forms.ListBox();
+            this.listBoxStatutVisite = new System.Windows.Forms.ListBox();
+            this.listBoxPreventionParentsVisite = new System.Windows.Forms.ListBox();
             this.lblDateDeNaissance = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnAjoutVisite = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimeDateVisite = new System.Windows.Forms.DateTimePicker();
-            this.listBoxPreventionParentsVisite = new System.Windows.Forms.ListBox();
-            this.listBoxStatutVisite = new System.Windows.Forms.ListBox();
-            this.lblNomPrenomEleveVisite = new System.Windows.Forms.Label();
             this.listBoxNomPrenomEleveVisite = new System.Windows.Forms.ListBox();
-            this.listBoxMedicamentVisite = new System.Windows.Forms.ListBox();
-            this.lblSuccess = new System.Windows.Forms.Label();
+            this.lblNomPrenomEleveVisite = new System.Windows.Forms.Label();
+            this.dateTimeDateVisite = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.erreurChampsVides = new System.Windows.Forms.Label();
+            this.lblSuccess = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -173,10 +173,41 @@ namespace UtilisateursGUI
             this.panel2.Controls.Add(this.tiersTempsEleve);
             this.panel2.Controls.Add(this.lblTelephoneEleve);
             this.panel2.Location = new System.Drawing.Point(378, 17);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 217);
             this.panel2.TabIndex = 22;
+            // 
+            // listBoxMedicamentVisite
+            // 
+            this.listBoxMedicamentVisite.FormattingEnabled = true;
+            this.listBoxMedicamentVisite.Location = new System.Drawing.Point(19, 33);
+            this.listBoxMedicamentVisite.Name = "listBoxMedicamentVisite";
+            this.listBoxMedicamentVisite.Size = new System.Drawing.Size(256, 17);
+            this.listBoxMedicamentVisite.TabIndex = 27;
+            // 
+            // listBoxStatutVisite
+            // 
+            this.listBoxStatutVisite.FormattingEnabled = true;
+            this.listBoxStatutVisite.Items.AddRange(new object[] {
+            "Maison",
+            "Hôpital",
+            "Classe"});
+            this.listBoxStatutVisite.Location = new System.Drawing.Point(19, 85);
+            this.listBoxStatutVisite.Name = "listBoxStatutVisite";
+            this.listBoxStatutVisite.Size = new System.Drawing.Size(256, 43);
+            this.listBoxStatutVisite.TabIndex = 26;
+            // 
+            // listBoxPreventionParentsVisite
+            // 
+            this.listBoxPreventionParentsVisite.FormattingEnabled = true;
+            this.listBoxPreventionParentsVisite.Items.AddRange(new object[] {
+            "Oui",
+            "Non"});
+            this.listBoxPreventionParentsVisite.Location = new System.Drawing.Point(19, 159);
+            this.listBoxPreventionParentsVisite.Name = "listBoxPreventionParentsVisite";
+            this.listBoxPreventionParentsVisite.Size = new System.Drawing.Size(257, 30);
+            this.listBoxPreventionParentsVisite.TabIndex = 23;
             // 
             // lblDateDeNaissance
             // 
@@ -201,7 +232,7 @@ namespace UtilisateursGUI
             // btnAnnuler
             // 
             this.btnAnnuler.Location = new System.Drawing.Point(457, 252);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(80, 25);
             this.btnAnnuler.TabIndex = 25;
@@ -212,7 +243,7 @@ namespace UtilisateursGUI
             // btnAjoutVisite
             // 
             this.btnAjoutVisite.Location = new System.Drawing.Point(541, 252);
-            this.btnAjoutVisite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAjoutVisite.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjoutVisite.Name = "btnAjoutVisite";
             this.btnAjoutVisite.Size = new System.Drawing.Size(139, 25);
             this.btnAjoutVisite.TabIndex = 24;
@@ -236,54 +267,18 @@ namespace UtilisateursGUI
             this.panel3.Controls.Add(this.lblClasseEleve);
             this.panel3.Controls.Add(this.lblDateDeNaissance);
             this.panel3.Location = new System.Drawing.Point(25, 17);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(330, 292);
             this.panel3.TabIndex = 23;
             // 
-            // panel1
+            // listBoxNomPrenomEleveVisite
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Controls.Add(this.erreurChampsVides);
-            this.panel1.Controls.Add(this.btnAnnuler);
-            this.panel1.Controls.Add(this.btnAjoutVisite);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(45, 131);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(709, 321);
-            this.panel1.TabIndex = 31;
-            // 
-            // dateTimeDateVisite
-            // 
-            this.dateTimeDateVisite.Location = new System.Drawing.Point(25, 69);
-            this.dateTimeDateVisite.Name = "dateTimeDateVisite";
-            this.dateTimeDateVisite.Size = new System.Drawing.Size(265, 20);
-            this.dateTimeDateVisite.TabIndex = 33;
-            // 
-            // listBoxPreventionParentsVisite
-            // 
-            this.listBoxPreventionParentsVisite.FormattingEnabled = true;
-            this.listBoxPreventionParentsVisite.Items.AddRange(new object[] {
-            "Oui",
-            "Non"});
-            this.listBoxPreventionParentsVisite.Location = new System.Drawing.Point(19, 159);
-            this.listBoxPreventionParentsVisite.Name = "listBoxPreventionParentsVisite";
-            this.listBoxPreventionParentsVisite.Size = new System.Drawing.Size(257, 30);
-            this.listBoxPreventionParentsVisite.TabIndex = 23;
-            // 
-            // listBoxStatutVisite
-            // 
-            this.listBoxStatutVisite.FormattingEnabled = true;
-            this.listBoxStatutVisite.Items.AddRange(new object[] {
-            "Maison",
-            "Hôpital",
-            "Classe"});
-            this.listBoxStatutVisite.Location = new System.Drawing.Point(19, 85);
-            this.listBoxStatutVisite.Name = "listBoxStatutVisite";
-            this.listBoxStatutVisite.Size = new System.Drawing.Size(256, 43);
-            this.listBoxStatutVisite.TabIndex = 26;
+            this.listBoxNomPrenomEleveVisite.FormattingEnabled = true;
+            this.listBoxNomPrenomEleveVisite.Location = new System.Drawing.Point(26, 33);
+            this.listBoxNomPrenomEleveVisite.Name = "listBoxNomPrenomEleveVisite";
+            this.listBoxNomPrenomEleveVisite.Size = new System.Drawing.Size(264, 17);
+            this.listBoxNomPrenomEleveVisite.TabIndex = 35;
             // 
             // lblNomPrenomEleveVisite
             // 
@@ -294,33 +289,26 @@ namespace UtilisateursGUI
             this.lblNomPrenomEleveVisite.TabIndex = 34;
             this.lblNomPrenomEleveVisite.Text = "Nom de l\'élève";
             // 
-            // listBoxNomPrenomEleveVisite
+            // dateTimeDateVisite
             // 
-            this.listBoxNomPrenomEleveVisite.FormattingEnabled = true;
-            this.listBoxNomPrenomEleveVisite.Location = new System.Drawing.Point(26, 33);
-            this.listBoxNomPrenomEleveVisite.Name = "listBoxNomPrenomEleveVisite";
-            this.listBoxNomPrenomEleveVisite.Size = new System.Drawing.Size(264, 17);
-            this.listBoxNomPrenomEleveVisite.TabIndex = 35;
+            this.dateTimeDateVisite.Location = new System.Drawing.Point(25, 69);
+            this.dateTimeDateVisite.Name = "dateTimeDateVisite";
+            this.dateTimeDateVisite.Size = new System.Drawing.Size(265, 20);
+            this.dateTimeDateVisite.TabIndex = 33;
             // 
-            // listBoxMedicamentVisite
+            // panel1
             // 
-            this.listBoxMedicamentVisite.FormattingEnabled = true;
-            this.listBoxMedicamentVisite.Location = new System.Drawing.Point(19, 33);
-            this.listBoxMedicamentVisite.Name = "listBoxMedicamentVisite";
-            this.listBoxMedicamentVisite.Size = new System.Drawing.Size(256, 17);
-            this.listBoxMedicamentVisite.TabIndex = 27;
-            // 
-            // lblSuccess
-            // 
-            this.lblSuccess.AutoSize = true;
-            this.lblSuccess.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSuccess.Location = new System.Drawing.Point(566, 87);
-            this.lblSuccess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSuccess.Name = "lblSuccess";
-            this.lblSuccess.Size = new System.Drawing.Size(184, 19);
-            this.lblSuccess.TabIndex = 36;
-            this.lblSuccess.Text = "La visite a bien été ajoutée";
-            this.lblSuccess.Visible = false;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Controls.Add(this.erreurChampsVides);
+            this.panel1.Controls.Add(this.btnAnnuler);
+            this.panel1.Controls.Add(this.btnAjoutVisite);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(45, 131);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(709, 321);
+            this.panel1.TabIndex = 31;
             // 
             // erreurChampsVides
             // 
@@ -335,6 +323,18 @@ namespace UtilisateursGUI
             this.erreurChampsVides.Text = "Veuillez remplir tous les champs";
             this.erreurChampsVides.Visible = false;
             // 
+            // lblSuccess
+            // 
+            this.lblSuccess.AutoSize = true;
+            this.lblSuccess.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuccess.Location = new System.Drawing.Point(566, 87);
+            this.lblSuccess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSuccess.Name = "lblSuccess";
+            this.lblSuccess.Size = new System.Drawing.Size(184, 19);
+            this.lblSuccess.TabIndex = 36;
+            this.lblSuccess.Text = "La visite a bien été ajoutée";
+            this.lblSuccess.Visible = false;
+            // 
             // FrmAjoutVisite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,7 +344,7 @@ namespace UtilisateursGUI
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmAjoutVisite";
             this.Text = "SaisieVisite";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

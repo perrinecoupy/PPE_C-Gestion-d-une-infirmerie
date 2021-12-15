@@ -500,5 +500,33 @@ namespace UtilisateursDAL
 
             maConnexion.Close();
         }
+
+        // Méthode qui modifie une visite dans la base de données
+        public static void ModifVisite(Visite visite)
+        {
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "UPDATE VISITE SET Date_visite = @Date_visite, Heure_arrivee_visite = @Heure_arrivee_visite, Heure_depart_visite = @Heure_depart_visite, Motif_visite = @Motif_visite, Commentaires_visite = @Commentaires_visite, Prescription_medicament = @Prescription_medicament, Statut_visite = @Statut_visite, Prevention_parents_visite = @Prevention_parents_visite WHERE Id_visite = @Id_visite";
+
+            // Ajout des paramètres
+            cmd.Parameters.AddWithValue("@Id_visite", visite.Id);
+            cmd.Parameters.AddWithValue("@Date_visite", visite.Date);
+            cmd.Parameters.AddWithValue("@Heure_arrivee_visite", visite.HeureArrive);
+            cmd.Parameters.AddWithValue("@Heure_depart_visite", visite.HeureDepart);
+            cmd.Parameters.AddWithValue("@Motif_visite", visite.Motif);
+            cmd.Parameters.AddWithValue("@Commentaires_visite", visite.Commentaires);
+            cmd.Parameters.AddWithValue("@Prescription_medicament", visite.Prescription);
+            cmd.Parameters.AddWithValue("@Statut_visite", visite.Statut);
+            cmd.Parameters.AddWithValue("@Prevention_parents_visite", visite.Prevention);
+
+            // Execution de la requete
+            cmd.ExecuteNonQuery();
+
+            maConnexion.Close();
+        }
     }
 }

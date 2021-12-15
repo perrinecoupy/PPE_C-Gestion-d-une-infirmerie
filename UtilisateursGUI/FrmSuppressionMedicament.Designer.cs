@@ -90,6 +90,7 @@ namespace UtilisateursGUI
             // 
             // combotBoxSupprimer
             // 
+            this.combotBoxSupprimer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combotBoxSupprimer.FormattingEnabled = true;
             this.combotBoxSupprimer.Location = new System.Drawing.Point(45, 203);
             this.combotBoxSupprimer.Name = "combotBoxSupprimer";
@@ -107,7 +108,7 @@ namespace UtilisateursGUI
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bnbOuiSuppressionMedicament);
             this.Controls.Add(this.lblSuppressionEleve);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmSuppressionMedicament";
             this.Text = "FrmSuppressionMedicament";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -97,9 +97,10 @@ namespace UtilisateursGUI
 
         private void btnModifierVisite_Click(object sender, EventArgs e)
         {
-            FrmModificationVisite frmModificationVisite = new FrmModificationVisite();
-            this.Hide();
-            frmModificationVisite.ShowDialog();
+            FrmConfirmationModificationVisite FrmConfirmation;
+            FrmConfirmation = new FrmConfirmationModificationVisite();
+            FrmConfirmation.Hide();
+            FrmConfirmation.ShowDialog();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)

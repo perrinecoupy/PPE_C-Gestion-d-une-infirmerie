@@ -132,5 +132,11 @@ namespace UtilisateursBLL
         {
             GestionDAO.AjoutVisite(visite);
         }
+
+        // Méthode qui modifie une visite dans la base de données
+        public static void ModifVisite(Visite visite)
+        {
+            GestionDAO.ModifVisite(visite);
+        }
     }
 }

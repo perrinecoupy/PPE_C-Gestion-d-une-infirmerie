@@ -68,6 +68,12 @@
     <Compile Include="FrmConfirmationModificationMedicament.Designer.cs">
       <DependentUpon>FrmConfirmationModificationMedicament.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConfirmationModificationVisite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfirmationModificationVisite.Designer.cs">
+      <DependentUpon>FrmConfirmationModificationVisite.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConfirmationModificationMedicament.resx">
       <DependentUpon>FrmConfirmationModificationMedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfirmationModificationVisite.resx">
+      <DependentUpon>FrmConfirmationModificationVisite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>

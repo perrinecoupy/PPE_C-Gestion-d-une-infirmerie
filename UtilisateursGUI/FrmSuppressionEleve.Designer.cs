@@ -94,6 +94,7 @@ namespace UtilisateursGUI
             // 
             // combotBoxSupprimer
             // 
+            this.combotBoxSupprimer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combotBoxSupprimer.FormattingEnabled = true;
             this.combotBoxSupprimer.Location = new System.Drawing.Point(34, 152);
             this.combotBoxSupprimer.Name = "combotBoxSupprimer";

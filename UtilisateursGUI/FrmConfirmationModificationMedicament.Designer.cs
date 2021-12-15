@@ -47,6 +47,7 @@ namespace UtilisateursGUI
             // 
             // cmbConfirmation
             // 
+            this.cmbConfirmation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbConfirmation.FormattingEnabled = true;
             this.cmbConfirmation.Location = new System.Drawing.Point(324, 154);
             this.cmbConfirmation.Name = "cmbConfirmation";
