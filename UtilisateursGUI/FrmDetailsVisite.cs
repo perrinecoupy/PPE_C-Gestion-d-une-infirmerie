@@ -25,6 +25,7 @@ namespace UtilisateursGUI
             DataGridViewTextBoxColumn colonneDate = new DataGridViewTextBoxColumn();
             colonneDate.DataPropertyName = "date";
             colonneDate.HeaderText = "DATE";
+
             // Création d'une en-tête de colonne pour la colonne 2
             DataGridViewTextBoxColumn colonneHeureArrivee = new DataGridViewTextBoxColumn();
             colonneHeureArrivee.DataPropertyName = "heureArrive";

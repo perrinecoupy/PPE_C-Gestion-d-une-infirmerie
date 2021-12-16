@@ -53,7 +53,7 @@ namespace UtilisateursGUI
                     {
                         List<Eleve> idEleve = Gestion.GetEleves();
 
-                        Visite visite = new Visite(Convert.ToDateTime(dateTimeDateVisite.Text), txtHeureArriveVisite.Text, txtHeureDepartVisite.Text, txtMotifVisite.Text, txtCommentairesVisite.Text, Convert.ToString(listBoxMedicamentVisite.SelectedItems), Convert.ToString(listBoxStatutVisite.SelectedItems), Convert.ToString(listBoxPreventionParentsVisite.SelectedItems), ((Eleve)listBoxNomPrenomEleveVisite.SelectedItem).Id);
+                        Visite visite = new Visite(Convert.ToDateTime(dateTimeDateVisite.Text), txtHeureArriveVisite.Text, txtHeureDepartVisite.Text, txtMotifVisite.Text, txtCommentairesVisite.Text, Convert.ToString(listBoxMedicamentVisite.SelectedItem), Convert.ToString(listBoxStatutVisite.SelectedItem), Convert.ToString(listBoxPreventionParentsVisite.SelectedItem), ((Eleve)listBoxNomPrenomEleveVisite.SelectedItem).Id);
 
                         Gestion.AjoutVisite(visite);
 

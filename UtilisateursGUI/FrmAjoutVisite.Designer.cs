@@ -42,9 +42,6 @@ namespace UtilisateursGUI
             this.tiersTempsEleve = new System.Windows.Forms.Label();
             this.lblClasseEleve = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listBoxMedicamentVisite = new System.Windows.Forms.ListBox();
-            this.listBoxStatutVisite = new System.Windows.Forms.ListBox();
-            this.listBoxPreventionParentsVisite = new System.Windows.Forms.ListBox();
             this.lblDateDeNaissance = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAnnuler = new System.Windows.Forms.Button();
@@ -56,6 +53,9 @@ namespace UtilisateursGUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.erreurChampsVides = new System.Windows.Forms.Label();
             this.lblSuccess = new System.Windows.Forms.Label();
+            this.listBoxMedicamentVisite = new System.Windows.Forms.ListBox();
+            this.listBoxStatutVisite = new System.Windows.Forms.ListBox();
+            this.listBoxPreventionParentsVisite = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -166,9 +166,9 @@ namespace UtilisateursGUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.listBoxMedicamentVisite);
-            this.panel2.Controls.Add(this.listBoxStatutVisite);
             this.panel2.Controls.Add(this.listBoxPreventionParentsVisite);
+            this.panel2.Controls.Add(this.listBoxStatutVisite);
+            this.panel2.Controls.Add(this.listBoxMedicamentVisite);
             this.panel2.Controls.Add(this.lblCommentairesSanteEleve);
             this.panel2.Controls.Add(this.tiersTempsEleve);
             this.panel2.Controls.Add(this.lblTelephoneEleve);
@@ -177,37 +177,6 @@ namespace UtilisateursGUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 217);
             this.panel2.TabIndex = 22;
-            // 
-            // listBoxMedicamentVisite
-            // 
-            this.listBoxMedicamentVisite.FormattingEnabled = true;
-            this.listBoxMedicamentVisite.Location = new System.Drawing.Point(19, 33);
-            this.listBoxMedicamentVisite.Name = "listBoxMedicamentVisite";
-            this.listBoxMedicamentVisite.Size = new System.Drawing.Size(256, 17);
-            this.listBoxMedicamentVisite.TabIndex = 27;
-            // 
-            // listBoxStatutVisite
-            // 
-            this.listBoxStatutVisite.FormattingEnabled = true;
-            this.listBoxStatutVisite.Items.AddRange(new object[] {
-            "Maison",
-            "Hôpital",
-            "Classe"});
-            this.listBoxStatutVisite.Location = new System.Drawing.Point(19, 85);
-            this.listBoxStatutVisite.Name = "listBoxStatutVisite";
-            this.listBoxStatutVisite.Size = new System.Drawing.Size(256, 43);
-            this.listBoxStatutVisite.TabIndex = 26;
-            // 
-            // listBoxPreventionParentsVisite
-            // 
-            this.listBoxPreventionParentsVisite.FormattingEnabled = true;
-            this.listBoxPreventionParentsVisite.Items.AddRange(new object[] {
-            "Oui",
-            "Non"});
-            this.listBoxPreventionParentsVisite.Location = new System.Drawing.Point(19, 159);
-            this.listBoxPreventionParentsVisite.Name = "listBoxPreventionParentsVisite";
-            this.listBoxPreventionParentsVisite.Size = new System.Drawing.Size(257, 30);
-            this.listBoxPreventionParentsVisite.TabIndex = 23;
             // 
             // lblDateDeNaissance
             // 
@@ -335,6 +304,37 @@ namespace UtilisateursGUI
             this.lblSuccess.Text = "La visite a bien été ajoutée";
             this.lblSuccess.Visible = false;
             // 
+            // listBoxMedicamentVisite
+            // 
+            this.listBoxMedicamentVisite.FormattingEnabled = true;
+            this.listBoxMedicamentVisite.Location = new System.Drawing.Point(19, 33);
+            this.listBoxMedicamentVisite.Name = "listBoxMedicamentVisite";
+            this.listBoxMedicamentVisite.Size = new System.Drawing.Size(256, 17);
+            this.listBoxMedicamentVisite.TabIndex = 39;
+            // 
+            // listBoxStatutVisite
+            // 
+            this.listBoxStatutVisite.FormattingEnabled = true;
+            this.listBoxStatutVisite.Items.AddRange(new object[] {
+            "Maison",
+            "Hôpital",
+            "Classe"});
+            this.listBoxStatutVisite.Location = new System.Drawing.Point(18, 85);
+            this.listBoxStatutVisite.Name = "listBoxStatutVisite";
+            this.listBoxStatutVisite.Size = new System.Drawing.Size(256, 43);
+            this.listBoxStatutVisite.TabIndex = 40;
+            // 
+            // listBoxPreventionParentsVisite
+            // 
+            this.listBoxPreventionParentsVisite.FormattingEnabled = true;
+            this.listBoxPreventionParentsVisite.Items.AddRange(new object[] {
+            "Oui",
+            "Non"});
+            this.listBoxPreventionParentsVisite.Location = new System.Drawing.Point(18, 159);
+            this.listBoxPreventionParentsVisite.Name = "listBoxPreventionParentsVisite";
+            this.listBoxPreventionParentsVisite.Size = new System.Drawing.Size(257, 30);
+            this.listBoxPreventionParentsVisite.TabIndex = 41;
+            // 
             // FrmAjoutVisite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -381,12 +381,12 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dateTimeDateVisite;
-        private System.Windows.Forms.ListBox listBoxStatutVisite;
-        private System.Windows.Forms.ListBox listBoxPreventionParentsVisite;
         private System.Windows.Forms.Label lblNomPrenomEleveVisite;
         private System.Windows.Forms.ListBox listBoxNomPrenomEleveVisite;
-        private System.Windows.Forms.ListBox listBoxMedicamentVisite;
         private System.Windows.Forms.Label lblSuccess;
         private System.Windows.Forms.Label erreurChampsVides;
+        private System.Windows.Forms.ListBox listBoxMedicamentVisite;
+        private System.Windows.Forms.ListBox listBoxStatutVisite;
+        private System.Windows.Forms.ListBox listBoxPreventionParentsVisite;
     }
 }

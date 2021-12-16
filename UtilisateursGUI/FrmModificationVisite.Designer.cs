@@ -158,6 +158,7 @@ namespace UtilisateursGUI
             this.listBoxNomPrenomEleveVisite.FormattingEnabled = true;
             this.listBoxNomPrenomEleveVisite.Location = new System.Drawing.Point(26, 33);
             this.listBoxNomPrenomEleveVisite.Name = "listBoxNomPrenomEleveVisite";
+            this.listBoxNomPrenomEleveVisite.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBoxNomPrenomEleveVisite.Size = new System.Drawing.Size(264, 17);
             this.listBoxNomPrenomEleveVisite.TabIndex = 35;
             // 
@@ -344,7 +345,7 @@ namespace UtilisateursGUI
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmModificationVisite";
             this.Text = "ModificationVisite";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
