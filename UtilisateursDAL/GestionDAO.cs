@@ -433,7 +433,7 @@ namespace UtilisateursDAL
 
             while (monReader.Read())
             {
-                Visite visite = new Visite(Convert.ToInt32(monReader["id_visite"]), Convert.ToDateTime(monReader["date_visite"]), monReader["heure_arrivee_visite"].ToString(), monReader["heure_depart_visite"].ToString(), monReader["motif_visite"].ToString(), monReader["commentaires_visite"].ToString(), monReader["prescription_medicament"].ToString(), monReader["statut_visite"].ToString(), monReader["prevention_parents_visite"].ToString(), (Convert.ToInt32(monReader["id_eleve_visite"])));
+                Visite visite = new Visite(Convert.ToInt32(monReader["id_visite"]), Convert.ToDateTime(monReader["date_visite"]), monReader["heure_arrivee_visite"].ToString(), monReader["heure_depart_visite"].ToString(), monReader["motif_visite"].ToString(), monReader["commentaires_visite"].ToString(), monReader["prescription_medicament"].ToString(), monReader["quantite_medicament"].ToString(), monReader["statut_visite"].ToString(), monReader["prevention_parents_visite"].ToString(), (Convert.ToInt32(monReader["id_eleve_visite"])));
 
                 lesVisites.Add(visite);
             }
@@ -482,7 +482,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO VISITE (Date_visite, Heure_arrivee_visite, Heure_depart_visite, Motif_visite, Commentaires_visite, Prescription_medicament, Statut_visite, Prevention_parents_visite, Id_eleve_visite) VALUES (@Date_visite, @Heure_arrivee_visite, @Heure_depart_visite, @Motif_visite, @Commentaires_visite, @Prescription_medicament, @Statut_visite, @Prevention_parents_visite, @Id_eleve_visite)";
+            cmd.CommandText = "INSERT INTO VISITE (Date_visite, Heure_arrivee_visite, Heure_depart_visite, Motif_visite, Commentaires_visite, Prescription_medicament, Quantite_medicament, Statut_visite, Prevention_parents_visite, Id_eleve_visite) VALUES (@Date_visite, @Heure_arrivee_visite, @Heure_depart_visite, @Motif_visite, @Commentaires_visite, @Prescription_medicament, @Quantite_medicament, @Statut_visite, @Prevention_parents_visite, @Id_eleve_visite)";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@Date_visite", visite.Date);
@@ -491,6 +491,7 @@ namespace UtilisateursDAL
             cmd.Parameters.AddWithValue("@Motif_visite", visite.Motif);
             cmd.Parameters.AddWithValue("@Commentaires_visite", visite.Commentaires);
             cmd.Parameters.AddWithValue("@Prescription_medicament", visite.Prescription);
+            cmd.Parameters.AddWithValue("@Quantite_medicament", visite.Quantite);
             cmd.Parameters.AddWithValue("@Statut_visite", visite.Statut);
             cmd.Parameters.AddWithValue("@Prevention_parents_visite", visite.Prevention);
             cmd.Parameters.AddWithValue("@Id_eleve_visite", visite.Id_eleve);
@@ -510,7 +511,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE VISITE SET Date_visite = @Date_visite, Heure_arrivee_visite = @Heure_arrivee_visite, Heure_depart_visite = @Heure_depart_visite, Motif_visite = @Motif_visite, Commentaires_visite = @Commentaires_visite, Prescription_medicament = @Prescription_medicament, Statut_visite = @Statut_visite, Prevention_parents_visite = @Prevention_parents_visite WHERE Id_visite = @Id_visite";
+            cmd.CommandText = "UPDATE VISITE SET Date_visite = @Date_visite, Heure_arrivee_visite = @Heure_arrivee_visite, Heure_depart_visite = @Heure_depart_visite, Motif_visite = @Motif_visite, Commentaires_visite = @Commentaires_visite, Prescription_medicament = @Prescription_medicament, Quantite_medicament = @Quantite_medicament, Statut_visite = @Statut_visite, Prevention_parents_visite = @Prevention_parents_visite WHERE Id_visite = @Id_visite";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@Id_visite", visite.Id);
@@ -520,6 +521,7 @@ namespace UtilisateursDAL
             cmd.Parameters.AddWithValue("@Motif_visite", visite.Motif);
             cmd.Parameters.AddWithValue("@Commentaires_visite", visite.Commentaires);
             cmd.Parameters.AddWithValue("@Prescription_medicament", visite.Prescription);
+            cmd.Parameters.AddWithValue("@Quantite_medicament", visite.Quantite);
             cmd.Parameters.AddWithValue("@Statut_visite", visite.Statut);
             cmd.Parameters.AddWithValue("@Prevention_parents_visite", visite.Prevention);
 

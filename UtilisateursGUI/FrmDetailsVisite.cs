@@ -47,16 +47,26 @@ namespace UtilisateursGUI
             colonneCommentaires.HeaderText = "COMMENTAIRES";
 
             // Création d'une en-tête de colonne pour la colonne 6
+            DataGridViewTextBoxColumn colonnePrescription = new DataGridViewTextBoxColumn();
+            colonnePrescription.DataPropertyName = "prescription";
+            colonnePrescription.HeaderText = "PRESCRIPTION";
+
+            // Création d'une en-tête de colonne pour la colonne 7
+            DataGridViewTextBoxColumn colonneQuantite = new DataGridViewTextBoxColumn();
+            colonneQuantite.DataPropertyName = "quantite";
+            colonneQuantite.HeaderText = "QUANTITE";
+
+            // Création d'une en-tête de colonne pour la colonne 8
             DataGridViewTextBoxColumn colonneStatut = new DataGridViewTextBoxColumn();
             colonneStatut.DataPropertyName = "statut";
             colonneStatut.HeaderText = "STATUT";
 
-            // Création d'une en-tête de colonne pour la colonne 7
+            // Création d'une en-tête de colonne pour la colonne 9
             DataGridViewTextBoxColumn colonnePrevention = new DataGridViewTextBoxColumn();
             colonnePrevention.DataPropertyName = "prevention";
             colonnePrevention.HeaderText = "PREVENTION";
 
-            // Création d'une en-tête de colonne pour la colonne 8
+            // Création d'une en-tête de colonne pour la colonne 10
             DataGridViewTextBoxColumn colonneIdEleve = new DataGridViewTextBoxColumn();
             colonneIdEleve.DataPropertyName = "id_eleve";
             colonneIdEleve.HeaderText = "ID ELEVE";
@@ -67,6 +77,8 @@ namespace UtilisateursGUI
             dataGridViewVisite.Columns.Add(colonneHeureDepart);
             dataGridViewVisite.Columns.Add(colonneMotif);
             dataGridViewVisite.Columns.Add(colonneCommentaires);
+            dataGridViewVisite.Columns.Add(colonnePrescription);
+            dataGridViewVisite.Columns.Add(colonneQuantite);
             dataGridViewVisite.Columns.Add(colonneStatut);
             dataGridViewVisite.Columns.Add(colonnePrevention);
             dataGridViewVisite.Columns.Add(colonneIdEleve);
@@ -78,6 +90,8 @@ namespace UtilisateursGUI
             colonneHeureDepart.Width = 140;
             colonneMotif.Width = 140;
             colonneCommentaires.Width = 140;
+            colonnePrescription.Width = 140;
+            colonneQuantite.Width = 140;
             colonneStatut.Width = 140;
             colonnePrevention.Width = 140;
             colonneIdEleve.Width = 140;
@@ -107,7 +121,7 @@ namespace UtilisateursGUI
         private void btnRetour_Click(object sender, EventArgs e)
         {
             FrmGestion frmGestion = new FrmGestion();
-            this.Close();
+            this.Hide();
             frmGestion.ShowDialog();
         }
     }

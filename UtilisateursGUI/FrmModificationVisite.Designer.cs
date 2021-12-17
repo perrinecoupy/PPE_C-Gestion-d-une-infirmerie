@@ -56,6 +56,8 @@ namespace UtilisateursGUI
             this.tiersTempsEleve = new System.Windows.Forms.Label();
             this.lblTelephoneEleve = new System.Windows.Forms.Label();
             this.lblSuccess = new System.Windows.Forms.Label();
+            this.txtQuantiteMedicament = new System.Windows.Forms.TextBox();
+            this.lblQuantiteMedicament = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -102,7 +104,7 @@ namespace UtilisateursGUI
             this.erreurChampsVides.AutoSize = true;
             this.erreurChampsVides.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.erreurChampsVides.ForeColor = System.Drawing.Color.Red;
-            this.erreurChampsVides.Location = new System.Drawing.Point(486, 290);
+            this.erreurChampsVides.Location = new System.Drawing.Point(500, 317);
             this.erreurChampsVides.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.erreurChampsVides.Name = "erreurChampsVides";
             this.erreurChampsVides.Size = new System.Drawing.Size(219, 19);
@@ -112,18 +114,18 @@ namespace UtilisateursGUI
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(457, 252);
+            this.btnAnnuler.Location = new System.Drawing.Point(471, 279);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(80, 25);
             this.btnAnnuler.TabIndex = 25;
-            this.btnAnnuler.Text = "ANNULER";
+            this.btnAnnuler.Text = "RETOUR";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnModifierVisite
             // 
-            this.btnModifierVisite.Location = new System.Drawing.Point(541, 252);
+            this.btnModifierVisite.Location = new System.Drawing.Point(555, 279);
             this.btnModifierVisite.Margin = new System.Windows.Forms.Padding(2);
             this.btnModifierVisite.Name = "btnModifierVisite";
             this.btnModifierVisite.Size = new System.Drawing.Size(139, 25);
@@ -254,6 +256,8 @@ namespace UtilisateursGUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.txtQuantiteMedicament);
+            this.panel2.Controls.Add(this.lblQuantiteMedicament);
             this.panel2.Controls.Add(this.listBoxMedicamentVisite);
             this.panel2.Controls.Add(this.listBoxStatutVisite);
             this.panel2.Controls.Add(this.listBoxPreventionParentsVisite);
@@ -263,7 +267,7 @@ namespace UtilisateursGUI
             this.panel2.Location = new System.Drawing.Point(378, 17);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(301, 217);
+            this.panel2.Size = new System.Drawing.Size(301, 252);
             this.panel2.TabIndex = 22;
             // 
             // listBoxMedicamentVisite
@@ -281,7 +285,7 @@ namespace UtilisateursGUI
             "Maison",
             "Hôpital",
             "Classe"});
-            this.listBoxStatutVisite.Location = new System.Drawing.Point(19, 85);
+            this.listBoxStatutVisite.Location = new System.Drawing.Point(18, 117);
             this.listBoxStatutVisite.Name = "listBoxStatutVisite";
             this.listBoxStatutVisite.Size = new System.Drawing.Size(256, 43);
             this.listBoxStatutVisite.TabIndex = 26;
@@ -292,7 +296,7 @@ namespace UtilisateursGUI
             this.listBoxPreventionParentsVisite.Items.AddRange(new object[] {
             "Oui",
             "Non"});
-            this.listBoxPreventionParentsVisite.Location = new System.Drawing.Point(19, 159);
+            this.listBoxPreventionParentsVisite.Location = new System.Drawing.Point(18, 191);
             this.listBoxPreventionParentsVisite.Name = "listBoxPreventionParentsVisite";
             this.listBoxPreventionParentsVisite.Size = new System.Drawing.Size(257, 30);
             this.listBoxPreventionParentsVisite.TabIndex = 23;
@@ -300,7 +304,7 @@ namespace UtilisateursGUI
             // lblCommentairesSanteEleve
             // 
             this.lblCommentairesSanteEleve.AutoSize = true;
-            this.lblCommentairesSanteEleve.Location = new System.Drawing.Point(16, 143);
+            this.lblCommentairesSanteEleve.Location = new System.Drawing.Point(15, 175);
             this.lblCommentairesSanteEleve.Name = "lblCommentairesSanteEleve";
             this.lblCommentairesSanteEleve.Size = new System.Drawing.Size(116, 13);
             this.lblCommentairesSanteEleve.TabIndex = 17;
@@ -309,7 +313,7 @@ namespace UtilisateursGUI
             // tiersTempsEleve
             // 
             this.tiersTempsEleve.AutoSize = true;
-            this.tiersTempsEleve.Location = new System.Drawing.Point(16, 69);
+            this.tiersTempsEleve.Location = new System.Drawing.Point(15, 101);
             this.tiersTempsEleve.Name = "tiersTempsEleve";
             this.tiersTempsEleve.Size = new System.Drawing.Size(62, 13);
             this.tiersTempsEleve.TabIndex = 16;
@@ -335,6 +339,22 @@ namespace UtilisateursGUI
             this.lblSuccess.TabIndex = 37;
             this.lblSuccess.Text = "La visite a bien été modifiée";
             this.lblSuccess.Visible = false;
+            // 
+            // txtQuantiteMedicament
+            // 
+            this.txtQuantiteMedicament.Location = new System.Drawing.Point(17, 78);
+            this.txtQuantiteMedicament.Name = "txtQuantiteMedicament";
+            this.txtQuantiteMedicament.Size = new System.Drawing.Size(258, 20);
+            this.txtQuantiteMedicament.TabIndex = 45;
+            // 
+            // lblQuantiteMedicament
+            // 
+            this.lblQuantiteMedicament.AutoSize = true;
+            this.lblQuantiteMedicament.Location = new System.Drawing.Point(17, 62);
+            this.lblQuantiteMedicament.Name = "lblQuantiteMedicament";
+            this.lblQuantiteMedicament.Size = new System.Drawing.Size(107, 13);
+            this.lblQuantiteMedicament.TabIndex = 44;
+            this.lblQuantiteMedicament.Text = "Quantité médicament";
             // 
             // FrmModificationVisite
             // 
@@ -388,5 +408,7 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Label tiersTempsEleve;
         private System.Windows.Forms.Label lblTelephoneEleve;
         private System.Windows.Forms.Label lblSuccess;
+        private System.Windows.Forms.TextBox txtQuantiteMedicament;
+        private System.Windows.Forms.Label lblQuantiteMedicament;
     }
 }

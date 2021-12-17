@@ -42,6 +42,10 @@ namespace UtilisateursGUI
 
             Gestion.SupprimeMedicament(unMedicament);
             DialogResult dialogResult = MessageBox.Show("Le médicament a bien été supprimé de la base de données.", "Enregistrement", MessageBoxButtons.OK);
+
+            FrmSuppressionMedicament frmSuppressionMedicament = new FrmSuppressionMedicament();
+            this.Hide();
+            frmSuppressionMedicament.ShowDialog();
         }
     }
 }

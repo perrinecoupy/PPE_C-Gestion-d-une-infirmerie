@@ -59,7 +59,7 @@ namespace UtilisateursGUI
             {
                 erreurChampsVides.Visible = false;
 
-                Visite visite = new Visite(this.visite.Id, Convert.ToDateTime(dateTimeDateVisite.Text), txtHeureArriveVisite.Text, txtHeureDepartVisite.Text, txtMotifVisite.Text, txtCommentairesVisite.Text, listBoxMedicamentVisite.Text, listBoxStatutVisite.Text, listBoxPreventionParentsVisite.Text);
+                Visite visite = new Visite(this.visite.Id, Convert.ToDateTime(dateTimeDateVisite.Text), txtHeureArriveVisite.Text, txtHeureDepartVisite.Text, txtMotifVisite.Text, txtCommentairesVisite.Text, listBoxMedicamentVisite.Text, txtQuantiteMedicament.Text, listBoxStatutVisite.Text, listBoxPreventionParentsVisite.Text);
 
                 Gestion.ModifVisite(visite);
 

@@ -85,7 +85,7 @@ namespace UtilisateursGUI
             this.btnAnnulerMedicament.Name = "btnAnnulerMedicament";
             this.btnAnnulerMedicament.Size = new System.Drawing.Size(80, 25);
             this.btnAnnulerMedicament.TabIndex = 25;
-            this.btnAnnulerMedicament.Text = "ANNULER";
+            this.btnAnnulerMedicament.Text = "RETOUR";
             this.btnAnnulerMedicament.UseVisualStyleBackColor = true;
             this.btnAnnulerMedicament.Click += new System.EventHandler(this.btnAnnulerMedicament_Click);
             // 

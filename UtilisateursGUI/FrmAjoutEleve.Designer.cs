@@ -232,7 +232,7 @@ namespace UtilisateursGUI
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(80, 25);
             this.btnAnnuler.TabIndex = 25;
-            this.btnAnnuler.Text = "ANNULER";
+            this.btnAnnuler.Text = "RETOUR";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 

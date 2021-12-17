@@ -43,6 +43,9 @@ namespace UtilisateursGUI
 
             Gestion.SupprimeEleve(unEleve);
             DialogResult dialogResult = MessageBox.Show("L'élève a bien été supprimé de la base de données.", "Enregistrement", MessageBoxButtons.OK);
+            FrmSuppressionEleve frmSuppressionEleve = new FrmSuppressionEleve();
+            this.Hide();
+            frmSuppressionEleve.ShowDialog();
             
         }
     }

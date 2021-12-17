@@ -38,7 +38,7 @@ namespace UtilisateursGUI
         {
             {
                 // vérification que les champs ne sont pas vides
-                if (listBoxNomPrenomEleveVisite.Text == string.Empty || dateTimeDateVisite.Text == string.Empty || txtHeureArriveVisite.Text == string.Empty || txtHeureDepartVisite.Text == string.Empty || txtMotifVisite.Text == string.Empty || txtCommentairesVisite.Text == string.Empty || listBoxMedicamentVisite.Text == string.Empty || listBoxStatutVisite.Text == string.Empty || listBoxPreventionParentsVisite.Text == string.Empty)
+                if (listBoxNomPrenomEleveVisite.Text == string.Empty || dateTimeDateVisite.Text == string.Empty || txtHeureArriveVisite.Text == string.Empty || txtHeureDepartVisite.Text == string.Empty || txtMotifVisite.Text == string.Empty || txtCommentairesVisite.Text == string.Empty || listBoxStatutVisite.Text == string.Empty || listBoxPreventionParentsVisite.Text == string.Empty)
                 {
                     erreurChampsVides.Visible = true;
                 }
@@ -53,7 +53,7 @@ namespace UtilisateursGUI
                     {
                         List<Eleve> idEleve = Gestion.GetEleves();
 
-                        Visite visite = new Visite(Convert.ToDateTime(dateTimeDateVisite.Text), txtHeureArriveVisite.Text, txtHeureDepartVisite.Text, txtMotifVisite.Text, txtCommentairesVisite.Text, Convert.ToString(listBoxMedicamentVisite.SelectedItem), Convert.ToString(listBoxStatutVisite.SelectedItem), Convert.ToString(listBoxPreventionParentsVisite.SelectedItem), ((Eleve)listBoxNomPrenomEleveVisite.SelectedItem).Id);
+                        Visite visite = new Visite(Convert.ToDateTime(dateTimeDateVisite.Text), txtHeureArriveVisite.Text, txtHeureDepartVisite.Text, txtMotifVisite.Text, txtCommentairesVisite.Text, Convert.ToString(listBoxMedicamentVisite.SelectedItem), txtQuantiteMedicament.Text, Convert.ToString(listBoxStatutVisite.SelectedItem), Convert.ToString(listBoxPreventionParentsVisite.SelectedItem), ((Eleve)listBoxNomPrenomEleveVisite.SelectedItem).Id);
 
                         Gestion.AjoutVisite(visite);
 

@@ -34,7 +34,6 @@ namespace UtilisateursGUI
             FrmModificationVisite FrmModificationVisite;
             FrmModificationVisite = new FrmModificationVisite((Visite)cmbConfirmation.SelectedItem);
             FrmModificationVisite.ShowDialog();
-            FrmModificationVisite.Close();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)

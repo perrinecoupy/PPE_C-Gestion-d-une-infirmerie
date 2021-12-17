@@ -42,6 +42,9 @@ namespace UtilisateursGUI
             this.tiersTempsEleve = new System.Windows.Forms.Label();
             this.lblClasseEleve = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.listBoxPreventionParentsVisite = new System.Windows.Forms.ListBox();
+            this.listBoxStatutVisite = new System.Windows.Forms.ListBox();
+            this.listBoxMedicamentVisite = new System.Windows.Forms.ListBox();
             this.lblDateDeNaissance = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAnnuler = new System.Windows.Forms.Button();
@@ -53,9 +56,8 @@ namespace UtilisateursGUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.erreurChampsVides = new System.Windows.Forms.Label();
             this.lblSuccess = new System.Windows.Forms.Label();
-            this.listBoxMedicamentVisite = new System.Windows.Forms.ListBox();
-            this.listBoxStatutVisite = new System.Windows.Forms.ListBox();
-            this.listBoxPreventionParentsVisite = new System.Windows.Forms.ListBox();
+            this.lblQuantiteMedicament = new System.Windows.Forms.Label();
+            this.txtQuantiteMedicament = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -139,7 +141,7 @@ namespace UtilisateursGUI
             // lblCommentairesSanteEleve
             // 
             this.lblCommentairesSanteEleve.AutoSize = true;
-            this.lblCommentairesSanteEleve.Location = new System.Drawing.Point(16, 143);
+            this.lblCommentairesSanteEleve.Location = new System.Drawing.Point(14, 175);
             this.lblCommentairesSanteEleve.Name = "lblCommentairesSanteEleve";
             this.lblCommentairesSanteEleve.Size = new System.Drawing.Size(116, 13);
             this.lblCommentairesSanteEleve.TabIndex = 17;
@@ -148,7 +150,7 @@ namespace UtilisateursGUI
             // tiersTempsEleve
             // 
             this.tiersTempsEleve.AutoSize = true;
-            this.tiersTempsEleve.Location = new System.Drawing.Point(16, 69);
+            this.tiersTempsEleve.Location = new System.Drawing.Point(16, 97);
             this.tiersTempsEleve.Name = "tiersTempsEleve";
             this.tiersTempsEleve.Size = new System.Drawing.Size(62, 13);
             this.tiersTempsEleve.TabIndex = 16;
@@ -166,6 +168,8 @@ namespace UtilisateursGUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.txtQuantiteMedicament);
+            this.panel2.Controls.Add(this.lblQuantiteMedicament);
             this.panel2.Controls.Add(this.listBoxPreventionParentsVisite);
             this.panel2.Controls.Add(this.listBoxStatutVisite);
             this.panel2.Controls.Add(this.listBoxMedicamentVisite);
@@ -175,8 +179,39 @@ namespace UtilisateursGUI
             this.panel2.Location = new System.Drawing.Point(378, 17);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(301, 217);
+            this.panel2.Size = new System.Drawing.Size(301, 242);
             this.panel2.TabIndex = 22;
+            // 
+            // listBoxPreventionParentsVisite
+            // 
+            this.listBoxPreventionParentsVisite.FormattingEnabled = true;
+            this.listBoxPreventionParentsVisite.Items.AddRange(new object[] {
+            "Oui",
+            "Non"});
+            this.listBoxPreventionParentsVisite.Location = new System.Drawing.Point(16, 191);
+            this.listBoxPreventionParentsVisite.Name = "listBoxPreventionParentsVisite";
+            this.listBoxPreventionParentsVisite.Size = new System.Drawing.Size(257, 30);
+            this.listBoxPreventionParentsVisite.TabIndex = 41;
+            // 
+            // listBoxStatutVisite
+            // 
+            this.listBoxStatutVisite.FormattingEnabled = true;
+            this.listBoxStatutVisite.Items.AddRange(new object[] {
+            "Maison",
+            "Hôpital",
+            "Classe"});
+            this.listBoxStatutVisite.Location = new System.Drawing.Point(18, 113);
+            this.listBoxStatutVisite.Name = "listBoxStatutVisite";
+            this.listBoxStatutVisite.Size = new System.Drawing.Size(256, 43);
+            this.listBoxStatutVisite.TabIndex = 40;
+            // 
+            // listBoxMedicamentVisite
+            // 
+            this.listBoxMedicamentVisite.FormattingEnabled = true;
+            this.listBoxMedicamentVisite.Location = new System.Drawing.Point(19, 33);
+            this.listBoxMedicamentVisite.Name = "listBoxMedicamentVisite";
+            this.listBoxMedicamentVisite.Size = new System.Drawing.Size(256, 17);
+            this.listBoxMedicamentVisite.TabIndex = 39;
             // 
             // lblDateDeNaissance
             // 
@@ -200,18 +235,18 @@ namespace UtilisateursGUI
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(457, 252);
+            this.btnAnnuler.Location = new System.Drawing.Point(457, 263);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(80, 25);
             this.btnAnnuler.TabIndex = 25;
-            this.btnAnnuler.Text = "ANNULER";
+            this.btnAnnuler.Text = "RETOUR";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnAjoutVisite
             // 
-            this.btnAjoutVisite.Location = new System.Drawing.Point(541, 252);
+            this.btnAjoutVisite.Location = new System.Drawing.Point(541, 263);
             this.btnAjoutVisite.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjoutVisite.Name = "btnAjoutVisite";
             this.btnAjoutVisite.Size = new System.Drawing.Size(139, 25);
@@ -304,36 +339,21 @@ namespace UtilisateursGUI
             this.lblSuccess.Text = "La visite a bien été ajoutée";
             this.lblSuccess.Visible = false;
             // 
-            // listBoxMedicamentVisite
+            // lblQuantiteMedicament
             // 
-            this.listBoxMedicamentVisite.FormattingEnabled = true;
-            this.listBoxMedicamentVisite.Location = new System.Drawing.Point(19, 33);
-            this.listBoxMedicamentVisite.Name = "listBoxMedicamentVisite";
-            this.listBoxMedicamentVisite.Size = new System.Drawing.Size(256, 17);
-            this.listBoxMedicamentVisite.TabIndex = 39;
+            this.lblQuantiteMedicament.AutoSize = true;
+            this.lblQuantiteMedicament.Location = new System.Drawing.Point(16, 56);
+            this.lblQuantiteMedicament.Name = "lblQuantiteMedicament";
+            this.lblQuantiteMedicament.Size = new System.Drawing.Size(107, 13);
+            this.lblQuantiteMedicament.TabIndex = 42;
+            this.lblQuantiteMedicament.Text = "Quantité médicament";
             // 
-            // listBoxStatutVisite
+            // txtQuantiteMedicament
             // 
-            this.listBoxStatutVisite.FormattingEnabled = true;
-            this.listBoxStatutVisite.Items.AddRange(new object[] {
-            "Maison",
-            "Hôpital",
-            "Classe"});
-            this.listBoxStatutVisite.Location = new System.Drawing.Point(18, 85);
-            this.listBoxStatutVisite.Name = "listBoxStatutVisite";
-            this.listBoxStatutVisite.Size = new System.Drawing.Size(256, 43);
-            this.listBoxStatutVisite.TabIndex = 40;
-            // 
-            // listBoxPreventionParentsVisite
-            // 
-            this.listBoxPreventionParentsVisite.FormattingEnabled = true;
-            this.listBoxPreventionParentsVisite.Items.AddRange(new object[] {
-            "Oui",
-            "Non"});
-            this.listBoxPreventionParentsVisite.Location = new System.Drawing.Point(18, 159);
-            this.listBoxPreventionParentsVisite.Name = "listBoxPreventionParentsVisite";
-            this.listBoxPreventionParentsVisite.Size = new System.Drawing.Size(257, 30);
-            this.listBoxPreventionParentsVisite.TabIndex = 41;
+            this.txtQuantiteMedicament.Location = new System.Drawing.Point(16, 72);
+            this.txtQuantiteMedicament.Name = "txtQuantiteMedicament";
+            this.txtQuantiteMedicament.Size = new System.Drawing.Size(258, 20);
+            this.txtQuantiteMedicament.TabIndex = 43;
             // 
             // FrmAjoutVisite
             // 
@@ -388,5 +408,7 @@ namespace UtilisateursGUI
         private System.Windows.Forms.ListBox listBoxMedicamentVisite;
         private System.Windows.Forms.ListBox listBoxStatutVisite;
         private System.Windows.Forms.ListBox listBoxPreventionParentsVisite;
+        private System.Windows.Forms.TextBox txtQuantiteMedicament;
+        private System.Windows.Forms.Label lblQuantiteMedicament;
     }
 }
