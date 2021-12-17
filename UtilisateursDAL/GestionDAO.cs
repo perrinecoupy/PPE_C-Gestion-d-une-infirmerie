@@ -424,7 +424,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "SELECT * FROM VISITE";
+            cmd.CommandText = "SELECT * FROM VISITE, ELEVE WHERE VISITE.id_eleve_visite = ELEVE.id_eleve";
 
             // Lecture des données
             SqlDataReader monReader = cmd.ExecuteReader();
@@ -433,7 +433,7 @@ namespace UtilisateursDAL
 
             while (monReader.Read())
             {
-                Visite visite = new Visite(Convert.ToInt32(monReader["id_visite"]), Convert.ToDateTime(monReader["date_visite"]), monReader["heure_arrivee_visite"].ToString(), monReader["heure_depart_visite"].ToString(), monReader["motif_visite"].ToString(), monReader["commentaires_visite"].ToString(), monReader["prescription_medicament"].ToString(), monReader["quantite_medicament"].ToString(), monReader["statut_visite"].ToString(), monReader["prevention_parents_visite"].ToString(), (Convert.ToInt32(monReader["id_eleve_visite"])));
+                Visite visite = new Visite(Convert.ToInt32(monReader["id_visite"]), Convert.ToDateTime(monReader["date_visite"]), monReader["heure_arrivee_visite"].ToString(), monReader["heure_depart_visite"].ToString(), monReader["motif_visite"].ToString(), monReader["commentaires_visite"].ToString(), monReader["prescription_medicament"].ToString(), monReader["quantite_medicament"].ToString(), monReader["statut_visite"].ToString(), monReader["prevention_parents_visite"].ToString(), (Convert.ToInt32(monReader["id_eleve_visite"])), new Eleve((int)monReader["id_eleve"], monReader["nom_eleve"].ToString(), monReader["prenom_eleve"].ToString()));
 
                 lesVisites.Add(visite);
             }

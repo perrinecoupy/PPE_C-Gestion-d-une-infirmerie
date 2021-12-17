@@ -19,6 +19,11 @@ namespace UtilisateursBO
         string statut;
         string prevention;
         int id_eleve;
+        Eleve eleve;
+
+        public Visite ()
+        {
+        }
 
         // constructeur utilisé pour ajouter une visite dans la base de données
         public Visite(int id, DateTime date, string heureArrive, string heureDepart, string motif, string commentaires, string prescription, string quantite, string statut, string prevention)
@@ -47,7 +52,7 @@ namespace UtilisateursBO
             this.Prevention = prevention;
             this.Id_eleve = id_eleve;
         }
-        public Visite(int id, DateTime date, string heureArrive, string heureDepart, string motif, string commentaires, string prescription, string quantite, string statut, string prevention, int id_eleve)
+        public Visite(int id, DateTime date, string heureArrive, string heureDepart, string motif, string commentaires, string prescription, string quantite, string statut, string prevention, int id_eleve, Eleve eleve)
         {
             this.Id = id;
             this.Date = date;
@@ -60,6 +65,7 @@ namespace UtilisateursBO
             this.Statut = statut;
             this.Prevention = prevention;
             this.Id_eleve = id_eleve;
+            this.Eleve = eleve;
         }
 
         // constructeur utilisé pour afficher les données des visites
@@ -89,5 +95,6 @@ namespace UtilisateursBO
         public string Statut { get => statut; set => statut = value; }
         public string Prevention { get => prevention; set => prevention = value; }
         public int Id_eleve { get => id_eleve; set => id_eleve = value; }
+        public Eleve Eleve { get => eleve; set => eleve = value; }
     }
 }

@@ -24,7 +24,7 @@ namespace UtilisateursGUI
 
             cmbConfirmation.ValueMember = "Id";
 
-            cmbConfirmation.DisplayMember = "Date";
+            cmbConfirmation.DisplayMember = "Eleve";
 
             cmbConfirmation.DataSource = liste;
         }
