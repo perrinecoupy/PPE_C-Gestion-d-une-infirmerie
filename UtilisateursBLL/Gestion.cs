@@ -56,6 +56,12 @@ namespace UtilisateursBLL
             return GestionDAO.GetLesClasses();
         }
 
+        // Méthode qui retourne les classes
+        public static List<Classe> GetLesDiplomes()
+        {
+            return GestionDAO.GetLesDiplomes();
+        }
+
         // Méthode qui ajoute un élève dans la base de données
         public static int GetDernierIdEleve()
         {

@@ -54,7 +54,9 @@ namespace UtilisateursGUI
             this.dtmDateDeNaissanceEleve = new System.Windows.Forms.DateTimePicker();
             this.dpdClasse = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dpdDiplome = new System.Windows.Forms.ListBox();
             this.txtTiersTempsEleve = new System.Windows.Forms.TextBox();
+            this.lblDiplomeEleve = new System.Windows.Forms.Label();
             this.cLASSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.lblSuccess = new System.Windows.Forms.Label();
@@ -76,7 +78,7 @@ namespace UtilisateursGUI
             // 
             // txtTelephoneParentEleve
             // 
-            this.txtTelephoneParentEleve.Location = new System.Drawing.Point(19, 92);
+            this.txtTelephoneParentEleve.Location = new System.Drawing.Point(23, 76);
             this.txtTelephoneParentEleve.Name = "txtTelephoneParentEleve";
             this.txtTelephoneParentEleve.Size = new System.Drawing.Size(259, 20);
             this.txtTelephoneParentEleve.TabIndex = 5;
@@ -134,7 +136,7 @@ namespace UtilisateursGUI
             // lblTelephoneEleve
             // 
             this.lblTelephoneEleve.AutoSize = true;
-            this.lblTelephoneEleve.Location = new System.Drawing.Point(17, 32);
+            this.lblTelephoneEleve.Location = new System.Drawing.Point(21, 16);
             this.lblTelephoneEleve.Name = "lblTelephoneEleve";
             this.lblTelephoneEleve.Size = new System.Drawing.Size(87, 13);
             this.lblTelephoneEleve.TabIndex = 14;
@@ -143,7 +145,7 @@ namespace UtilisateursGUI
             // lblTelephoneParentEleve
             // 
             this.lblTelephoneParentEleve.AutoSize = true;
-            this.lblTelephoneParentEleve.Location = new System.Drawing.Point(17, 76);
+            this.lblTelephoneParentEleve.Location = new System.Drawing.Point(21, 60);
             this.lblTelephoneParentEleve.Name = "lblTelephoneParentEleve";
             this.lblTelephoneParentEleve.Size = new System.Drawing.Size(91, 13);
             this.lblTelephoneParentEleve.TabIndex = 15;
@@ -152,7 +154,7 @@ namespace UtilisateursGUI
             // tiersTempsEleve
             // 
             this.tiersTempsEleve.AutoSize = true;
-            this.tiersTempsEleve.Location = new System.Drawing.Point(17, 122);
+            this.tiersTempsEleve.Location = new System.Drawing.Point(21, 106);
             this.tiersTempsEleve.Name = "tiersTempsEleve";
             this.tiersTempsEleve.Size = new System.Drawing.Size(61, 13);
             this.tiersTempsEleve.TabIndex = 16;
@@ -161,7 +163,7 @@ namespace UtilisateursGUI
             // lblCommentairesSanteEleve
             // 
             this.lblCommentairesSanteEleve.AutoSize = true;
-            this.lblCommentairesSanteEleve.Location = new System.Drawing.Point(17, 170);
+            this.lblCommentairesSanteEleve.Location = new System.Drawing.Point(21, 154);
             this.lblCommentairesSanteEleve.Name = "lblCommentairesSanteEleve";
             this.lblCommentairesSanteEleve.Size = new System.Drawing.Size(102, 13);
             this.lblCommentairesSanteEleve.TabIndex = 17;
@@ -169,7 +171,7 @@ namespace UtilisateursGUI
             // 
             // txtTelephoneEleve
             // 
-            this.txtTelephoneEleve.Location = new System.Drawing.Point(19, 49);
+            this.txtTelephoneEleve.Location = new System.Drawing.Point(23, 33);
             this.txtTelephoneEleve.Name = "txtTelephoneEleve";
             this.txtTelephoneEleve.Size = new System.Drawing.Size(259, 20);
             this.txtTelephoneEleve.TabIndex = 18;
@@ -183,7 +185,7 @@ namespace UtilisateursGUI
             // 
             // txtCommentairesSanteEleve
             // 
-            this.txtCommentairesSanteEleve.Location = new System.Drawing.Point(19, 186);
+            this.txtCommentairesSanteEleve.Location = new System.Drawing.Point(23, 170);
             this.txtCommentairesSanteEleve.Name = "txtCommentairesSanteEleve";
             this.txtCommentairesSanteEleve.Size = new System.Drawing.Size(259, 20);
             this.txtCommentairesSanteEleve.TabIndex = 21;
@@ -227,7 +229,7 @@ namespace UtilisateursGUI
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(457, 252);
+            this.btnAnnuler.Location = new System.Drawing.Point(457, 259);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(80, 25);
@@ -238,7 +240,7 @@ namespace UtilisateursGUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(541, 252);
+            this.button1.Location = new System.Drawing.Point(540, 260);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 25);
@@ -288,7 +290,9 @@ namespace UtilisateursGUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.dpdDiplome);
             this.panel2.Controls.Add(this.txtTiersTempsEleve);
+            this.panel2.Controls.Add(this.lblDiplomeEleve);
             this.panel2.Controls.Add(this.lblCommentairesSanteEleve);
             this.panel2.Controls.Add(this.txtCommentairesSanteEleve);
             this.panel2.Controls.Add(this.txtTelephoneEleve);
@@ -299,15 +303,32 @@ namespace UtilisateursGUI
             this.panel2.Location = new System.Drawing.Point(378, 17);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(301, 217);
+            this.panel2.Size = new System.Drawing.Size(301, 241);
             this.panel2.TabIndex = 22;
+            // 
+            // dpdDiplome
+            // 
+            this.dpdDiplome.FormattingEnabled = true;
+            this.dpdDiplome.Location = new System.Drawing.Point(24, 211);
+            this.dpdDiplome.Name = "dpdDiplome";
+            this.dpdDiplome.Size = new System.Drawing.Size(120, 30);
+            this.dpdDiplome.TabIndex = 27;
             // 
             // txtTiersTempsEleve
             // 
-            this.txtTiersTempsEleve.Location = new System.Drawing.Point(19, 138);
+            this.txtTiersTempsEleve.Location = new System.Drawing.Point(23, 122);
             this.txtTiersTempsEleve.Name = "txtTiersTempsEleve";
             this.txtTiersTempsEleve.Size = new System.Drawing.Size(259, 20);
             this.txtTiersTempsEleve.TabIndex = 22;
+            // 
+            // lblDiplomeEleve
+            // 
+            this.lblDiplomeEleve.AutoSize = true;
+            this.lblDiplomeEleve.Location = new System.Drawing.Point(21, 194);
+            this.lblDiplomeEleve.Name = "lblDiplomeEleve";
+            this.lblDiplomeEleve.Size = new System.Drawing.Size(45, 13);
+            this.lblDiplomeEleve.TabIndex = 26;
+            this.lblDiplomeEleve.Text = "Diplôme";
             // 
             // cLASSEBindingSource
             // 
@@ -390,5 +411,7 @@ namespace UtilisateursGUI
         private System.Windows.Forms.Label erreurChampsVides;
         private System.Windows.Forms.Label lblSuccess;
         private System.Windows.Forms.BindingSource cLASSEBindingSource;
+        private System.Windows.Forms.Label lblDiplomeEleve;
+        private System.Windows.Forms.ListBox dpdDiplome;
     }
 }

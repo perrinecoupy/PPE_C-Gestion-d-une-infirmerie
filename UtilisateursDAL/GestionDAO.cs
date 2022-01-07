@@ -167,6 +167,38 @@ namespace UtilisateursDAL
             return lesClasses;
         }
 
+        public static List<Diplome> GetLesDiplome()
+        {
+            int id;
+            string libelle;
+            Classe uneClasse;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+
+            // Requette sql
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM DIPLOME";
+
+            // Lecture des données
+            SqlDataReader monReader = cmd.ExecuteReader();
+
+            List<Diplome> lesDiplomes = new List<Diplome>();
+
+            while (monReader.Read())
+            {
+                id = (int)monReader["id_diplome"];
+                libelle = monReader["libelle_diplome"].ToString();
+                uneClasse = new Classe(id, libelle);
+                lesDiplomes.Add(unDiplome);
+            }
+
+            monReader.Close();
+            maConnexion.Close();
+
+            return GetLesDiplomes;
+        }
+
         // Méthode qui retourne la liste des élèves
         public static List<Eleve> GetEleves()
         {
