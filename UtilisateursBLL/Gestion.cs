@@ -57,7 +57,7 @@ namespace UtilisateursBLL
         }
 
         // Méthode qui retourne les classes
-        public static List<Classe> GetLesDiplomes()
+        public static List<Diplome> GetLesDiplomes()
         {
             return GestionDAO.GetLesDiplomes();
         }

@@ -167,11 +167,11 @@ namespace UtilisateursDAL
             return lesClasses;
         }
 
-        public static List<Diplome> GetLesDiplome()
+        public static List<Diplome> GetLesDiplomes()
         {
             int id;
             string libelle;
-            Classe uneClasse;
+            Diplome unDiplome;
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
 
@@ -189,14 +189,14 @@ namespace UtilisateursDAL
             {
                 id = (int)monReader["id_diplome"];
                 libelle = monReader["libelle_diplome"].ToString();
-                uneClasse = new Classe(id, libelle);
+                unDiplome = new Diplome(id, libelle);
                 lesDiplomes.Add(unDiplome);
             }
 
             monReader.Close();
             maConnexion.Close();
 
-            return GetLesDiplomes;
+            return lesDiplomes;
         }
 
         // Méthode qui retourne la liste des élèves
