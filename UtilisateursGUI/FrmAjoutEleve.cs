@@ -20,13 +20,17 @@ namespace UtilisateursGUI
             List<Classe> liste = Gestion.GetLesClasses();
 
             dpdClasse.DataSource = liste;
+
+            List<Diplome> liste2 = Gestion.GetLesDiplomes();
+
+            dpdDiplome.DataSource = liste2;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             {
                 // vérification que les champs ne sont pas vides
-                if (txtNomEleve.Text == string.Empty || txtPrenomEleve.Text == string.Empty || dpdClasse.Text == string.Empty || dtmDateDeNaissanceEleve.Text == string.Empty || txtSanteEleve.Text == string.Empty || txtTelephoneEleve.Text == string.Empty || txtTelephoneParentEleve.Text == string.Empty || txtTiersTempsEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty)
+                if (txtNomEleve.Text == string.Empty || txtPrenomEleve.Text == string.Empty || dpdClasse.Text == string.Empty || dtmDateDeNaissanceEleve.Text == string.Empty || txtSanteEleve.Text == string.Empty || txtTelephoneEleve.Text == string.Empty || txtTelephoneParentEleve.Text == string.Empty || txtTiersTempsEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty || dpdDiplome.Text == string.Empty)
                 {
                     erreurChampsVides.Visible = true;
                 }

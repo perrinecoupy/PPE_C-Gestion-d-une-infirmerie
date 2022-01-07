@@ -18,6 +18,7 @@ namespace UtilisateursBO
         string tiersTemps;
         string commentaire;
         int classe;
+        int diplome;
 
         // Constructeur utilisé pour sauvegarder l'id de l'élève pour appliquer les modifications et la suppression
         public Eleve(int id)
@@ -32,7 +33,7 @@ namespace UtilisateursBO
         }
 
         // constructeur utilisé pour afficher les données des élèves
-        public Eleve(int id, string nom, string prenom, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe)
+        public Eleve(int id, string nom, string prenom, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe, int diplome)
         {
             this.id = id;
             this.nom = nom;
@@ -44,6 +45,7 @@ namespace UtilisateursBO
             this.tiersTemps = tiersTemps;
             this.commentaire = commentaire;
             this.classe = classe;
+            this.diplome = diplome;
         }
 
         // constructeur utilisé pour afficher les données des élèves
@@ -55,7 +57,7 @@ namespace UtilisateursBO
         }
 
         // constructeur utilisé pour ajouter un élève dans la base de données
-        public Eleve(string nom, string prenom, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe)
+        public Eleve(string nom, string prenom, DateTime dateNaissance, string sante, string numTelEleve, string numTelParent, string tiersTemps, string commentaire, int classe, int diplome)
         {
             this.nom = nom;
             this.prenom = prenom;
@@ -66,6 +68,7 @@ namespace UtilisateursBO
             this.tiersTemps = tiersTemps;
             this.commentaire = commentaire;
             this.classe = classe;
+            this.diplome = diplome;
         }
 
         // Setters et getters
@@ -79,5 +82,6 @@ namespace UtilisateursBO
         public string TiersTemps { get => tiersTemps; set => tiersTemps = value; }
         public string Commentaire { get => commentaire; set => commentaire = value; }
         public int Classe { get => classe; set => classe = value; }
+        public int Diplome { get => diplome; set => diplome = value; }
     }
 }
