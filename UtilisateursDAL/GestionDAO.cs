@@ -62,7 +62,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "INSERT INTO ELEVE (Nom_eleve, Prenom_eleve, Date_de_naissance_eleve, Sante_eleve, Numero_telephone_eleve, Numero_telephone_parent_eleve, Tiers_temps_eleve, Commentaires_sante_libre_eleve, Id_classe_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve)";
+            cmd.CommandText = "INSERT INTO ELEVE (Nom_eleve, Prenom_eleve, Date_de_naissance_eleve, Sante_eleve, Numero_telephone_eleve, Numero_telephone_parent_eleve, Tiers_temps_eleve, Commentaires_sante_libre_eleve, Id_classe_eleve, Id_diplome_eleve) VALUES (@Nom_eleve, @Prenom_eleve, @Date_de_naissance_eleve, @Sante_eleve, @Numero_telephone_eleve, @Numero_telephone_parent_eleve, @Tiers_temps_eleve, @Commentaires_sante_libre_eleve, @Id_classe_eleve, @Id_diplome_eleve)";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@Nom_eleve", eleve.Nom);
@@ -74,6 +74,7 @@ namespace UtilisateursDAL
             cmd.Parameters.AddWithValue("@Tiers_temps_eleve", eleve.TiersTemps);
             cmd.Parameters.AddWithValue("@Commentaires_sante_libre_eleve", eleve.Commentaire);
             cmd.Parameters.AddWithValue("@Id_classe_eleve", eleve.Classe);
+            cmd.Parameters.AddWithValue("@Id_diplome_eleve", eleve.Diplome);
 
             // Execution de la requete
             cmd.ExecuteNonQuery();

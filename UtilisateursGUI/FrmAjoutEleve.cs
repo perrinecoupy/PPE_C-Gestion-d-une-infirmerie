@@ -44,8 +44,9 @@ namespace UtilisateursGUI
                         if (erreurChampsVides.Visible == false)
                         {
                         List<Classe> idClasse = Gestion.GetLesClasses();
+                        List<Diplome> id_diplome = Gestion.GetLesDiplomes();
 
-                            Eleve eleve = new Eleve(txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id);
+                            Eleve eleve = new Eleve(txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id, ((Diplome)dpdDiplome.SelectedItem).Id);
 
                             Gestion.AjoutEleve(eleve);
 

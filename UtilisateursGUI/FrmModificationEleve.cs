@@ -61,7 +61,7 @@ namespace UtilisateursGUI
             {
                 erreurChampsVides.Visible = false;
 
-                Eleve eleve = new Eleve(this.eleve.Id, txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id);
+                Eleve eleve = new Eleve(this.eleve.Id, txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id, ((Diplome)dpdClasse.SelectedItem).Id);
 
                 Gestion.ModifEleve(eleve);
 
