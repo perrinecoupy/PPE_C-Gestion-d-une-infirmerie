@@ -341,7 +341,7 @@ namespace UtilisateursDAL
             // Requette sql
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.CommandText = "UPDATE ELEVE SET Nom_eleve = @Nom_eleve,  Prenom_eleve = @Prenom_eleve,  Date_de_naissance_eleve = @Date_de_naissance_eleve, Sante_eleve = @Sante_eleve, Numero_telephone_eleve = @Numero_telephone_eleve, Numero_telephone_parent_eleve = @Numero_telephone_parent_eleve, Tiers_temps_eleve = @Tiers_temps_eleve, Commentaires_sante_libre_eleve = @Commentaires_sante_libre_eleve, Id_classe_eleve = @Id_classe_eleve WHERE Id_eleve = @Id_eleve";
+            cmd.CommandText = "UPDATE ELEVE SET Nom_eleve = @Nom_eleve,  Prenom_eleve = @Prenom_eleve,  Date_de_naissance_eleve = @Date_de_naissance_eleve, Sante_eleve = @Sante_eleve, Numero_telephone_eleve = @Numero_telephone_eleve, Numero_telephone_parent_eleve = @Numero_telephone_parent_eleve, Tiers_temps_eleve = @Tiers_temps_eleve, Commentaires_sante_libre_eleve = @Commentaires_sante_libre_eleve, Id_classe_eleve = @Id_classe_eleve, Id_diplome_eleve = @Id_diplome_eleve WHERE Id_eleve = @Id_eleve";
 
             // Ajout des paramètres
             cmd.Parameters.AddWithValue("@Id_eleve", eleve.Id);
@@ -354,6 +354,7 @@ namespace UtilisateursDAL
             cmd.Parameters.AddWithValue("@Tiers_temps_eleve", eleve.TiersTemps);
             cmd.Parameters.AddWithValue("@Commentaires_sante_libre_eleve", eleve.Commentaire);
             cmd.Parameters.AddWithValue("@Id_classe_eleve", eleve.Classe);
+            cmd.Parameters.AddWithValue("@Id_diplome_eleve", eleve.Diplome);
 
             // Execution de la requete
             cmd.ExecuteNonQuery();

@@ -56,6 +56,8 @@ namespace UtilisateursGUI
             this.lblTelephoneParentEleve = new System.Windows.Forms.Label();
             this.txtTelephoneParentEleve = new System.Windows.Forms.TextBox();
             this.lblSuccess = new System.Windows.Forms.Label();
+            this.lblDiplomeEleve = new System.Windows.Forms.Label();
+            this.dpdDiplome = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,7 +76,7 @@ namespace UtilisateursGUI
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(457, 252);
+            this.btnAnnuler.Location = new System.Drawing.Point(457, 271);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(80, 25);
@@ -85,7 +87,7 @@ namespace UtilisateursGUI
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(541, 252);
+            this.btnModifier.Location = new System.Drawing.Point(541, 271);
             this.btnModifier.Margin = new System.Windows.Forms.Padding(2);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(139, 25);
@@ -108,7 +110,6 @@ namespace UtilisateursGUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Controls.Add(this.erreurChampsVides);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnAnnuler);
@@ -124,7 +125,7 @@ namespace UtilisateursGUI
             this.erreurChampsVides.AutoSize = true;
             this.erreurChampsVides.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.erreurChampsVides.ForeColor = System.Drawing.Color.Red;
-            this.erreurChampsVides.Location = new System.Drawing.Point(490, 279);
+            this.erreurChampsVides.Location = new System.Drawing.Point(536, 422);
             this.erreurChampsVides.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.erreurChampsVides.Name = "erreurChampsVides";
             this.erreurChampsVides.Size = new System.Drawing.Size(219, 19);
@@ -241,6 +242,8 @@ namespace UtilisateursGUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.dpdDiplome);
+            this.panel2.Controls.Add(this.lblDiplomeEleve);
             this.panel2.Controls.Add(this.txtTiersTempsEleve);
             this.panel2.Controls.Add(this.lblCommentairesSanteEleve);
             this.panel2.Controls.Add(this.txtCommentairesSanteEleve);
@@ -252,7 +255,7 @@ namespace UtilisateursGUI
             this.panel2.Location = new System.Drawing.Point(380, 16);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(301, 217);
+            this.panel2.Size = new System.Drawing.Size(301, 255);
             this.panel2.TabIndex = 26;
             // 
             // txtTiersTempsEleve
@@ -331,11 +334,29 @@ namespace UtilisateursGUI
             this.lblSuccess.Text = "L\'élève a bien été modifié";
             this.lblSuccess.Visible = false;
             // 
+            // lblDiplomeEleve
+            // 
+            this.lblDiplomeEleve.AutoSize = true;
+            this.lblDiplomeEleve.Location = new System.Drawing.Point(20, 213);
+            this.lblDiplomeEleve.Name = "lblDiplomeEleve";
+            this.lblDiplomeEleve.Size = new System.Drawing.Size(45, 13);
+            this.lblDiplomeEleve.TabIndex = 23;
+            this.lblDiplomeEleve.Text = "Diplôme";
+            // 
+            // dpdDiplome
+            // 
+            this.dpdDiplome.FormattingEnabled = true;
+            this.dpdDiplome.Location = new System.Drawing.Point(19, 229);
+            this.dpdDiplome.Name = "dpdDiplome";
+            this.dpdDiplome.Size = new System.Drawing.Size(259, 21);
+            this.dpdDiplome.TabIndex = 24;
+            // 
             // FrmModificationEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.erreurChampsVides);
             this.Controls.Add(this.lblSuccess);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -344,7 +365,6 @@ namespace UtilisateursGUI
             this.Text = "ModificationEleve";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -383,5 +403,7 @@ namespace UtilisateursGUI
         private System.Windows.Forms.TextBox txtTelephoneParentEleve;
         private System.Windows.Forms.Label lblSuccess;
         private System.Windows.Forms.Label erreurChampsVides;
+        private System.Windows.Forms.Label lblDiplomeEleve;
+        private System.Windows.Forms.ComboBox dpdDiplome;
     }
 }

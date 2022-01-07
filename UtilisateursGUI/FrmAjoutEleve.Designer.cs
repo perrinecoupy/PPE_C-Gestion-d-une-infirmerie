@@ -311,7 +311,7 @@ namespace UtilisateursGUI
             this.dpdDiplome.FormattingEnabled = true;
             this.dpdDiplome.Location = new System.Drawing.Point(24, 211);
             this.dpdDiplome.Name = "dpdDiplome";
-            this.dpdDiplome.Size = new System.Drawing.Size(120, 30);
+            this.dpdDiplome.Size = new System.Drawing.Size(258, 30);
             this.dpdDiplome.TabIndex = 27;
             // 
             // txtTiersTempsEleve

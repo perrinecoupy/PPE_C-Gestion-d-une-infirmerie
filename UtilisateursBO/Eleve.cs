@@ -19,6 +19,7 @@ namespace UtilisateursBO
         string commentaire;
         int classe;
         int diplome;
+        Diplome unDiplome;
 
         // Constructeur utilisé pour sauvegarder l'id de l'élève pour appliquer les modifications et la suppression
         public Eleve(int id)
@@ -83,5 +84,6 @@ namespace UtilisateursBO
         public string Commentaire { get => commentaire; set => commentaire = value; }
         public int Classe { get => classe; set => classe = value; }
         public int Diplome { get => diplome; set => diplome = value; }
+        public Diplome Diplome2 { get => unDiplome; set => unDiplome = value; }
     }
 }

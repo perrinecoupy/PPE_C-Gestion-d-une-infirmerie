@@ -25,6 +25,7 @@ namespace UtilisateursGUI
         private string tiersTemps;
         private string commentaire;
         private int classe;
+        private int diplome;
 
         
 
@@ -41,7 +42,9 @@ namespace UtilisateursGUI
             txtTiersTempsEleve.Text = this.eleve.TiersTemps;
             txtCommentairesSanteEleve.Text = this.eleve.Commentaire;
             List<Classe> liste = Gestion.GetLesClasses();
+            List<Diplome> liste2 = Gestion.GetLesDiplomes();
             dpdClasse.DataSource = liste;
+            dpdDiplome.DataSource = liste2;
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
@@ -53,7 +56,7 @@ namespace UtilisateursGUI
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            if (txtNomEleve.Text == string.Empty || txtPrenomEleve.Text == string.Empty || dpdClasse.Text == string.Empty || dtmDateDeNaissanceEleve.Text == string.Empty || txtSanteEleve.Text == string.Empty || txtTelephoneEleve.Text == string.Empty || txtTelephoneParentEleve.Text == string.Empty || txtTiersTempsEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty)
+            if (txtNomEleve.Text == string.Empty || txtPrenomEleve.Text == string.Empty || dpdClasse.Text == string.Empty || dtmDateDeNaissanceEleve.Text == string.Empty || txtSanteEleve.Text == string.Empty || txtTelephoneEleve.Text == string.Empty || txtTelephoneParentEleve.Text == string.Empty || txtTiersTempsEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty || txtCommentairesSanteEleve.Text == string.Empty || dpdDiplome.Text == string.Empty)
             {
                 erreurChampsVides.Visible = true;
             }
@@ -61,7 +64,7 @@ namespace UtilisateursGUI
             {
                 erreurChampsVides.Visible = false;
 
-                Eleve eleve = new Eleve(this.eleve.Id, txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id, ((Diplome)dpdClasse.SelectedItem).Id);
+                Eleve eleve = new Eleve(this.eleve.Id, txtNomEleve.Text, txtPrenomEleve.Text, Convert.ToDateTime(dtmDateDeNaissanceEleve.Text), txtSanteEleve.Text, txtTelephoneEleve.Text, txtTelephoneParentEleve.Text, txtTiersTempsEleve.Text, txtCommentairesSanteEleve.Text, ((Classe)dpdClasse.SelectedItem).Id, ((Diplome)dpdDiplome.SelectedItem).Id);
 
                 Gestion.ModifEleve(eleve);
 

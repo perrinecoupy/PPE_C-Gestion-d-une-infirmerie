@@ -65,6 +65,11 @@ namespace UtilisateursGUI
             colonneClasse.DataPropertyName = "classe";
             colonneClasse.HeaderText = "CLASSE";
 
+            // Création d'une en-tête de colonne pour la colonne 10
+            DataGridViewTextBoxColumn colonneDiplome = new DataGridViewTextBoxColumn();
+            colonneDiplome.DataPropertyName = "diplome";
+            colonneDiplome.HeaderText = "DIPLOME";
+
             // Ajout des 9 en-têtes de colonne au datagridview
             dataGridViewEleve.Columns.Add(colonneNom);
             dataGridViewEleve.Columns.Add(colonnePrenom);
@@ -74,6 +79,7 @@ namespace UtilisateursGUI
             dataGridViewEleve.Columns.Add(colonneTiersTemps);
             dataGridViewEleve.Columns.Add(colonneCommentaire);
             dataGridViewEleve.Columns.Add(colonneClasse);
+            dataGridViewEleve.Columns.Add(colonneDiplome);
 
             // Définition du style apporté au datagridview
             dataGridViewEleve.ColumnHeadersVisible = true;
@@ -85,6 +91,7 @@ namespace UtilisateursGUI
             colonneTiersTemps.Width = 140;
             colonneCommentaire.Width = 140;
             colonneClasse.Width = 140;
+            colonneDiplome.Width = 140;
 
             var lesEleves = new List<Eleve>();
 
